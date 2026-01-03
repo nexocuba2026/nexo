@@ -11,13 +11,17 @@
     .slogan { font-size:18px; margin-top:5px; color:#ff7a00; font-weight:bold; }
     nav a { color:#fff; margin:0 12px; text-decoration:none; font-weight:bold; }
     section { padding:50px 20px; max-width:1200px; margin:auto; text-align:center; }
+    .categories { display:flex; justify-content:center; flex-wrap:wrap; gap:30px; margin-bottom:40px; }
+    .category { text-align:center; cursor:pointer; }
+    .category img { width:60px; height:60px; margin-bottom:10px; }
     .cards { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-    .card { border:1px solid #ddd; border-radius:8px; width:280px; text-align:left; overflow:hidden; }
+    .card { border:1px solid #ddd; border-radius:8px; width:280px; text-align:left; overflow:hidden; transition: transform 0.2s; }
+    .card:hover { transform: scale(1.03); }
     .card img { width:100%; height:180px; object-fit:cover; }
     .card-content { padding:15px; }
     .card h3 { margin-top:0; color:#ff7a00; }
     .card p { margin:10px 0; font-size:14px; color:#333; }
-    .btn { display:inline-block; padding:10px 18px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; margin-top:10px; }
+    .btn { display:inline-block; padding:10px 18px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; margin-top:10px; margin-right:5px; }
     footer { background:#000; color:#fff; text-align:center; padding:25px; font-size:14px; margin-top:40px; }
     .footer-btn { display:inline-block; margin:10px 10px; padding:10px 20px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; }
   </style>
@@ -39,29 +43,46 @@
 
 <section>
   <h2>Categorías de Servicios</h2>
+  <div class="categories">
+    <div class="category">
+      <img src="images/construccion.png" alt="Construcción">
+      <p>Construcción</p>
+    </div>
+    <div class="category">
+      <img src="images/restaurante.png" alt="Restaurantes">
+      <p>Restaurantes</p>
+    </div>
+    <div class="category">
+      <img src="images/transporte.png" alt="Transporte">
+      <p>Transporte</p>
+    </div>
+    <div class="category">
+      <img src="images/salud.png" alt="Salud">
+      <p>Salud</p>
+    </div>
+  </div>
+
+  <h2>Servicios Destacados</h2>
   <div class="cards">
     <div class="card">
-      <img src="https://via.placeholder.com/280x180" alt="Construcción">
+      <img src="images/servicio1.jpg" alt="Servicio 1">
       <div class="card-content">
-        <h3>Construcción</h3>
-        <p>Reformas, mantenimiento y remodelaciones profesionales.</p>
-        <a class="btn" href="#">Contactar proveedor</a>
+        <h3>Reformas Modernas</h3>
+        <p>Empresa: Constructora Soluciones</p>
+        <p>Especialistas en remodelaciones residenciales y comerciales.</p>
+        <a class="btn" href="empresas/constructora-soluciones.html">Ver más</a>
+        <a class="btn" href="https://wa.me/1234567890" target="_blank">Contactar</a>
       </div>
     </div>
+
     <div class="card">
-      <img src="https://via.placeholder.com/280x180" alt="Restaurantes">
+      <img src="images/producto1.jpg" alt="Servicio 2">
       <div class="card-content">
-        <h3>Restaurantes</h3>
-        <p>Comida a domicilio, eventos y servicios especiales.</p>
-        <a class="btn" href="#">Contactar proveedor</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/280x180" alt="Transporte">
-      <div class="card-content">
-        <h3>Transporte</h3>
-        <p>Servicios de transporte confiables y eficientes.</p>
-        <a class="btn" href="#">Contactar proveedor</a>
+        <h3>Comida Gourmet</h3>
+        <p>Empresa: Restaurante Delicias</p>
+        <p>Menús personalizados para eventos y entregas a domicilio.</p>
+        <a class="btn" href="empresas/restaurante-delicias.html">Ver más</a>
+        <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar</a>
       </div>
     </div>
   </div>
