@@ -11,11 +11,13 @@
     .slogan { font-size:18px; margin-top:5px; color:#ff7a00; font-weight:bold; }
     nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
     section { padding:40px 20px; max-width:1200px; margin:auto; }
-    
+
     /* Buscador */
-    .search { text-align:center; margin-bottom:40px; display:flex; justify-content:center; gap:10px; }
-    .search input { padding:12px; width:50%; border:1px solid #ddd; border-radius:5px; font-size:16px; }
-    .search button { padding:12px 20px; background:#ff7a00; color:#fff; border:none; border-radius:5px; font-weight:bold; cursor:pointer; }
+    .search { position:relative; width:60%; margin:40px auto; }
+    #searchInput { width:100%; padding:12px; border:1px solid #ddd; border-radius:5px; font-size:16px; }
+    .search-results { position:absolute; top:100%; left:0; right:0; background:#fff; border:1px solid #ddd; border-radius:0 0 5px 5px; max-height:200px; overflow-y:auto; z-index:100; display:none; }
+    .search-results div { padding:10px; cursor:pointer; }
+    .search-results div:hover { background:#ff7a00; color:#fff; }
 
     /* Tarjetas */
     .section-title { text-align:left; color:#ff7a00; margin-bottom:20px; font-size:22px; }
@@ -50,15 +52,17 @@
   </nav>
 </header>
 
-<section class="search">
-  <input type="text" placeholder="Busca un servicio, producto o palabra clave...">
-  <button>Buscar</button>
-</section>
+<!-- Barra de búsqueda con autocompletado -->
+<div class="search">
+  <input type="text" placeholder="Busca un servicio, producto o palabra clave..." id="searchInput" autocomplete="off">
+  <div id="searchResults" class="search-results"></div>
+</div>
 
+<!-- Servicios Destacados -->
 <section>
   <h2 class="section-title">Servicios Destacados</h2>
   <div class="cards">
-    <div class="card">
+    <div class="card" data-keywords="Reformas, Modernas, Constructora Soluciones, Remodelación, Residencial, Comercial">
       <img src="images/servicio1.jpg" alt="Servicio 1">
       <div class="card-content">
         <h3>Reformas Modernas</h3>
@@ -69,7 +73,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-keywords="Transporte, Express, TransMovil, Logística, Mercancías">
       <img src="images/servicio2.jpg" alt="Servicio 2">
       <div class="card-content">
         <h3>Transporte Express</h3>
@@ -82,10 +86,11 @@
   </div>
 </section>
 
+<!-- Productos Destacados -->
 <section>
   <h2 class="section-title">Productos Destacados</h2>
   <div class="cards">
-    <div class="card">
+    <div class="card" data-keywords="Comida, Gourmet, Restaurante Delicias, Menú, Evento">
       <img src="images/producto1.jpg" alt="Producto 1">
       <div class="card-content">
         <h3>Comida Gourmet</h3>
@@ -96,7 +101,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-keywords="Bebidas, Naturales, Jugos Tropicales, Smoothies, Saludables">
       <img src="images/producto2.jpg" alt="Producto 2">
       <div class="card-content">
         <h3>Bebidas Naturales</h3>
@@ -109,11 +114,12 @@
   </div>
 </section>
 
+<!-- Ofertas Plus -->
 <section>
   <h2 class="section-title">Ofertas Plus de neXo</h2>
   <p style="color:#111; font-weight:bold; margin-bottom:20px;">Con neXo aumenta el crecimiento de tu negocio en un corto plazo</p>
   <div class="cards">
-    <div class="card">
+    <div class="card" data-keywords="Diseño, Logotipos, Ofertas Plus">
       <img src="images/logo-design.jpg" alt="Diseño de Logotipos">
       <div class="card-content">
         <h3>Diseño de Logotipos</h3>
@@ -121,7 +127,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-keywords="Tarjetas, Presentación, Ofertas Plus">
       <img src="images/tarjeta.jpg" alt="Tarjetas de Presentación">
       <div class="card-content">
         <h3>Tarjetas de Presentación</h3>
@@ -129,7 +135,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-keywords="Manual, Identidad, Ofertas Plus">
       <img src="images/manual.jpg" alt="Manual de Identidad">
       <div class="card-content">
         <h3>Manual de Identidad</h3>
@@ -137,7 +143,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-keywords="Flayers, Plegables, Ofertas Plus">
       <img src="images/flayer.jpg" alt="Flayers y Plegables">
       <div class="card-content">
         <h3>Flayers y Plegables</h3>
@@ -145,7 +151,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-keywords="Diseño, Interiores, Ofertas Plus">
       <img src="images/interiores.jpg" alt="Diseño de Interiores">
       <div class="card-content">
         <h3>Diseño de Interiores</h3>
@@ -155,12 +161,60 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
   <p>¿Quieres publicar tu negocio o servicio? Contáctanos:</p>
   <a class="footer-btn" href="contacto.html">Contactar con neXo</a>
   <a class="footer-btn" href="mailto:tuemail@correo.com">Enviar email</a>
   <p>© neXo – Publicidad y servicios</p>
 </footer>
+
+<!-- Script de autocompletado -->
+<script>
+const searchData = [
+  { name: "Reformas Modernas", url: "empresas/constructora-soluciones.html" },
+  { name: "Transporte Express", url: "empresas/transmovil.html" },
+  { name: "Comida Gourmet", url: "productos/comida-gourmet.html" },
+  { name: "Bebidas Naturales", url: "productos/jugos-tropicales.html" },
+  { name: "Diseño de Logotipos", url: "contacto.html" },
+  { name: "Tarjetas de Presentación", url: "contacto.html" },
+  { name: "Manual de Identidad", url: "contacto.html" },
+  { name: "Flayers y Plegables", url: "contacto.html" },
+  { name: "Diseño de Interiores", url: "contacto.html" }
+];
+
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+searchInput.addEventListener('input', function() {
+  const query = this.value.toLowerCase();
+  searchResults.innerHTML = '';
+  if (query === '') {
+    searchResults.style.display = 'none';
+    return;
+  }
+
+  const filtered = searchData.filter(item => item.name.toLowerCase().includes(query));
+  
+  filtered.forEach(item => {
+    const div = document.createElement('div');
+    div.textContent = item.name;
+    div.addEventListener('click', () => {
+      window.location.href = item.url;
+    });
+    searchResults.appendChild(div);
+  });
+
+  searchResults.style.display = filtered.length ? 'block' : 'none';
+});
+
+// Cerrar menú al hacer click fuera
+document.addEventListener('click', function(e) {
+  if (!searchInput.contains(e.target)) {
+    searchResults.style.display = 'none';
+  }
+});
+</script>
 
 </body>
 </html>
