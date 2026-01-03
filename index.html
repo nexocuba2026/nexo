@@ -11,20 +11,30 @@
     .slogan { font-size:18px; margin-top:5px; color:#ff7a00; font-weight:bold; }
     nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
     section { padding:40px 20px; max-width:1200px; margin:auto; }
-    .search { text-align:center; margin-bottom:40px; }
-    .search input { padding:12px; width:60%; border:1px solid #ddd; border-radius:5px; font-size:16px; }
-    .cards { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-    .card { border:1px solid #ddd; border-radius:8px; width:280px; text-align:left; overflow:hidden; transition: transform 0.2s; }
-    .card:hover { transform: scale(1.03); }
-    .card img { width:100%; height:180px; object-fit:cover; }
-    .card-content { padding:15px; }
+    
+    /* Buscador */
+    .search { text-align:center; margin-bottom:40px; display:flex; justify-content:center; gap:10px; }
+    .search input { padding:12px; width:50%; border:1px solid #ddd; border-radius:5px; font-size:16px; }
+    .search button { padding:12px 20px; background:#ff7a00; color:#fff; border:none; border-radius:5px; font-weight:bold; cursor:pointer; }
+
+    /* Tarjetas */
+    .section-title { text-align:left; color:#ff7a00; margin-bottom:20px; font-size:22px; }
+    .cards { display:flex; flex-direction:column; gap:20px; }
+    .card { border:1px solid #ddd; border-radius:8px; overflow:hidden; display:flex; gap:15px; align-items:center; transition: transform 0.2s; padding:15px; }
+    .card:hover { transform: scale(1.02); }
+    .card img { width:180px; height:120px; object-fit:cover; border-radius:5px; }
+    .card-content { flex:1; }
     .card h3 { margin-top:0; color:#ff7a00; }
-    .card p { margin:10px 0; font-size:14px; color:#333; }
-    .btn { display:inline-block; padding:10px 18px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; margin-top:10px; margin-right:5px; }
+    .card p { margin:5px 0; font-size:14px; color:#333; }
+    .price { font-weight:bold; color:#111; margin-top:5px; }
+    .btn { display:inline-block; padding:10px 18px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; margin-top:5px; margin-right:5px; }
+
+    /* Footer */
     footer { background:#000; color:#fff; text-align:center; padding:25px; font-size:14px; margin-top:40px; }
     .footer-btn { display:inline-block; margin:10px 10px; padding:10px 20px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -41,11 +51,12 @@
 </header>
 
 <section class="search">
-  <input type="text" placeholder="Busca un servicio o producto...">
+  <input type="text" placeholder="Busca un servicio, producto o palabra clave...">
+  <button>Buscar</button>
 </section>
 
 <section>
-  <h2>Servicios y Productos Destacados</h2>
+  <h2 class="section-title">Servicios Destacados</h2>
   <div class="cards">
     <div class="card">
       <img src="images/servicio1.jpg" alt="Servicio 1">
@@ -59,13 +70,86 @@
     </div>
 
     <div class="card">
+      <img src="images/servicio2.jpg" alt="Servicio 2">
+      <div class="card-content">
+        <h3>Transporte Express</h3>
+        <p>Empresa: TransMovil</p>
+        <p>Servicio rápido de transporte y logística de mercancías.</p>
+        <a class="btn" href="empresas/transmovil.html">Ver más</a>
+        <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Productos Destacados</h2>
+  <div class="cards">
+    <div class="card">
       <img src="images/producto1.jpg" alt="Producto 1">
       <div class="card-content">
         <h3>Comida Gourmet</h3>
         <p>Empresa: Restaurante Delicias</p>
         <p>Menús personalizados para eventos y entregas a domicilio.</p>
-        <a class="btn" href="empresas/restaurante-delicias.html">Ver más</a>
-        <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar</a>
+        <div class="price">Precio: 15 USD</div>
+        <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar proveedor</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/producto2.jpg" alt="Producto 2">
+      <div class="card-content">
+        <h3>Bebidas Naturales</h3>
+        <p>Empresa: Jugos Tropicales</p>
+        <p>Variedad de jugos y smoothies frescos y saludables.</p>
+        <div class="price">Precio: 5 USD</div>
+        <a class="btn" href="https://wa.me/1234567892" target="_blank">Contactar proveedor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Ofertas Plus de neXo</h2>
+  <p style="color:#111; font-weight:bold; margin-bottom:20px;">Con neXo aumenta el crecimiento de tu negocio en un corto plazo</p>
+  <div class="cards">
+    <div class="card">
+      <img src="images/logo-design.jpg" alt="Diseño de Logotipos">
+      <div class="card-content">
+        <h3>Diseño de Logotipos</h3>
+        <a class="btn" href="contacto.html">Solicitar Servicio</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/tarjeta.jpg" alt="Tarjetas de Presentación">
+      <div class="card-content">
+        <h3>Tarjetas de Presentación</h3>
+        <a class="btn" href="contacto.html">Solicitar Servicio</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/manual.jpg" alt="Manual de Identidad">
+      <div class="card-content">
+        <h3>Manual de Identidad</h3>
+        <a class="btn" href="contacto.html">Solicitar Servicio</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/flayer.jpg" alt="Flayers y Plegables">
+      <div class="card-content">
+        <h3>Flayers y Plegables</h3>
+        <a class="btn" href="contacto.html">Solicitar Servicio</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/interiores.jpg" alt="Diseño de Interiores">
+      <div class="card-content">
+        <h3>Diseño de Interiores</h3>
+        <a class="btn" href="contacto.html">Solicitar Servicio</a>
       </div>
     </div>
   </div>
