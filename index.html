@@ -2,32 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>neXo | Publicidad y Servicios</title>
+  <title>neXo | Publicidad para Negocios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#fff; color:#111; }
-    header { background:#000; color:#fff; padding:25px; text-align:center; }
+    header { background:#000; color:#fff; padding:20px; text-align:center; }
     header span { color:#ff7a00; }
     .slogan { font-size:18px; margin-top:5px; color:#ff7a00; font-weight:bold; }
-    nav { margin-top:15px; }
-    nav a { color:#fff; margin:0 12px; text-decoration:none; font-weight:bold; }
-    section { padding:50px 20px; text-align:center; max-width:1200px; margin:auto; }
-    .busqueda { margin-bottom:50px; }
-    .busqueda input[type="text"] { width:70%; padding:12px; border:1px solid #ccc; border-radius:5px; font-size:16px; }
-    .busqueda button { padding:12px 20px; margin-left:10px; background:#ff7a00; color:#fff; border:none; border-radius:5px; font-weight:bold; cursor:pointer; }
-    .destacados { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-    .card { border:1px solid #ddd; border-radius:8px; width:280px; text-align:left; overflow:hidden; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+    section { padding:40px 20px; max-width:1200px; margin:auto; }
+    .search { text-align:center; margin-bottom:40px; }
+    .search input { padding:12px; width:60%; border:1px solid #ddd; border-radius:5px; font-size:16px; }
+    .cards { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+    .card { border:1px solid #ddd; border-radius:8px; width:280px; text-align:left; overflow:hidden; transition: transform 0.2s; }
+    .card:hover { transform: scale(1.03); }
     .card img { width:100%; height:180px; object-fit:cover; }
     .card-content { padding:15px; }
     .card h3 { margin-top:0; color:#ff7a00; }
     .card p { margin:10px 0; font-size:14px; color:#333; }
-    .btn { display:inline-block; padding:10px 18px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; margin-top:10px; }
-    .quienes-somos { text-align:left; margin-top:70px; border-top:1px solid #ddd; padding-top:30px; }
+    .btn { display:inline-block; padding:10px 18px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; margin-top:10px; margin-right:5px; }
     footer { background:#000; color:#fff; text-align:center; padding:25px; font-size:14px; margin-top:40px; }
     .footer-btn { display:inline-block; margin:10px 10px; padding:10px 20px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; }
   </style>
 </head>
-
 <body>
 
 <header>
@@ -43,49 +40,35 @@
   </nav>
 </header>
 
-<section class="busqueda">
-  <input type="text" placeholder="Buscar servicio, producto o negocio...">
-  <button>Buscar</button>
+<section class="search">
+  <input type="text" placeholder="Busca un servicio o producto...">
 </section>
 
-<section class="destacados">
-  <div class="card">
-    <img src="https://via.placeholder.com/280x180" alt="Servicio destacado 1">
-    <div class="card-content">
-      <h3>Restaurante Gourmet</h3>
-      <p>Comida cubana e internacional, servicio a domicilio, ambiente familiar.</p>
-      <a class="btn" href="#">Contactar proveedor</a>
+<section>
+  <h2>Servicios y Productos Destacados</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="images/servicio1.jpg" alt="Servicio 1">
+      <div class="card-content">
+        <h3>Reformas Modernas</h3>
+        <p>Empresa: Constructora Soluciones</p>
+        <p>Especialistas en remodelaciones residenciales y comerciales.</p>
+        <a class="btn" href="empresas/constructora-soluciones.html">Ver más</a>
+        <a class="btn" href="https://wa.me/1234567890" target="_blank">Contactar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/producto1.jpg" alt="Producto 1">
+      <div class="card-content">
+        <h3>Comida Gourmet</h3>
+        <p>Empresa: Restaurante Delicias</p>
+        <p>Menús personalizados para eventos y entregas a domicilio.</p>
+        <a class="btn" href="empresas/restaurante-delicias.html">Ver más</a>
+        <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar</a>
+      </div>
     </div>
   </div>
-
-  <div class="card">
-    <img src="https://via.placeholder.com/280x180" alt="Servicio destacado 2">
-    <div class="card-content">
-      <h3>Servicios de Construcción</h3>
-      <p>Reformas, mantenimiento y remodelaciones profesionales con garantía.</p>
-      <a class="btn" href="#">Contactar proveedor</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="https://via.placeholder.com/280x180" alt="Producto destacado">
-    <div class="card-content">
-      <h3>Bicicleta Eléctrica</h3>
-      <p>Alta autonomía, diseño moderno, ideal para transporte urbano ecológico.</p>
-      <a class="btn" href="#">Contactar proveedor</a>
-    </div>
-  </div>
-</section>
-
-<section class="quienes-somos">
-  <h2>Quiénes somos</h2>
-  <p>
-    neXo es una plataforma estratégica de promoción digital que conecta clientes con negocios,
-    servicios y productos seleccionados. Nos encargamos de gestionar y mostrar contenido de alta calidad,
-    garantizando que cada publicación cumpla con estándares de visibilidad, presentación y relevancia. 
-    Nuestro enfoque es ofrecer soluciones efectivas que aumenten la exposición y las oportunidades de negocio,
-    centralizando toda la administración y asegurando que la experiencia sea profesional y confiable.
-  </p>
 </section>
 
 <footer>
