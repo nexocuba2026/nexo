@@ -13,14 +13,15 @@
     section { padding:40px 20px; max-width:1200px; margin:auto; }
 
     /* Buscador */
-    .search { position:relative; width:60%; margin:40px auto; }
-    #searchInput { width:100%; padding:12px; border:1px solid #ddd; border-radius:5px; font-size:16px; }
+    .search { position:relative; width:60%; margin:40px auto; display:flex; gap:10px; }
+    #searchInput { flex:1; padding:12px; border:1px solid #ddd; border-radius:5px; font-size:16px; }
+    #searchButton { padding:12px 20px; border:none; border-radius:5px; background:#ff7a00; color:#fff; font-weight:bold; cursor:pointer; }
     .search-results { position:absolute; top:100%; left:0; right:0; background:#fff; border:1px solid #ddd; border-radius:0 0 5px 5px; max-height:200px; overflow-y:auto; z-index:100; display:none; }
     .search-results div { padding:10px; cursor:pointer; }
     .search-results div:hover { background:#ff7a00; color:#fff; }
 
     /* Tarjetas */
-    .section-title { text-align:left; color:#ff7a00; margin-bottom:20px; font-size:22px; }
+    .section-title { text-align:left; color:#ff7a00; margin-bottom:20px; font-size:22px; display:flex; align-items:center; gap:10px; }
     .cards { display:flex; flex-direction:column; gap:20px; }
     .card { border:1px solid #ddd; border-radius:8px; overflow:hidden; display:flex; gap:15px; align-items:center; transition: transform 0.2s; padding:15px; }
     .card:hover { transform: scale(1.02); }
@@ -52,9 +53,10 @@
   </nav>
 </header>
 
-<!-- Barra de búsqueda con autocompletado -->
+<!-- Barra de búsqueda con autocompletado y botón -->
 <div class="search">
   <input type="text" placeholder="Busca un servicio, producto o palabra clave..." id="searchInput" autocomplete="off">
+  <button id="searchButton">Buscar</button>
   <div id="searchResults" class="search-results"></div>
 </div>
 
@@ -70,6 +72,7 @@
         <p>Especialistas en remodelaciones residenciales y comerciales.</p>
         <a class="btn" href="empresas/constructora-soluciones.html">Ver más</a>
         <a class="btn" href="https://wa.me/1234567890" target="_blank">Contactar</a>
+        <a class="btn" href="catalogos/constructora-soluciones.pdf" target="_blank">Catálogo</a>
       </div>
     </div>
 
@@ -81,6 +84,7 @@
         <p>Servicio rápido de transporte y logística de mercancías.</p>
         <a class="btn" href="empresas/transmovil.html">Ver más</a>
         <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar</a>
+        <a class="btn" href="catalogos/transmovil.pdf" target="_blank">Catálogo</a>
       </div>
     </div>
   </div>
@@ -98,6 +102,7 @@
         <p>Menús personalizados para eventos y entregas a domicilio.</p>
         <div class="price">Precio: 15 USD</div>
         <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar proveedor</a>
+        <a class="btn" href="catalogos/comida-gourmet.pdf" target="_blank">Catálogo</a>
       </div>
     </div>
 
@@ -109,6 +114,7 @@
         <p>Variedad de jugos y smoothies frescos y saludables.</p>
         <div class="price">Precio: 5 USD</div>
         <a class="btn" href="https://wa.me/1234567892" target="_blank">Contactar proveedor</a>
+        <a class="btn" href="catalogos/jugos-tropicales.pdf" target="_blank">Catálogo</a>
       </div>
     </div>
   </div>
@@ -116,47 +122,32 @@
 
 <!-- Ofertas Plus -->
 <section>
-  <h2 class="section-title">Ofertas Plus de neXo</h2>
+  <h2 class="section-title">
+    Ofertas Plus de neXo
+    <a class="btn" href="contacto.html">Solicitar Servicio</a>
+    <a class="btn" href="catalogos/ofertas-plus.pdf" target="_blank">Catálogo</a>
+  </h2>
   <p style="color:#111; font-weight:bold; margin-bottom:20px;">Con neXo aumenta el crecimiento de tu negocio en un corto plazo</p>
   <div class="cards">
-    <div class="card" data-keywords="Diseño, Logotipos, Ofertas Plus">
+    <div class="card">
       <img src="images/logo-design.jpg" alt="Diseño de Logotipos">
-      <div class="card-content">
-        <h3>Diseño de Logotipos</h3>
-        <a class="btn" href="contacto.html">Solicitar Servicio</a>
-      </div>
+      <div class="card-content"><h3>Diseño de Logotipos</h3></div>
     </div>
-
-    <div class="card" data-keywords="Tarjetas, Presentación, Ofertas Plus">
+    <div class="card">
       <img src="images/tarjeta.jpg" alt="Tarjetas de Presentación">
-      <div class="card-content">
-        <h3>Tarjetas de Presentación</h3>
-        <a class="btn" href="contacto.html">Solicitar Servicio</a>
-      </div>
+      <div class="card-content"><h3>Tarjetas de Presentación</h3></div>
     </div>
-
-    <div class="card" data-keywords="Manual, Identidad, Ofertas Plus">
+    <div class="card">
       <img src="images/manual.jpg" alt="Manual de Identidad">
-      <div class="card-content">
-        <h3>Manual de Identidad</h3>
-        <a class="btn" href="contacto.html">Solicitar Servicio</a>
-      </div>
+      <div class="card-content"><h3>Manual de Identidad</h3></div>
     </div>
-
-    <div class="card" data-keywords="Flayers, Plegables, Ofertas Plus">
+    <div class="card">
       <img src="images/flayer.jpg" alt="Flayers y Plegables">
-      <div class="card-content">
-        <h3>Flayers y Plegables</h3>
-        <a class="btn" href="contacto.html">Solicitar Servicio</a>
-      </div>
+      <div class="card-content"><h3>Flayers y Plegables</h3></div>
     </div>
-
-    <div class="card" data-keywords="Diseño, Interiores, Ofertas Plus">
+    <div class="card">
       <img src="images/interiores.jpg" alt="Diseño de Interiores">
-      <div class="card-content">
-        <h3>Diseño de Interiores</h3>
-        <a class="btn" href="contacto.html">Solicitar Servicio</a>
-      </div>
+      <div class="card-content"><h3>Diseño de Interiores</h3></div>
     </div>
   </div>
 </section>
@@ -169,7 +160,7 @@
   <p>© neXo – Publicidad y servicios</p>
 </footer>
 
-<!-- Script de autocompletado -->
+<!-- Script de autocompletado y búsqueda -->
 <script>
 const searchData = [
   { name: "Reformas Modernas", url: "empresas/constructora-soluciones.html" },
@@ -185,34 +176,27 @@ const searchData = [
 
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
+const searchButton = document.getElementById('searchButton');
 
-searchInput.addEventListener('input', function() {
-  const query = this.value.toLowerCase();
+function filterSearch() {
+  const query = searchInput.value.toLowerCase();
   searchResults.innerHTML = '';
-  if (query === '') {
-    searchResults.style.display = 'none';
-    return;
-  }
-
+  if(query === '') { searchResults.style.display='none'; return; }
   const filtered = searchData.filter(item => item.name.toLowerCase().includes(query));
-  
   filtered.forEach(item => {
     const div = document.createElement('div');
     div.textContent = item.name;
-    div.addEventListener('click', () => {
-      window.location.href = item.url;
-    });
+    div.addEventListener('click', ()=>{ window.location.href=item.url; });
     searchResults.appendChild(div);
   });
+  searchResults.style.display = filtered.length ? 'block':'none';
+}
 
-  searchResults.style.display = filtered.length ? 'block' : 'none';
-});
+searchInput.addEventListener('input', filterSearch);
+searchButton.addEventListener('click', filterSearch);
 
-// Cerrar menú al hacer click fuera
-document.addEventListener('click', function(e) {
-  if (!searchInput.contains(e.target)) {
-    searchResults.style.display = 'none';
-  }
+document.addEventListener('click', function(e){
+  if(!searchInput.contains(e.target)) { searchResults.style.display='none'; }
 });
 </script>
 
