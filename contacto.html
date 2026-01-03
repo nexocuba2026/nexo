@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>neXo | Contacto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#fff; color:#111; }
+    header { background:#000; color:#fff; padding:25px; text-align:center; }
+    header span { color:#ff7a00; }
+    .slogan { font-size:18px; margin-top:5px; color:#ff7a00; font-weight:bold; }
+    nav a { color:#fff; margin:0 12px; text-decoration:none; font-weight:bold; }
+    section { padding:50px 20px; max-width:600px; margin:auto; text-align:left; }
+    label { display:block; margin-top:15px; font-weight:bold; }
+    input, textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ddd; border-radius:5px; font-size:14px; }
+    button { margin-top:20px; padding:12px 20px; background:#ff7a00; color:#fff; border:none; border-radius:5px; font-weight:bold; cursor:pointer; }
+    footer { background:#000; color:#fff; text-align:center; padding:25px; font-size:14px; margin-top:40px; }
+    .footer-btn { display:inline-block; margin:10px 10px; padding:10px 20px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; }
+  </style>
+</head>
 
+<body>
+
+<header>
+  <h1>ne<span>X</span>o</h1>
+  <div class="slogan">Conectando soluciones, creando resultados</div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="ofertas.html">Ofertas Plus</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<section>
+  <h2>Contacta con neXo</h2>
+  <p>Si quieres que publiquemos tu negocio, servicio o producto, completa el formulario o contáctanos directamente por email.</p>
+
+  <!-- Formulario simple -->
+  <form action="mailto:tuemail@correo.com" method="post" enctype="text/plain">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+    <button type="submit">Enviar mensaje</button>
+  </form>
+
+  <p>También puedes contactarnos directamente haciendo clic en el botón:</p>
+  <a class="footer-btn" href="mailto:tuemail@correo.com">Enviar Email</a>
+</section>
+
+<footer>
+  <p>© neXo – Publicidad y servicios</p>
+</footer>
+
+</body>
+</html>
