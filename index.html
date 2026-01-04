@@ -4,68 +4,37 @@
   <meta charset="UTF-8">
   <title>neXo | Publicidad para Negocios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Fuente script para el eslogan -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #ffffff;
-      color: #111111;
-    }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#fff; color:#111; }
+    header { background:#000; color:#fff; padding:20px; text-align:center; }
+    header span { color:#ff7a00; }
+    .slogan { font-size:18px; margin-top:5px; color:#ff7a00; font-weight:bold; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+    section { padding:40px 20px; max-width:1200px; margin:auto; }
 
-    header {
-      background-color: #000000;
-      color: #ffffff;
-      padding: 25px 20px;
-      text-align: center;
-    }
+    /* Buscador */
+    .search { position:relative; width:60%; margin:40px auto; display:flex; gap:10px; }
+    #searchInput { flex:1; padding:12px; border:1px solid #ddd; border-radius:5px; font-size:16px; }
+    #searchButton { padding:12px 20px; border:none; border-radius:5px; background:#ff7a00; color:#fff; font-weight:bold; cursor:pointer; }
+    .search-results { position:absolute; top:100%; left:0; right:0; background:#fff; border:1px solid #ddd; border-radius:0 0 5px 5px; max-height:200px; overflow-y:auto; z-index:100; display:none; }
+    .search-results div { padding:10px; cursor:pointer; }
+    .search-results div:hover { background:#ff7a00; color:#fff; }
 
-    header h1 {
-      margin: 0;
-      font-size: 42px;
-      letter-spacing: 1px;
-    }
+    /* Tarjetas */
+    .section-title { text-align:left; color:#ff7a00; margin-bottom:20px; font-size:22px; display:flex; align-items:center; gap:10px; }
+    .cards { display:flex; flex-direction:column; gap:20px; }
+    .card { border:1px solid #ddd; border-radius:8px; overflow:hidden; display:flex; gap:15px; align-items:center; transition: transform 0.2s; padding:15px; }
+    .card:hover { transform: scale(1.02); }
+    .card img { width:180px; height:120px; object-fit:cover; border-radius:5px; }
+    .card-content { flex:1; }
+    .card h3 { margin-top:0; color:#ff7a00; }
+    .card p { margin:5px 0; font-size:14px; color:#333; }
+    .price { font-weight:bold; color:#111; margin-top:5px; }
+    .btn { display:inline-block; padding:10px 18px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; margin-top:5px; margin-right:5px; }
 
-    header h1 span {
-      color: #ff7a00;
-    }
-
-    /* ESLOGAN SCRIPT */
-    .slogan {
-      margin-top: 8px;
-      font-family: 'Pacifico', cursive;
-      font-size: 22px;
-      color: #ff7a00;
-      font-weight: normal;
-    }
-
-    nav {
-      margin-top: 18px;
-    }
-
-    nav a {
-      color: #ffffff;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 15px;
-    }
-
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    footer {
-      background-color: #000000;
-      color: #ffffff;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-    }
+    /* Footer */
+    footer { background:#000; color:#fff; text-align:center; padding:25px; font-size:14px; margin-top:40px; }
+    .footer-btn { display:inline-block; margin:10px 10px; padding:10px 20px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; }
   </style>
 </head>
 
@@ -74,27 +43,162 @@
 <header>
   <h1>ne<span>X</span>o</h1>
   <div class="slogan">Conectando soluciones, creando resultados</div>
-
   <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Servicios</a>
-    <a href="#">Productos</a>
-    <a href="#">Ofertas Plus</a>
-    <a href="#">Contacto</a>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="ofertas.html">Ofertas Plus</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="contacto.html">Contacto</a>
   </nav>
 </header>
 
+<!-- Barra de búsqueda con autocompletado y botón -->
+<div class="search">
+  <input type="text" placeholder="Busca un servicio, producto o palabra clave..." id="searchInput" autocomplete="off">
+  <button id="searchButton">Buscar</button>
+  <div id="searchResults" class="search-results"></div>
+</div>
+
+<!-- Servicios Destacados -->
 <section>
-  <h2>Servicios y productos destacados</h2>
-  <p>
-    Descubre soluciones, servicios y productos seleccionados para impulsar
-    el crecimiento de tu negocio.
-  </p>
+  <h2 class="section-title">Servicios Destacados</h2>
+  <div class="cards">
+    <div class="card" data-keywords="Reformas, Modernas, Constructora Soluciones, Remodelación, Residencial, Comercial">
+      <img src="images/servicio1.jpg" alt="Servicio 1">
+      <div class="card-content">
+        <h3>Reformas Modernas</h3>
+        <p>Empresa: Constructora Soluciones</p>
+        <p>Especialistas en remodelaciones residenciales y comerciales.</p>
+        <a class="btn" href="empresas/constructora-soluciones.html">Ver más</a>
+        <a class="btn" href="https://wa.me/1234567890" target="_blank">Contactar</a>
+        <a class="btn" href="catalogos/constructora-soluciones.pdf" target="_blank">Catálogo</a>
+      </div>
+    </div>
+
+    <div class="card" data-keywords="Transporte, Express, TransMovil, Logística, Mercancías">
+      <img src="images/servicio2.jpg" alt="Servicio 2">
+      <div class="card-content">
+        <h3>Transporte Express</h3>
+        <p>Empresa: TransMovil</p>
+        <p>Servicio rápido de transporte y logística de mercancías.</p>
+        <a class="btn" href="empresas/transmovil.html">Ver más</a>
+        <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar</a>
+        <a class="btn" href="catalogos/transmovil.pdf" target="_blank">Catálogo</a>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Productos Destacados -->
+<section>
+  <h2 class="section-title">Productos Destacados</h2>
+  <div class="cards">
+    <div class="card" data-keywords="Comida, Gourmet, Restaurante Delicias, Menú, Evento">
+      <img src="images/producto1.jpg" alt="Producto 1">
+      <div class="card-content">
+        <h3>Comida Gourmet</h3>
+        <p>Empresa: Restaurante Delicias</p>
+        <p>Menús personalizados para eventos y entregas a domicilio.</p>
+        <div class="price">Precio: 15 USD</div>
+        <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar proveedor</a>
+        <a class="btn" href="catalogos/comida-gourmet.pdf" target="_blank">Catálogo</a>
+      </div>
+    </div>
+
+    <div class="card" data-keywords="Bebidas, Naturales, Jugos Tropicales, Smoothies, Saludables">
+      <img src="images/producto2.jpg" alt="Producto 2">
+      <div class="card-content">
+        <h3>Bebidas Naturales</h3>
+        <p>Empresa: Jugos Tropicales</p>
+        <p>Variedad de jugos y smoothies frescos y saludables.</p>
+        <div class="price">Precio: 5 USD</div>
+        <a class="btn" href="https://wa.me/1234567892" target="_blank">Contactar proveedor</a>
+        <a class="btn" href="catalogos/jugos-tropicales.pdf" target="_blank">Catálogo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ofertas Plus -->
+<section>
+  <h2 class="section-title">
+    Ofertas Plus de neXo
+    <a class="btn" href="contacto.html">Solicitar Servicio</a>
+    <a class="btn" href="catalogos/ofertas-plus.pdf" target="_blank">Catálogo</a>
+  </h2>
+  <p style="color:#111; font-weight:bold; margin-bottom:20px;">Con neXo aumenta el crecimiento de tu negocio en un corto plazo</p>
+  <div class="cards">
+    <div class="card">
+      <img src="images/logo-design.jpg" alt="Diseño de Logotipos">
+      <div class="card-content"><h3>Diseño de Logotipos</h3></div>
+    </div>
+    <div class="card">
+      <img src="images/tarjeta.jpg" alt="Tarjetas de Presentación">
+      <div class="card-content"><h3>Tarjetas de Presentación</h3></div>
+    </div>
+    <div class="card">
+      <img src="images/manual.jpg" alt="Manual de Identidad">
+      <div class="card-content"><h3>Manual de Identidad</h3></div>
+    </div>
+    <div class="card">
+      <img src="images/flayer.jpg" alt="Flayers y Plegables">
+      <div class="card-content"><h3>Flayers y Plegables</h3></div>
+    </div>
+    <div class="card">
+      <img src="images/interiores.jpg" alt="Diseño de Interiores">
+      <div class="card-content"><h3>Diseño de Interiores</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
-  © neXo – Plataforma de publicidad y servicios
+  <p>¿Quieres publicar tu negocio o servicio? Contáctanos:</p>
+  <a class="footer-btn" href="contacto.html">Contactar con neXo</a>
+  <a class="footer-btn" href="mailto:tuemail@correo.com">Enviar email</a>
+  <p>© neXo – Publicidad y servicios</p>
 </footer>
+
+<!-- Script de autocompletado y búsqueda -->
+<script>
+const searchData = [
+  { name: "Reformas Modernas", url: "empresas/constructora-soluciones.html" },
+  { name: "Transporte Express", url: "empresas/transmovil.html" },
+  { name: "Comida Gourmet", url: "productos/comida-gourmet.html" },
+  { name: "Bebidas Naturales", url: "productos/jugos-tropicales.html" },
+  { name: "Diseño de Logotipos", url: "contacto.html" },
+  { name: "Tarjetas de Presentación", url: "contacto.html" },
+  { name: "Manual de Identidad", url: "contacto.html" },
+  { name: "Flayers y Plegables", url: "contacto.html" },
+  { name: "Diseño de Interiores", url: "contacto.html" }
+];
+
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+const searchButton = document.getElementById('searchButton');
+
+function filterSearch() {
+  const query = searchInput.value.toLowerCase();
+  searchResults.innerHTML = '';
+  if(query === '') { searchResults.style.display='none'; return; }
+  const filtered = searchData.filter(item => item.name.toLowerCase().includes(query));
+  filtered.forEach(item => {
+    const div = document.createElement('div');
+    div.textContent = item.name;
+    div.addEventListener('click', ()=>{ window.location.href=item.url; });
+    searchResults.appendChild(div);
+  });
+  searchResults.style.display = filtered.length ? 'block':'none';
+}
+
+searchInput.addEventListener('input', filterSearch);
+searchButton.addEventListener('click', filterSearch);
+
+document.addEventListener('click', function(e){
+  if(!searchInput.contains(e.target)) { searchResults.style.display='none'; }
+});
+</script>
 
 </body>
 </html>
