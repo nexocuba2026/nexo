@@ -2,35 +2,63 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Tienda | neXo</title>
+  <title>neXo | Tienda</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#fff; color:#111; }
-    header { background:#000; color:#fff; padding:25px; text-align:center; }
+    header { background:#000; color:#fff; padding:20px; text-align:center; }
     header span { color:#ff7a00; }
-    .slogan { font-size:18px; margin-top:5px; color:#ff7a00; font-weight:bold; }
-    nav a { color:#fff; margin:0 12px; text-decoration:none; font-weight:bold; }
-    section { padding:50px 20px; max-width:1200px; margin:auto; text-align:center; }
-    .cards { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-    .card { border:1px solid #ddd; border-radius:8px; width:280px; text-align:left; overflow:hidden; transition: transform 0.2s; }
-    .card:hover { transform: scale(1.03); }
-    .card img { width:100%; height:180px; object-fit:cover; }
-    .card-content { padding:15px; }
-    .card h3 { margin-top:0; color:#ff7a00; }
-    .card p { margin:10px 0; font-size:14px; color:#333; }
-    .btn { display:inline-block; padding:10px 18px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; margin-top:10px; }
-    footer { background:#000; color:#fff; text-align:center; padding:25px; font-size:14px; margin-top:40px; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+
+    section { max-width:1200px; margin:auto; padding:40px 20px; }
+
+    /* Productos */
+    .cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .card {
+      border:1px solid #ddd;
+      border-radius:8px;
+      padding:15px;
+      width:250px;
+      text-align:center;
+      transition:transform 0.2s;
+    }
+    .card:hover { transform:scale(1.03); }
+    .card img { width:100%; height:180px; object-fit:cover; border-radius:5px; }
+    .card h3 { color:#ff7a00; margin-top:10px; font-size:18px; }
+    .card p { margin:5px 0; font-size:14px; }
+    .price { font-weight:bold; color:#111; }
+    .discount { color:#ff0000; font-weight:bold; }
+    .delivery { font-size:13px; color:#007700; margin-top:5px; font-weight:bold; }
+    .btn {
+      display:inline-block;
+      padding:10px 16px;
+      background:#ff7a00;
+      color:#fff;
+      text-decoration:none;
+      border-radius:5px;
+      font-weight:bold;
+      margin-top:10px;
+    }
+
+    footer {
+      background:#000;
+      color:#fff;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+    }
+    .footer-btn { display:inline-block; margin:10px 10px; padding:10px 20px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>ne<span>X</span>o | Tienda</h1>
-  <div class="slogan">Conectando soluciones, creando resultados</div>
+  <h1>ne<span>X</span>o</h1>
   <nav>
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
-    <a href="ofertas.html">Ofertas Plus</a>
     <a href="tienda.html">Tienda</a>
     <a href="quienes.html">Quiénes Somos</a>
     <a href="contacto.html">Contacto</a>
@@ -38,30 +66,73 @@
 </header>
 
 <section>
-  <h2>Productos Destacados</h2>
+
   <div class="cards">
+
     <div class="card">
-      <img src="images/producto1.jpg" alt="Producto 1">
-      <div class="card-content">
-        <h3>Producto 1</h3>
-        <p>Descripción breve del producto.</p>
-        <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar proveedor</a>
-      </div>
+      <img src="img/producto1.jpg" alt="Producto 1">
+      <h3>Comida Gourmet</h3>
+      <p>Proveedor: Restaurante Delicias</p>
+      <div class="price">Precio: 150 CUP</div>
+      <div class="delivery">Entrega a domicilio gratis</div>
+      <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar proveedor</a>
     </div>
 
     <div class="card">
-      <img src="images/producto2.jpg" alt="Producto 2">
-      <div class="card-content">
-        <h3>Producto 2</h3>
-        <p>Descripción breve del producto.</p>
-        <a class="btn" href="https://wa.me/1234567892" target="_blank">Contactar proveedor</a>
-      </div>
+      <img src="img/producto2.jpg" alt="Producto 2">
+      <h3>Bebidas Naturales</h3>
+      <p>Proveedor: Jugos Tropicales</p>
+      <div class="price">Precio: 50 CUP <span class="discount">-10%</span></div>
+      <div class="delivery">Entrega a domicilio gratis</div>
+      <a class="btn" href="https://wa.me/1234567892" target="_blank">Contactar proveedor</a>
     </div>
+
+    <div class="card">
+      <img src="img/producto3.jpg" alt="Producto 3">
+      <h3>Snacks Saludables</h3>
+      <p>Proveedor: Delicias Naturales</p>
+      <div class="price">Precio: 75 CUP <span class="discount">-10%</span></div>
+      <div class="delivery">Entrega a domicilio gratis</div>
+      <a class="btn" href="https://wa.me/1234567893" target="_blank">Contactar proveedor</a>
+    </div>
+
+    <div class="card">
+      <img src="img/producto4.jpg" alt="Producto 4">
+      <h3>Jugos Tropicales</h3>
+      <p>Proveedor: Jugos Tropicales</p>
+      <div class="price">Precio: 60 CUP</div>
+      <div class="delivery">Domicilio con costo adicional</div>
+      <a class="btn" href="https://wa.me/1234567892" target="_blank">Contactar proveedor</a>
+    </div>
+
+    <div class="card">
+      <img src="img/producto5.jpg" alt="Producto 5">
+      <h3>Postres Caseros</h3>
+      <p>Proveedor: Dulce Hogar</p>
+      <div class="price">Precio: 80 CUP</div>
+      <div class="delivery">Domicilio con costo adicional</div>
+      <a class="btn" href="https://wa.me/1234567894" target="_blank">Contactar proveedor</a>
+    </div>
+
+    <div class="card">
+      <img src="img/producto6.jpg" alt="Producto 6">
+      <h3>Pan Artesanal</h3>
+      <p>Proveedor: Panadería El Trigo</p>
+      <div class="price">Precio: 40 CUP</div>
+      <div class="delivery">Domicilio con costo adicional</div>
+      <a class="btn" href="https://wa.me/1234567895" target="_blank">Contactar proveedor</a>
+    </div>
+
   </div>
+
 </section>
 
+<!-- Footer -->
 <footer>
-  <p>© neXo – Publicidad y servicios</p>
+  <p>¿Quieres publicar tu negocio o servicio? Contáctanos:</p>
+  <a class="footer-btn" href="contacto.html">Contactar con neXo</a>
+  <a class="footer-btn" href="mailto:tuemail@correo.com">Enviar email</a>
+  <p>© neXo – Plataforma de publicidad y servicios</p>
 </footer>
 
 </body>
