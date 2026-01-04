@@ -14,7 +14,7 @@ header {
 }
 
 header span {
-  color: #ff7a00; /* color principal de neXo */
+  color: #ff7a00;
 }
 
 nav {
@@ -37,7 +37,7 @@ section {
 /* Tarjetas de servicios/productos */
 .cards {
   display: flex;
-  flex-direction: column; /* vertical */
+  flex-direction: column;
   align-items: center;
   gap: 20px;
 }
