@@ -7,8 +7,10 @@
 
   <style>
     body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#fff; color:#111; }
-    header { background:#000; color:#fff; padding:20px; text-align:center; }
+    header { background:#000; color:#fff; padding:20px; text-align:center; display:flex; align-items:center; justify-content:center; gap:15px; flex-wrap:wrap; }
+    header h1 { margin:0; font-size:28px; }
     header span { color:#ff7a00; }
+    .page-name { font-size:20px; color:#ff7a00; font-weight:bold; }
     nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
 
     section { max-width:1200px; margin:auto; padding:40px 20px; }
@@ -22,10 +24,29 @@
       width:250px;
       text-align:center;
       transition:transform 0.2s;
+      position: relative;
     }
     .card:hover { transform:scale(1.03); }
-    .card img { width:100%; height:180px; object-fit:cover; border-radius:5px; }
-    .card h3 { color:#ff7a00; margin-top:10px; font-size:18px; }
+
+    /* Carrusel */
+    .carousel { position:relative; width:100%; height:180px; margin-bottom:10px; }
+    .carousel img { width:100%; height:100%; object-fit:cover; border-radius:5px; }
+    .carousel-btn {
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:#ff7a00;
+      color:#fff;
+      border:none;
+      padding:5px 10px;
+      cursor:pointer;
+      font-weight:bold;
+      border-radius:3px;
+    }
+    .prev { left:5px; }
+    .next { right:5px; }
+
+    .card h3 { color:#ff7a00; margin-top:0; font-size:18px; }
     .card p { margin:5px 0; font-size:14px; }
     .price { font-weight:bold; color:#111; }
     .discount { color:#ff0000; font-weight:bold; }
@@ -56,6 +77,7 @@
 
 <header>
   <h1>ne<span>X</span>o</h1>
+  <div class="page-name">| Tienda</div>
   <nav>
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
@@ -69,62 +91,91 @@
 
   <div class="cards">
 
+    <!-- PRODUCTO 1 -->
     <div class="card">
-      <img src="img/producto1.jpg" alt="Producto 1">
+      <div class="carousel" data-images='["img/producto1a.jpg","img/producto1b.jpg","img/producto1c.jpg"]'>
+        <img src="img/producto1a.jpg" alt="Producto 1">
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+      </div>
       <h3>Comida Gourmet</h3>
-      <p>Proveedor: Restaurante Delicias</p>
+      <p>Restaurante Delicias</p>
       <div class="price">Precio: 150 CUP</div>
       <div class="delivery">Entrega a domicilio gratis</div>
       <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar proveedor</a>
     </div>
 
+    <!-- PRODUCTO 2 -->
     <div class="card">
-      <img src="img/producto2.jpg" alt="Producto 2">
+      <div class="carousel" data-images='["img/producto2a.jpg","img/producto2b.jpg"]'>
+        <img src="img/producto2a.jpg" alt="Producto 2">
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+      </div>
       <h3>Bebidas Naturales</h3>
-      <p>Proveedor: Jugos Tropicales</p>
+      <p>Jugos Tropicales</p>
       <div class="price">Precio: 50 CUP <span class="discount">-10%</span></div>
       <div class="delivery">Entrega a domicilio gratis</div>
       <a class="btn" href="https://wa.me/1234567892" target="_blank">Contactar proveedor</a>
     </div>
 
+    <!-- PRODUCTO 3 -->
     <div class="card">
-      <img src="img/producto3.jpg" alt="Producto 3">
+      <div class="carousel" data-images='["img/producto3a.jpg","img/producto3b.jpg"]'>
+        <img src="img/producto3a.jpg" alt="Producto 3">
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+      </div>
       <h3>Snacks Saludables</h3>
-      <p>Proveedor: Delicias Naturales</p>
+      <p>Delicias Naturales</p>
       <div class="price">Precio: 75 CUP <span class="discount">-10%</span></div>
       <div class="delivery">Entrega a domicilio gratis</div>
       <a class="btn" href="https://wa.me/1234567893" target="_blank">Contactar proveedor</a>
     </div>
 
+    <!-- PRODUCTO 4 -->
     <div class="card">
-      <img src="img/producto4.jpg" alt="Producto 4">
+      <div class="carousel" data-images='["img/producto4a.jpg","img/producto4b.jpg"]'>
+        <img src="img/producto4a.jpg" alt="Producto 4">
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+      </div>
       <h3>Jugos Tropicales</h3>
-      <p>Proveedor: Jugos Tropicales</p>
+      <p>Jugos Tropicales</p>
       <div class="price">Precio: 60 CUP</div>
       <div class="delivery">Domicilio con costo adicional</div>
       <a class="btn" href="https://wa.me/1234567892" target="_blank">Contactar proveedor</a>
     </div>
 
+    <!-- PRODUCTO 5 -->
     <div class="card">
-      <img src="img/producto5.jpg" alt="Producto 5">
+      <div class="carousel" data-images='["img/producto5a.jpg","img/producto5b.jpg"]'>
+        <img src="img/producto5a.jpg" alt="Producto 5">
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+      </div>
       <h3>Postres Caseros</h3>
-      <p>Proveedor: Dulce Hogar</p>
+      <p>Dulce Hogar</p>
       <div class="price">Precio: 80 CUP</div>
       <div class="delivery">Domicilio con costo adicional</div>
       <a class="btn" href="https://wa.me/1234567894" target="_blank">Contactar proveedor</a>
     </div>
 
+    <!-- PRODUCTO 6 -->
     <div class="card">
-      <img src="img/producto6.jpg" alt="Producto 6">
+      <div class="carousel" data-images='["img/producto6a.jpg","img/producto6b.jpg"]'>
+        <img src="img/producto6a.jpg" alt="Producto 6">
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+      </div>
       <h3>Pan Artesanal</h3>
-      <p>Proveedor: Panadería El Trigo</p>
+      <p>Panadería El Trigo</p>
       <div class="price">Precio: 40 CUP</div>
       <div class="delivery">Domicilio con costo adicional</div>
       <a class="btn" href="https://wa.me/1234567895" target="_blank">Contactar proveedor</a>
     </div>
 
   </div>
-
 </section>
 
 <!-- Footer -->
@@ -134,6 +185,27 @@
   <a class="footer-btn" href="mailto:tuemail@correo.com">Enviar email</a>
   <p>© neXo – Plataforma de publicidad y servicios</p>
 </footer>
+
+<script>
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const imgs = JSON.parse(carousel.getAttribute('data-images'));
+  const imgTag = carousel.querySelector('img');
+  let index = 0;
+
+  const prevBtn = carousel.querySelector('.prev');
+  const nextBtn = carousel.querySelector('.next');
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + imgs.length) % imgs.length;
+    imgTag.src = imgs[index];
+  });
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % imgs.length;
+    imgTag.src = imgs[index];
+  });
+});
+</script>
 
 </body>
 </html>
