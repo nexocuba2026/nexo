@@ -4,8 +4,105 @@
   <meta charset="UTF-8">
   <title>Contacto | neXo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header span {
+      color: #ff7a00;
+    }
+
+    .slogan {
+      font-size: 18px;
+      margin-top: 5px;
+      color: #ff7a00;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ff7a00;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    /* Botones de contacto */
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .btn {
+      width: 260px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .btn svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    .btn.whatsapp {
+      background-color: #25D366;
+    }
+
+    .btn.email {
+      background-color: #ff7a00;
+    }
+
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -13,20 +110,42 @@
   <div class="slogan">Conectando soluciones, creando resultados</div>
   <nav>
     <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="tienda.html">Tienda</a>
     <a href="quienes.html">Quiénes Somos</a>
     <a href="contacto.html">Contacto</a>
   </nav>
 </header>
 
 <section>
-  <h2>Contacto con neXo</h2>
-  <p>¿Quieres publicar tu negocio o servicio? Contáctanos directamente:</p>
-  <p>WhatsApp: <a href="https://wa.me/+5355415537" target="_blank">tu número</a></p>
-  <p>Email: <a href="mailto:nexocuba2026@gmail.com">tuemail@correo.com</a></p>
+  <h2>Contacto</h2>
+  <p>
+    Si deseas publicar tu negocio, servicio o producto en neXo,
+    o estás interesado en nuestras Ofertas Plus, puedes contactarnos
+    directamente a través de los siguientes canales.
+  </p>
+
+  <div class="contact-buttons">
+    <!-- WhatsApp -->
+    <a class="btn whatsapp" href="https://wa.me/1234567890" target="_blank">
+      <svg viewBox="0 0 32 32">
+        <path d="M16 2C8.3 2 2 8.1 2 15.6c0 2.7.8 5.3 2.3 7.5L2 30l7-2.2c2.1 1.2 4.5 1.8 7 1.8 7.7 0 14-6.1 14-13.6C30 8.1 23.7 2 16 2zm0 25.2c-2.2 0-4.3-.6-6.1-1.7l-.4-.2-4.2 1.3 1.4-4-.3-.4c-1.4-2-2.2-4.3-2.2-6.6C4.2 9.3 9.6 4 16 4s11.8 5.3 11.8 11.6S22.4 27.2 16 27.2z"/>
+      </svg>
+      WhatsApp
+    </a>
+
+    <!-- Correo -->
+    <a class="btn email" href="mailto:tuemail@correo.com">
+      <svg viewBox="0 0 24 24">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+      Correo
+    </a>
+  </div>
 </section>
 
 <footer>
-  <p>© neXo – Publicidad y servicios</p>
+  <p>© neXo – Plataforma de publicidad y visibilidad para negocios</p>
 </footer>
 
 </body>
