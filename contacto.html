@@ -5,73 +5,189 @@
   <title>neXo | Contactos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #111;
+    }
+
+    header, footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .logo-header {
+      width: 180px;
+      margin-bottom: 5px;
+    }
+
+    .slogan {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .contact-section p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .contact-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .contact-card {
+      background-color: #f4f4f4;
+      padding: 20px;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .contact-card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #ff7a00;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .contact-card a:hover {
+      background-color: #e36a00;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-logo img {
+      width: 120px;
+      margin-bottom: 5px;
+    }
+
+    .footer-frase {
+      font-size: 14px;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .footer-contacto a {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 12px;
+      background-color: #ff7a00;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .footer-contacto a:hover {
+      background-color: #e36a00;
+    }
+
+  </style>
 </head>
 <body>
 
 <header>
-  <div class="header-container">
-    <img src="imagenes/logo-nexo.png" alt="neXo Logo" class="logo-header">
-    <div class="slogan">Conectando soluciones, creando resultados</div>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="tienda.html">Tienda</a>
-      <a href="ofertas.html">Ofertas Plus</a>
-      <a href="quienes.html">Quiénes Somos</a>
-      <a href="contactos.html">Contactos</a>
-    </nav>
-  </div>
+  <img src="imagenes/logo-nexo.png" alt="neXo Logo" class="logo-header">
+  <div class="slogan">Conectando soluciones, creando resultados</div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="ofertas.html">Ofertas Plus</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="contactos.html">Contactos</a>
+  </nav>
 </header>
 
-<section class="section">
+<section class="contact-section">
   <h2>Contacta con neXo</h2>
-  <p>Elige la forma que prefieras para comunicarte con nosotros.</p>
+  <p>Elige la forma que prefieras para comunicarte con nosotros y recibir información sobre nuestros servicios y soluciones.</p>
 
-  <div class="card-horizontal">
-    <img src="imagenes/whatsapp.png" alt="WhatsApp" class="card-img">
-    <div class="card-content">
+  <div class="contact-cards">
+
+    <!-- WhatsApp -->
+    <div class="contact-card">
+      <img src="imagenes/whatsapp.png" alt="WhatsApp">
       <h3>WhatsApp</h3>
-      <a href="https://wa.me/5355555555" target="_blank" class="btn-publicidad">Visitar</a>
+      <a href="https://wa.me/5355555555" target="_blank">Visitar</a>
     </div>
-  </div>
 
-  <div class="card-horizontal">
-    <img src="imagenes/correo.png" alt="Correo" class="card-img">
-    <div class="card-content">
+    <!-- Correo -->
+    <div class="contact-card">
+      <img src="imagenes/correo.png" alt="Correo">
       <h3>Correo</h3>
-      <a href="mailto:contacto@nexo.com" class="btn-publicidad">Visitar</a>
+      <a href="mailto:contacto@nexo.com">Visitar</a>
     </div>
-  </div>
 
-  <div class="card-horizontal">
-    <img src="imagenes/instagram.png" alt="Instagram" class="card-img">
-    <div class="card-content">
+    <!-- Instagram -->
+    <div class="contact-card">
+      <img src="imagenes/instagram.png" alt="Instagram">
       <h3>Instagram</h3>
-      <a href="https://instagram.com/nexo" target="_blank" class="btn-publicidad">Visitar</a>
+      <a href="https://instagram.com/nexo" target="_blank">Visitar</a>
     </div>
-  </div>
 
-  <div class="card-horizontal">
-    <img src="imagenes/facebook.png" alt="Facebook" class="card-img">
-    <div class="card-content">
+    <!-- Facebook -->
+    <div class="contact-card">
+      <img src="imagenes/facebook.png" alt="Facebook">
       <h3>Facebook</h3>
-      <a href="https://facebook.com/nexo" target="_blank" class="btn-publicidad">Visitar</a>
+      <a href="https://facebook.com/nexo" target="_blank">Visitar</a>
     </div>
-  </div>
 
-  <div class="card-horizontal">
-    <img src="imagenes/youtube.png" alt="YouTube" class="card-img">
-    <div class="card-content">
+    <!-- YouTube -->
+    <div class="contact-card">
+      <img src="imagenes/youtube.png" alt="YouTube">
       <h3>YouTube</h3>
-      <a href="https://youtube.com/nexo" target="_blank" class="btn-publicidad">Visitar</a>
+      <a href="https://youtube.com/nexo" target="_blank">Visitar</a>
     </div>
+
   </div>
 </section>
 
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-logo">
-      <img src="imagenes/logo-nexo.png" alt="neXo Logo" class="logo-footer">
+      <img src="imagenes/logo-nexo.png" alt="neXo Logo">
       <p class="footer-frase">Conectando soluciones, creando resultados</p>
     </div>
     <div class="footer-contacto">
