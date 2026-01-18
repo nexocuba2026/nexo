@@ -120,3 +120,29 @@ h2 {
   margin: 0 8px;
   text-decoration: none;
 }
+.carrusel {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Altura grande, puedes subir a 600px si quieres */
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.carrusel .slides {
+  display: flex;
+  width: 300%; /* Para 3 imágenes */
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.carrusel .slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene proporción y llena el contenedor */
+  flex-shrink: 0;
+  display: none; /* Inicialmente ocultas */
+}
+
+.carrusel .slide.active {
+  display: block;
+}
