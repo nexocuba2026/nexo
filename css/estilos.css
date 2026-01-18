@@ -1,215 +1,270 @@
-/* ================= RESET ================= */
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ================= VARIABLES ================= */
-:root {
-    --nexo-orange: #ff7a00;
-    --nexo-black: #111111;
-    --nexo-gray: #f4f4f4;
-    --text-gray: #555555;
-}
-
-/* ================= BODY ================= */
+/* Body */
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #ffffff;
-    color: var(--nexo-black);
-    line-height: 1.6;
-    padding-bottom: 100px; /* espacio para footer fijo */
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
 }
 
-/* ================= HEADER ================= */
+/* Encabezado */
 header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e6e6e6;
-    padding: 22px 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  z-index: 1000;
 }
 
-.logo-header {
-    width: 180px;
-    margin-bottom: 6px;
+header .logo img {
+  height: 60px;
 }
 
-.slogan {
-    color: var(--nexo-orange);
-    font-weight: 600;
-    font-size: 16px;
-}
-
-/* ================= NAV ================= */
-nav {
-    margin-top: 14px;
+header .eslogan {
+  color: #ff7a00;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 1.1em;
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--nexo-black);
-    margin: 0 14px;
-    font-weight: 500;
-    transition: color 0.2s ease;
+  color: #ffffff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-nav a:hover {
-    color: var(--nexo-orange);
+nav a:hover, nav a.active {
+  background-color: #ff7a00;
+  color: #ffffff;
 }
 
-/* ================= SECTIONS ================= */
-section {
-    padding: 50px 20px;
-}
-
-.section-title {
-    font-size: 30px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.category-title {
-    font-size: 22px;
-    font-weight: 700;
-    margin: 45px auto 22px;
-    max-width: 920px;
-    color: var(--nexo-orange);
-    border-left: 5px solid var(--nexo-orange);
-    padding-left: 14px;
-}
-
-/* ================= BUTTONS ================= */
-button,
-.btn {
-    background-color: var(--nexo-orange);
-    color: #ffffff;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.2s ease;
-}
-
-button:hover,
-.btn:hover {
-    opacity: 0.85;
-}
-
-/* ================= CARDS ================= */
-.product-card,
-.service-card,
-.offer-card {
-    display: flex;
-    gap: 22px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 18px;
-    margin: 20px auto;
-    max-width: 920px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.product-img,
-.service-img,
-.offer-img {
-    width: 170px;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.product-info,
-.service-info,
-.offer-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.product-info h3,
-.service-info h3,
-.offer-info h3 {
-    font-size: 21px;
-    margin-bottom: 6px;
-}
-
-.product-info p,
-.service-info p,
-.offer-info p {
-    font-size: 14px;
-    color: var(--text-gray);
-    margin-bottom: 6px;
-}
-
-/* ================= PRICE ================= */
-.price {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--nexo-orange);
-    margin: 8px 0;
-}
-
-/* ================= FOOTER (FIJO) ================= */
+/* Footer fijo */
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #ffffff;
-    border-top: 1px solid #e6e6e6;
-    text-align: center;
-    padding: 12px 10px;
-    z-index: 90;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  z-index: 1000;
 }
 
-.logo-footer {
-    width: 90px;
-    margin-bottom: 6px;
+footer .logo img {
+  height: 40px;
 }
 
-.footer-text {
-    font-size: 13px;
-    color: var(--text-gray);
-    margin-bottom: 6px;
+footer .eslogan {
+  color: #ffffff;
+  font-weight: bold;
 }
 
-.footer-buttons a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: var(--nexo-black);
-    font-weight: 500;
-    font-size: 14px;
+footer .contactos a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ff7a00;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-.footer-buttons a:hover {
-    color: var(--nexo-orange);
+footer .contactos a:hover {
+  opacity: 0.8;
 }
 
-/* ================= RESPONSIVE ================= */
+/* Carrusel */
+.carrusel {
+  margin-top: 100px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carrusel img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.carrusel .texto-carrusel {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Secciones */
+section {
+  padding: 120px 50px 50px 50px;
+}
+
+/* Tarjetas generales */
+.tarjeta {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border: 1px solid #ff7a00;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 15px;
+}
+
+.tarjeta img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.tarjeta .contenido {
+  flex: 1;
+}
+
+.tarjeta .contenido h3 {
+  color: #ff7a00;
+  margin-bottom: 10px;
+}
+
+.tarjeta .contenido p {
+  margin-bottom: 8px;
+}
+
+.tarjeta .contenido .botones {
+  margin-top: 10px;
+}
+
+.tarjeta .contenido .botones a {
+  text-decoration: none;
+  background-color: #ff7a00;
+  color: #ffffff;
+  padding: 7px 12px;
+  margin-right: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.tarjeta .contenido .botones a:hover {
+  opacity: 0.9;
+}
+
+/* Secciones de categorías */
+.categoria {
+  margin: 40px 0 20px 0;
+}
+
+.categoria h2 {
+  color: #ff7a00;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff7a00;
+  padding-bottom: 5px;
+}
+
+/* Buscador */
+.buscar-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.buscar-container input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.buscar-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff7a00;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.buscar-container button:hover {
+  opacity: 0.9;
+}
+
+/* Bloques comerciales */
+.bloque-comercial {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 8px;
+}
+
+.bloque-comercial h2 {
+  color: #ff7a00;
+  margin-bottom: 15px;
+}
+
+.bloque-comercial p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.bloque-comercial a {
+  background-color: #ff7a00;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.bloque-comercial a:hover {
+  opacity: 0.9;
+}
+
+/* Sección de servicios VIP */
+.servicios-vip {
+  margin-top: 50px;
+}
+
+.servicios-vip h2 {
+  color: #ff7a00;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .product-card,
-    .service-card,
-    .offer-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .product-img,
-    .service-img,
-    .offer-img {
-        width: 100%;
-        height: auto;
-        max-width: 300px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 8px;
-    }
+  .tarjeta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tarjeta img {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+  .buscar-container input[type="text"] {
+    width: 70%;
+  }
 }
