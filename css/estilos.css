@@ -294,3 +294,68 @@ footer {
 #carrito-detalle button:hover {
     background-color: #e36a00;
 }
+/* Botón flotante del carrito */
+#carrito-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff7a00;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+#carrito-flotante:hover {
+    background-color: #e36a00;
+}
+
+#carrito-detalle {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    width: 320px;
+    background-color: #ffffff;
+    color: #111111;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    padding: 15px;
+}
+
+#carrito-detalle input {
+    width: 95%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+#carrito-detalle button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ff7a00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#carrito-detalle button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#carrito-detalle button:hover:enabled {
+    background-color: #e36a00;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
