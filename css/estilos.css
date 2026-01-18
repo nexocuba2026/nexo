@@ -123,9 +123,11 @@ h2 {
 .carrusel {
   position: relative;
   width: 100%;
-  height: 500px; /* Altura grande, puedes subir a 600px si quieres */
+  height: 300px; /* Tamaño medio, puedes subir a 350px si quieres */
   overflow: hidden;
   margin-bottom: 40px;
+  border-radius: 10px; /* opcional para bordes suaves */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra ligera */
 }
 
 .carrusel .slides {
@@ -138,11 +140,12 @@ h2 {
 .carrusel .slide {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Mantiene proporción y llena el contenedor */
+  object-fit: cover; /* llena el contenedor sin deformarse */
   flex-shrink: 0;
-  display: none; /* Inicialmente ocultas */
+  display: none; /* ocultas al inicio */
 }
 
 .carrusel .slide.active {
   display: block;
 }
+
