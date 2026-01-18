@@ -7,147 +7,60 @@
 <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-
 <header>
-  <img src="imagenes/logo-nexo.png" alt="neXo Logo" class="logo-header">
-  <div class="slogan">Conectando soluciones, creando resultados</div>
+  <div class="logo"><img src="imagenes/logo.png" alt="neXo"></div>
+  <div class="eslogan">Conectando soluciones, creando resultados</div>
   <nav>
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
-    <a href="tienda.html">Tienda</a>
+    <a href="tienda.html" class="active">Tienda</a>
     <a href="ofertas.html">Ofertas Plus</a>
     <a href="quienes.html">Quiénes Somos</a>
     <a href="contactos.html">Contactos</a>
   </nav>
 </header>
 
-<section class="products-section">
-
-  <!-- Categoría: Productos para el hogar -->
-  <h2 class="category-title">Productos para el Hogar</h2>
-  <div class="product-card">
-    <img src="imagenes/hogar1.jpg" class="product-img" alt="Lámpara de mesa">
-    <div class="product-info">
-      <h3>Lámpara de mesa</h3>
-      <p>Material: Metal y vidrio, Color: Blanco, Garantía: 1 año</p>
-      <p>Precio: $30 USD</p>
-      <p>Tienda: Casa Home</p>
-      <p>Dirección: Av. Central 45, Ciudad</p>
-      <div class="product-buttons">
-        <button onclick="contactarProveedor('Lámpara de mesa','Casa Home','+5355512345')">Contactar proveedor</button>
-      </div>
-    </div>
+<section>
+  <div class="buscar-container">
+    <input type="text" placeholder="Buscar productos">
+    <button>Buscar</button>
   </div>
 
-  <div class="product-card">
-    <img src="imagenes/hogar2.jpg" class="product-img" alt="Juego de sábanas">
-    <div class="product-info">
-      <h3>Juego de sábanas</h3>
-      <p>Material: Algodón 100%, Garantía: 6 meses</p>
-      <p>Precio: $45 USD</p>
-      <p>Tienda: Hogar Total</p>
-      <p>Dirección: Calle 12, Ciudad</p>
-      <div class="product-buttons">
-        <button onclick="contactarProveedor('Juego de sábanas','Hogar Total','+5355523456')">Contactar proveedor</button>
+  <!-- Categorías -->
+  <div class="categoria">
+    <h2>Productos para el hogar</h2>
+    <!-- Tienda X -->
+    <div class="categoria">
+      <h3>Tienda X</h3>
+      <div class="tarjeta">
+        <img src="productos/producto1.jpg" alt="">
+        <div class="contenido">
+          <h3>Producto 1</h3>
+          <p>Descripción detallada del producto 1</p>
+          <p>Precio: $25 USD</p>
+          <p>Dirección: Calle 123, Ciudad</p>
+          <div class="botones">
+            <a href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Producto%201">Contactar proveedor</a>
+          </div>
+        </div>
       </div>
+      <!-- Más productos de esta tienda -->
     </div>
+    <!-- Más tiendas en la categoría -->
   </div>
-
-  <!-- Categoría: Ferretería -->
-  <h2 class="category-title">Ferretería</h2>
-  <div class="product-card">
-    <img src="imagenes/ferreteria1.jpg" class="product-img" alt="Taladro eléctrico">
-    <div class="product-info">
-      <h3>Taladro eléctrico</h3>
-      <p>Material: Metal y plástico, Potencia: 500W, Garantía: 2 años</p>
-      <p>Precio: $60 USD</p>
-      <p>Tienda: Ferretería Plus</p>
-      <p>Dirección: Calle 45 #12, Ciudad</p>
-      <div class="product-buttons">
-        <button onclick="contactarProveedor('Taladro eléctrico','Ferretería Plus','+5355534567')">Contactar proveedor</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Categoría: Alimentos -->
-  <h2 class="category-title">Alimentos</h2>
-  <div class="product-card">
-    <img src="imagenes/alimentos1.jpg" class="product-img" alt="Aceite de cocina">
-    <div class="product-info">
-      <h3>Aceite de cocina</h3>
-      <p>Botella 1L, Garantía: 12 meses</p>
-      <p>Precio: $10 USD</p>
-      <p>Tienda: Super Alimentos</p>
-      <p>Dirección: Av. Principal 101, Ciudad</p>
-      <div class="product-buttons">
-        <button onclick="contactarProveedor('Aceite de cocina','Super Alimentos','+5355545678')">Contactar proveedor</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Categoría: Productos para Autos -->
-  <h2 class="category-title">Productos para Autos</h2>
-  <div class="product-card">
-    <img src="imagenes/autos1.jpg" class="product-img" alt="Aceite motor 5W-30">
-    <div class="product-info">
-      <h3>Aceite motor 5W-30</h3>
-      <p>Marca: Mobil, Litros: 4, Garantía: 6 meses</p>
-      <p>Precio: $35 USD</p>
-      <p>Tienda: Auto Parts</p>
-      <p>Dirección: Calle 67, Ciudad</p>
-      <div class="product-buttons">
-        <button onclick="contactarProveedor('Aceite motor 5W-30','Auto Parts','+5355556789')">Contactar proveedor</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Categoría: Productos para Motos -->
-  <h2 class="category-title">Productos para Motos</h2>
-  <div class="product-card">
-    <img src="imagenes/motos1.jpg" class="product-img" alt="Casco Moto">
-    <div class="product-info">
-      <h3>Casco Moto</h3>
-      <p>Material: Fibra, Color: Negro, Talla: M, Garantía: 1 año</p>
-      <p>Precio: $50 USD</p>
-      <p>Tienda: Moto Center</p>
-      <p>Dirección: Calle 89, Ciudad</p>
-      <div class="product-buttons">
-        <button onclick="contactarProveedor('Casco Moto','Moto Center','+5355567890')">Contactar proveedor</button>
-      </div>
-    </div>
-  </div>
-
+  <!-- Más categorías -->
 </section>
 
 <footer>
-  <img src="imagenes/logo-nexo.png" alt="Logo neXo" class="logo-footer">
-  <p>Publicidad y visibilidad para negocios y servicios</p>
-  <div class="footer-buttons">
-    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-    <a href="mailto:correo@nexo.com">Correo</a>
-    <a href="https://wa.me/5355512345" target="_blank">WhatsApp</a>
+  <div class="logo"><img src="imagenes/logo.png" alt="neXo"></div>
+  <div class="eslogan">Conectando soluciones, creando resultados</div>
+  <div class="contactos">
+    <a href="https://www.facebook.com/">Facebook</a>
+    <a href="https://www.instagram.com/">Instagram</a>
+    <a href="https://www.youtube.com/">YouTube</a>
+    <a href="mailto:contacto@nexo.com">Correo</a>
+    <a href="https://wa.me/1234567890">WhatsApp</a>
   </div>
 </footer>
-
-<script>
-function contactarProveedor(producto, tienda, telefono){
-    const mensaje = `Hola, quiero información sobre el producto: ${producto} de la tienda ${tienda}`;
-    window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
-}
-</script>
-<div class="floating-bar" onclick="abrirWhatsAppNexo()">
-    Si quieres promocionar tus servicios o productos con nexo, PULSA AQUÍ
-</div>
-
-<script>
-function abrirWhatsAppNexo() {
-    const numero = "+5355512345"; // Número de WhatsApp de nexo
-    const mensaje = "Hola, quiero promocionar mis servicios/productos con nexo";
-    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, "_blank");
-}
-</script>
-
 </body>
 </html>
