@@ -2,41 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>neXo | Tienda</title>
+<title>Tienda | neXo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/estilos.css">
-<style>
-body { font-family: Arial, sans-serif; margin:0; background:#fff; color:#111; }
-header, footer { background-color: #000; color:#fff; text-align:center; padding:15px; }
-nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
-nav a:hover { text-decoration:underline; }
-.logo-header { width:180px; margin-bottom:5px; }
-.slogan { font-size:16px; margin-bottom:10px; }
-
-.category-section { padding:30px 20px; }
-.category-title { font-size:24px; margin-bottom:20px; text-align:center; }
-
-.carousel-container { position: relative; max-width: 950px; margin: auto; overflow: hidden; }
-.carousel-slide { display: flex; transition: 0.5s; }
-.product-card { display: flex; background:#f4f4f4; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin:10px; min-width:900px; }
-.product-img { width:300px; object-fit: cover; border-radius: 10px 0 0 10px; }
-.product-info { padding: 15px; flex:1; }
-.product-info h3 { margin:0 0 10px 0; }
-.product-info p { margin:5px 0; }
-.product-buttons a { display:inline-block; margin-right:10px; margin-top:10px; padding:10px 15px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; }
-.product-buttons a:hover { background:#e36a00; }
-
-.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color:#fff; border:none; font-size:24px; padding:10px; cursor:pointer; border-radius:50%; }
-.carousel-btn.left { left:10px; }
-.carousel-btn.right { right:10px; }
-
-.footer-container { display:flex; flex-direction:column; align-items:center; }
-.footer-logo img { width:120px; margin-bottom:5px; }
-.footer-frase { font-size:14px; font-style:italic; margin-bottom:10px; }
-.footer-contacto a { display:inline-block; margin:5px; padding:8px 12px; background-color:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; }
-.footer-contacto a:hover { background-color:#e36a00; }
-
-</style>
 </head>
 <body>
 
@@ -53,105 +21,117 @@ nav a:hover { text-decoration:underline; }
 </nav>
 </header>
 
-<!-- Categoría: Productos para el Hogar -->
-<section class="category-section">
-<h2 class="category-title">Productos para el Hogar</h2>
+<section class="products-section">
+<h2 class="section-title">Productos para el Hogar</h2>
 <div class="carousel-container">
-  <button class="carousel-btn left" onclick="moveSlide(-1,0)">&#10094;</button>
-  <div class="carousel-slide" id="carousel0">
-
+  <button class="carousel-btn left" onclick="prevSlide('hogar')">&#10094;</button>
+  <div class="carousel-slide" id="carousel-hogar">
+    <!-- Producto 1 -->
     <div class="product-card">
       <img src="imagenes/producto1.jpg" class="product-img" alt="Set de Ollas">
       <div class="product-info">
         <h3>Set de Ollas</h3>
-        <p><strong>Tienda ABC</strong></p>
+        <p><strong>Tienda ABC</strong> | Dirección: Calle 12, Ciudad</p>
         <p>Material: Acero inoxidable. Características: 6 piezas, apto inducción. Garantía: 2 años.</p>
         <p>Domicilio: Gratis</p>
-        <p>Dirección: Calle 12, Ciudad</p>
+        <p>Precio: $25 USD</p>
         <div class="product-buttons">
           <a href="https://wa.me/5355555555?text=Quiero%20comprar%20Set%20de%20Ollas" target="_blank">Comprar</a>
           <a href="tienda-abc.html">Ver Todos</a>
         </div>
       </div>
     </div>
-
+    <!-- Producto 2 -->
     <div class="product-card">
-      <img src="imagenes/producto2.jpg" class="product-img" alt="Aspiradora Eléctrica">
+      <img src="imagenes/producto2.jpg" class="product-img" alt="Aspiradora">
       <div class="product-info">
-        <h3>Aspiradora Eléctrica</h3>
-        <p><strong>Tienda ABC</strong></p>
-        <p>Material: Plástico + motor metálico. Potencia: 1200W. Garantía: 1 año.</p>
+        <h3>Aspiradora Industrial</h3>
+        <p><strong>Tienda ABC</strong> | Dirección: Calle 12, Ciudad</p>
+        <p>Potencia: 1200W. Capacidad: 10L. Material: Plástico y metal. Garantía: 1 año.</p>
         <p>Domicilio: $5 USD</p>
-        <p>Dirección: Calle 12, Ciudad</p>
+        <p>Precio: $80 USD</p>
         <div class="product-buttons">
-          <a href="https://wa.me/5355555555?text=Quiero%20comprar%20Aspiradora%20Eléctrica" target="_blank">Comprar</a>
+          <a href="https://wa.me/5355555555?text=Quiero%20comprar%20Aspiradora%20Industrial" target="_blank">Comprar</a>
           <a href="tienda-abc.html">Ver Todos</a>
         </div>
       </div>
     </div>
-
-    <!-- Agrega más productos aquí siguiendo el mismo formato -->
-
+    <!-- Agrega más productos dentro de esta categoría aquí -->
   </div>
-  <button class="carousel-btn right" onclick="moveSlide(1,0)">&#10095;</button>
+  <button class="carousel-btn right" onclick="nextSlide('hogar')">&#10095;</button>
 </div>
 </section>
 
-<!-- Categoría: Productos para Autos -->
-<section class="category-section">
-<h2 class="category-title">Productos para Autos</h2>
+<!-- Otra categoría ejemplo -->
+<section class="products-section">
+<h2 class="section-title">Productos para Autos</h2>
 <div class="carousel-container">
-  <button class="carousel-btn left" onclick="moveSlide(-1,1)">&#10094;</button>
-  <div class="carousel-slide" id="carousel1">
-
+  <button class="carousel-btn left" onclick="prevSlide('autos')">&#10094;</button>
+  <div class="carousel-slide" id="carousel-autos">
     <div class="product-card">
-      <img src="imagenes/producto3.jpg" class="product-img" alt="Juego de Herramientas">
+      <img src="imagenes/producto3.jpg" class="product-img" alt="Juego de Tapas">
       <div class="product-info">
-        <h3>Juego de Herramientas</h3>
-        <p><strong>Tienda DEF</strong></p>
-        <p>Material: Acero y plástico. Características: 50 piezas. Garantía: 1 año.</p>
+        <h3>Juego de Tapas de Rueda</h3>
+        <p><strong>Tienda AutoPlus</strong> | Dirección: Av. 45, Ciudad</p>
+        <p>Material: Plástico ABS resistente. Compatible con modelos 2010-2025.</p>
         <p>Domicilio: Gratis</p>
-        <p>Dirección: Avenida 22, Ciudad</p>
+        <p>Precio: $15 USD</p>
         <div class="product-buttons">
-          <a href="https://wa.me/5355555555?text=Quiero%20comprar%20Juego%20de%20Herramientas" target="_blank">Comprar</a>
-          <a href="tienda-def.html">Ver Todos</a>
+          <a href="https://wa.me/5355555555?text=Quiero%20comprar%20Juego%20de%20Tapas%20de%20Rueda" target="_blank">Comprar</a>
+          <a href="tienda-autoplus.html">Ver Todos</a>
         </div>
       </div>
     </div>
-
     <!-- Agrega más productos -->
-
   </div>
-  <button class="carousel-btn right" onclick="moveSlide(1,1)">&#10095;</button>
+  <button class="carousel-btn right" onclick="nextSlide('autos')">&#10095;</button>
 </div>
 </section>
 
+<!-- Footer -->
 <footer>
-  <div class="footer-container">
-    <div class="footer-logo">
-      <img src="imagenes/logo-nexo.png" alt="neXo Logo">
-      <p class="footer-frase">Conectando soluciones, creando resultados</p>
-    </div>
-    <div class="footer-contacto">
-      <a href="https://wa.me/5355555555" target="_blank">WhatsApp</a>
-      <a href="mailto:contacto@nexo.com">Correo</a>
-      <a href="https://instagram.com/nexo" target="_blank">Instagram</a>
-      <a href="https://facebook.com/nexo" target="_blank">Facebook</a>
-      <a href="https://youtube.com/nexo" target="_blank">YouTube</a>
-    </div>
-  </div>
+<div class="footer-container">
+<div class="footer-logo">
+<img src="imagenes/logo-nexo.png" alt="neXo Logo">
+<p class="footer-frase">Conectando soluciones, creando resultados</p>
+</div>
+<div class="footer-contacto">
+<a href="https://wa.me/5355555555" target="_blank">WhatsApp</a>
+<a href="mailto:contacto@nexo.com">Correo</a>
+<a href="https://instagram.com/nexo" target="_blank">Instagram</a>
+<a href="https://facebook.com/nexo" target="_blank">Facebook</a>
+<a href="https://youtube.com/nexo" target="_blank">YouTube</a>
+</div>
+</div>
 </footer>
 
 <script>
-let positions = [0,0]; // indice de cada carrusel
-function moveSlide(direction, carouselIndex){
-  const carousel = document.getElementById("carousel"+carouselIndex);
-  positions[carouselIndex] += direction;
-  if(positions[carouselIndex]<0) positions[carouselIndex]=carousel.children.length-1;
-  if(positions[carouselIndex]>=carousel.children.length) positions[carouselIndex]=0;
-  const offset = -positions[carouselIndex]*900; // mismo tamaño de .product-card
-  carousel.style.transform="translateX("+offset+"px)";
+let carousels = { 'hogar':0, 'autos':0 };
+
+function showCarousel(category){
+  let carousel = document.getElementById('carousel-' + category);
+  let slides = carousel.children;
+  for(let i=0;i<slides.length;i++){ slides[i].style.display='none'; }
+  slides[carousels[category]].style.display='flex';
 }
+
+function nextSlide(category){
+  let carousel = document.getElementById('carousel-' + category);
+  carousels[category]++;
+  if(carousels[category]>=carousel.children.length) carousels[category]=0;
+  showCarousel(category);
+}
+
+function prevSlide(category){
+  let carousel = document.getElementById('carousel-' + category);
+  carousels[category]--;
+  if(carousels[category]<0) carousels[category]=carousel.children.length-1;
+  showCarousel(category);
+}
+
+// Inicializar todas
+showCarousel('hogar');
+showCarousel('autos');
 </script>
 
 </body>
