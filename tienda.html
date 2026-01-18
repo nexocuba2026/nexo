@@ -142,6 +142,52 @@ showCarousel('autos');
     <button id="cerrar-carrito">Cerrar</button>
   </div>
 </div>
+ <script>
+const carritoBoton = document.getElementById("carrito-flotante");
+const carritoDetalle = document.getElementById("carrito-detalle");
+const cerrarCarrito = document.getElementById("cerrar-carrito");
+
+// Mostrar/ocultar carrito al hacer clic
+carritoBoton.addEventListener("click", () => {
+    if(carritoDetalle.style.display === "block") {
+        carritoDetalle.style.display = "none";
+    } else {
+        carritoDetalle.style.display = "block";
+    }
+});
+
+// Cerrar con botón
+cerrarCarrito.addEventListener("click", () => {
+    carritoDetalle.style.display = "none";
+});
+
+// Aquí se puede agregar la lógica para añadir productos dinámicamente
+let carritoProductos = [];
+
+function agregarAlCarrito(producto) {
+    carritoProductos.push(producto);
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    if(carritoProductos.length === 0) {
+        carritoDetalle.innerHTML = '<p>No hay productos en el carrito.</p><button id="cerrar-carrito">Cerrar</button>';
+    } else {
+        let html = '';
+        carritoProductos.forEach((p, index) => {
+            html += `<p>${p.nombre} - $${p.precio}</p>`;
+        });
+        html += '<button id="cerrar-carrito">Cerrar</button>';
+        carritoDetalle.innerHTML = html;
+
+        // Reasignar el botón de cerrar
+        document.getElementById("cerrar-carrito").addEventListener("click", () => {
+            carritoDetalle.style.display = "none";
+        });
+    }
+}
+</script>
+ 
 </body>
 
 
