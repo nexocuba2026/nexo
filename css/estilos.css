@@ -1,151 +1,210 @@
+/* ===== BODY ===== */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
 }
 
-.header {
-  background: #000;
-  color: #fff;
-  padding: 20px;
+/* ===== HEADER ===== */
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 40px;
 }
-
-.header-top {
-  text-align: center;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
-.logo {
-  max-width: 150px;
+.logo-header {
+  width: 120px; /* logo más grande */
+  height: auto;
 }
-
-.slogan {
-  color: orange;
-  margin-top: 10px;
-}
-
-.menu {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.menu a {
-  color: #fff;
+header nav a {
+  color: #ffffff;
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
-
-.slider img {
+header .slogan {
   width: 100%;
-  max-height: 350px;
-  object-fit: cover;
-}
-
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-.gris {
-  background: #eaeaea;
-}
-
-h2 {
   text-align: center;
-  margin-bottom: 30px;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #fff;
-  width: 260px;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.precio {
+  color: #ff7a00;
   font-weight: bold;
-  color: orange;
+  margin-top: 10px;
 }
 
-.acciones a {
-  display: block;
-  margin-top: 8px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-}
-
-.vip {
-  background: #fff;
-  text-align: center;
-}
-
-.btn-nexo {
-  display: inline-block;
-  margin-top: 30px;
-  background: orange;
-  color: #fff;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.footer {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-.footer a {
-  color: orange;
-  margin: 0 8px;
-  text-decoration: none;
-}
+/* ===== CARRUSEL ===== */
 .carrusel {
   position: relative;
   width: 100%;
-  height: 300px; /* Tamaño medio, puedes subir a 350px si quieres */
+  height: 300px; /* tamaño medio */
   overflow: hidden;
   margin-bottom: 40px;
-  border-radius: 10px; /* opcional para bordes suaves */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra ligera */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
 .carrusel .slides {
   display: flex;
-  width: 300%; /* Para 3 imágenes */
+  width: 300%;
   height: 100%;
   transition: transform 1s ease-in-out;
 }
-
 .carrusel .slide {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* llena el contenedor sin deformarse */
+  object-fit: cover;
   flex-shrink: 0;
-  display: none; /* ocultas al inicio */
+  display: none;
 }
-
 .carrusel .slide.active {
   display: block;
 }
 
+/* ===== BUSQUEDA ===== */
+.busqueda {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.busqueda input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.busqueda button {
+  padding: 10px 20px;
+  background-color: #ff7a00;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.busqueda button:hover {
+  background-color: #e06600;
+}
+
+/* ===== TARJETAS HORIZONTALES ===== */
+.card-horizontal {
+  display: flex;
+  flex-direction: row;
+  background-color: #f4f4f4;
+  border-left: 5px solid #ff7a00;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-horizontal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.card-horizontal .card-img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+}
+.card-horizontal .card-content {
+  padding: 15px;
+  flex: 1;
+}
+.card-horizontal .card-content h3 {
+  margin-top: 0;
+  color: #000;
+}
+.card-horizontal .card-content p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+.card-buttons, .vip-buttons {
+  margin-top: 10px;
+}
+.card-buttons a, .vip-buttons a {
+  display: inline-block;
+  padding: 8px 15px;
+  margin-right: 10px;
+  background-color: #ff7a00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.card-buttons a:hover, .vip-buttons a:hover {
+  background-color: #e06600;
+}
+
+/* ===== PUBLICIDAD PARA CLIENTES ===== */
+.section-publicidad {
+  background-color: #ff7a00;
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 30px 0;
+}
+.section-publicidad h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+.section-publicidad p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.btn-publicidad {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-publicidad:hover {
+  background-color: #333;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 40px;
+  font-size: 14px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.logo-footer {
+  width: 60px;
+  height: auto;
+}
+.footer-frase {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+.footer-contacto a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.footer-contacto a:hover {
+  color: #ff7a00;
+}
