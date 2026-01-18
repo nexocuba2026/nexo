@@ -242,3 +242,55 @@ footer {
         margin: 5px 0;
     }
 }
+/* Botón flotante del carrito */
+#carrito-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff7a00;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+}
+
+#carrito-flotante:hover {
+    background-color: #e36a00;
+}
+
+/* Panel desplegable del carrito */
+#carrito-detalle {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    width: 300px;
+    background-color: #ffffff;
+    color: #111111;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    padding: 15px;
+}
+
+#carrito-detalle p {
+    margin-bottom: 10px;
+}
+
+#carrito-detalle button {
+    background-color: #ff7a00;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#carrito-detalle button:hover {
+    background-color: #e36a00;
+}
