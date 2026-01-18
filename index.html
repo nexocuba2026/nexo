@@ -2,223 +2,101 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>neXo | Publicidad para Negocios</title>
+<title>neXo | Conectando soluciones, creando resultados</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
-  color: #111;
-}
-
-header {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 30px 15px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 40px;
-}
-
-header span {
-  color: orange;
-}
-
-header p {
-  color: orange;
-  margin-top: 8px;
-}
-
-.search-box {
-  margin-top: 20px;
-}
-
-.search-box input {
-  padding: 12px;
-  width: 280px;
-  max-width: 90%;
-  border-radius: 5px;
-  border: none;
-}
-
-.search-box button {
-  padding: 12px 18px;
-  background: orange;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #fff;
-  width: 260px;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.card h3 {
-  margin: 10px 0 5px;
-}
-
-.card p {
-  font-size: 14px;
-}
-
-.price {
-  font-weight: bold;
-  color: orange;
-}
-
-.actions a {
-  display: block;
-  margin-top: 8px;
-  text-decoration: none;
-  background: #000;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-}
-
-.ofertas {
-  background: #fff;
-  text-align: center;
-}
-
-.ofertas span {
-  display: inline-block;
-  background: orange;
-  color: #fff;
-  padding: 8px 15px;
-  border-radius: 20px;
-  margin: 5px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  background: #000;
-  color: #fff;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-footer {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-footer a {
-  color: orange;
-  margin: 0 8px;
-  text-decoration: none;
-}
-</style>
+<link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-<header>
-  <h1>ne<span>X</span>o</h1>
-  <p>Conectando soluciones, creando resultados</p>
-
-  <div class="search-box">
-    <input type="text" placeholder="Buscar servicios, productos o empresas">
-    <button>Buscar</button>
+<!-- ===== ENCABEZADO ===== -->
+<header class="header">
+  <div class="header-top">
+    <img src="imagenes/logo-nexo.png" alt="neXo" class="logo">
+    <p class="slogan">Conectando soluciones, creando resultados</p>
   </div>
+
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="ofertas.html">Ofertas Plus</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="contactos.html">Contactos</a>
+  </nav>
 </header>
 
-<section>
+<!-- ===== CARRUSEL ===== -->
+<section class="slider">
+  <img src="imagenes/slider1.jpg">
+  <img src="imagenes/slider2.jpg">
+  <img src="imagenes/slider3.jpg">
+</section>
+
+<!-- ===== SERVICIOS DESTACADOS ===== -->
+<section class="section">
   <h2>Servicios destacados</h2>
 
   <div class="cards">
     <div class="card">
-      <img src="https://via.placeholder.com/300x180">
+      <img src="imagenes/servicio1.jpg">
       <h3>Marketing Digital</h3>
       <p>Empresa XYZ</p>
+      <p>Publicidad estratégica y posicionamiento comercial.</p>
 
-      <div class="actions">
-        <a href="#">Ver más</a>
-        <a href="#">Contactar</a>
-        <a href="#">Catálogo</a>
+      <div class="acciones">
+        <a href="servicios.html#marketing">Ver más</a>
+        <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
       </div>
     </div>
   </div>
 </section>
 
-<section>
+<!-- ===== PRODUCTOS DESTACADOS ===== -->
+<section class="section gris">
   <h2>Productos destacados</h2>
 
   <div class="cards">
     <div class="card">
-      <img src="https://via.placeholder.com/300x180">
+      <img src="imagenes/producto1.jpg">
       <h3>Impresión Publicitaria</h3>
-      <p class="price">$25 USD</p>
+      <p class="precio">$25 USD</p>
+      <p>Tienda ABC</p>
 
-      <div class="actions">
-        <a href="#">Ver más</a>
-        <a href="#">Catálogo</a>
+      <div class="acciones">
+        <a href="productos/producto-ejemplo.html">Ver más</a>
+        <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="ofertas">
-  <h2>Ofertas Plus de neXo</h2>
-  <p><strong>Con neXo aumenta el crecimiento de tu negocio en un corto plazo</strong></p>
+<!-- ===== SERVICIOS VIP ===== -->
+<section class="section vip">
+  <h2>Servicios VIP de neXo</h2>
 
-  <div>
-    <span>Diseño de logotipos</span>
-    <span>Tarjetas de presentación</span>
-    <span>Manual de identidad</span>
-    <span>Flyers</span>
-    <span>Plegables</span>
-    <span>Diseño de interiores</span>
+  <div class="cards">
+    <div class="card">
+      <img src="imagenes/vip1.jpg">
+      <h3>Diseño de logotipos</h3>
+    </div>
+
+    <div class="card">
+      <img src="imagenes/vip1.jpg">
+      <h3>Diseño de interiores comerciales</h3>
+    </div>
   </div>
 
-  <a class="btn" href="#">Catálogo</a>
+  <a class="btn-nexo" href="contactos.html">Contactar con neXo</a>
 </section>
 
-<footer>
-  <a href="#">Facebook</a>
-  <a href="#">Instagram</a>
-  <a href="#">YouTube</a>
-  <a href="#">Correo</a>
-  <a href="#">WhatsApp</a>
+<!-- ===== PIE DE PÁGINA ===== -->
+<footer class="footer">
+  <a href="https://wa.me/5355555555" target="_blank">WhatsApp</a>
+  <a href="mailto:contacto@nexo.com">Correo</a>
+  <a href="https://instagram.com/nexo" target="_blank">Instagram</a>
+  <a href="https://facebook.com/nexo" target="_blank">Facebook</a>
+  <a href="https://youtube.com/nexo" target="_blank">YouTube</a>
 </footer>
 
 </body>
