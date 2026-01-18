@@ -1,170 +1,215 @@
-/* ======== RESET ======== */
+/* ================= RESET ================= */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* ======== BODY ======== */
+/* ================= VARIABLES ================= */
+:root {
+    --nexo-orange: #ff7a00;
+    --nexo-black: #111111;
+    --nexo-gray: #f4f4f4;
+    --text-gray: #555555;
+}
+
+/* ================= BODY ================= */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background-color: #ffffff;
-    color: #111111;
+    color: var(--nexo-black);
+    line-height: 1.6;
+    padding-bottom: 100px; /* espacio para footer fijo */
 }
 
-/* ======== ENCABEZADO ======== */
+/* ================= HEADER ================= */
 header {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 22px 20px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-header .logo-header {
+.logo-header {
     width: 180px;
+    margin-bottom: 6px;
 }
 
-header .slogan {
-    color: #ff7a00;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 5px;
+.slogan {
+    color: var(--nexo-orange);
+    font-weight: 600;
+    font-size: 16px;
 }
 
+/* ================= NAV ================= */
 nav {
-    margin-top: 10px;
+    margin-top: 14px;
 }
 
 nav a {
-    color: #ffffff;
-    margin: 0 12px;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: 0.3s;
+    color: var(--nexo-black);
+    margin: 0 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: #ff7a00;
-    background-color: rgba(255, 122, 0, 0.1);
-    border-radius: 5px;
+    color: var(--nexo-orange);
 }
 
-/* ======== BOTONES UNIFORMES ======== */
-button, .btn {
-    padding: 10px 20px;
-    background-color: #000000;
-    color: #ffffff;
-    border: 2px solid #ff7a00;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover, .btn:hover {
-    background-color: #ff7a00;
-    color: #ffffff;
-}
-
-/* ======== SECCIONES ======== */
+/* ================= SECTIONS ================= */
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
-.category-title, .section-title {
+.section-title {
+    font-size: 30px;
+    font-weight: 700;
     text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #000000;
+    margin-bottom: 35px;
 }
 
-/* ======== TARJETAS ======== */
-.product-card, .service-card, .offer-card {
+.category-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 45px auto 22px;
+    max-width: 920px;
+    color: var(--nexo-orange);
+    border-left: 5px solid var(--nexo-orange);
+    padding-left: 14px;
+}
+
+/* ================= BUTTONS ================= */
+button,
+.btn {
+    background-color: var(--nexo-orange);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* ================= CARDS ================= */
+.product-card,
+.service-card,
+.offer-card {
     display: flex;
-    flex-direction: row;
-    background: linear-gradient(120deg, #000000 5%, #ff7a00 25%, #ffffff 95%);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    width: 80%;
-    max-width: 900px;
-    margin: 10px auto;
+    gap: 22px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 20px auto;
+    max-width: 920px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.product-img, .service-img, .offer-img {
-    width: 180px;
-    height: 180px;
+.product-img,
+.service-img,
+.offer-img {
+    width: 170px;
+    height: 170px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-.product-info, .service-info, .offer-info {
-    padding: 15px;
+.product-info,
+.service-info,
+.offer-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.product-info h3, .service-info h3, .offer-info h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.product-info p, .service-info p, .offer-info p {
-    font-size: 14px;
+.product-info h3,
+.service-info h3,
+.offer-info h3 {
+    font-size: 21px;
     margin-bottom: 6px;
 }
 
-/* ======== FOOTER UNIFORME ======== */
-footer {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
+.product-info p,
+.service-info p,
+.offer-info p {
     font-size: 14px;
-    margin-top: 30px;
+    color: var(--text-gray);
+    margin-bottom: 6px;
 }
 
-footer .logo-footer {
-    width: 100px;
-    margin-bottom: 10px;
+/* ================= PRICE ================= */
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--nexo-orange);
+    margin: 8px 0;
+}
+
+/* ================= FOOTER (FIJO) ================= */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e6e6e6;
+    text-align: center;
+    padding: 12px 10px;
+    z-index: 90;
+}
+
+.logo-footer {
+    width: 90px;
+    margin-bottom: 6px;
+}
+
+.footer-text {
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-bottom: 6px;
 }
 
 .footer-buttons a {
     margin: 0 10px;
-    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    color: var(--nexo-black);
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .footer-buttons a:hover {
-    color: #ff7a00;
+    color: var(--nexo-orange);
 }
 
-/* ======== BARRA FLOTANTE INFERIOR ======== */
-.floating-bar {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #000000;
-    color: #ffffff;
-    border: 2px solid #ff7a00;
-    border-radius: 25px;
-    padding: 12px 20px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 200;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .product-card,
+    .service-card,
+    .offer-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-.floating-bar:hover {
-    background-color: #ff7a00;
-    color: #000000;
+    .product-img,
+    .service-img,
+    .offer-img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
 }
