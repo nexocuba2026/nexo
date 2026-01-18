@@ -1,121 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Servicios | neXo</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <title>neXo | Servicios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
 
-<header class="header">
-  <div class="header-top">
-    <img src="imagenes/logo-nexo.png" class="logo">
-    <p class="slogan">Conectando soluciones, creando resultados</p>
+<header>
+  <div class="header-container">
+    <img src="imagenes/logo-nexo.png" alt="neXo Logo" class="logo-header">
+    <div class="slogan">Conectando soluciones, creando resultados</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="ofertas.html">Ofertas Plus</a>
+      <a href="quienes.html">Quiénes Somos</a>
+      <a href="contactos.html">Contactos</a>
+    </nav>
   </div>
-
-  <nav class="menu">
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="tienda.html">Tienda</a>
-    <a href="ofertas.html">Ofertas Plus</a>
-    <a href="quienes.html">Quiénes Somos</a>
-    <a href="contactos.html">Contactos</a>
-  </nav>
 </header>
 
 <section class="section">
-  <h2>Servicios por categoría</h2>
+  <h2>Servicios - Construcción</h2>
 
-  <!-- CONSTRUCCIÓN -->
-  <h3 id="construccion">Construcción</h3>
-  <div class="cards">
-    <div class="card">
-      <img src="imagenes/servicio1.jpg">
-      <h4>Construcción y reformas</h4>
-      <p>Empresa Constructora XYZ</p>
-      <p>Servicios integrales de obra y remodelación.</p>
-
-      <div class="acciones">
-        <a href="empresas/empresa.html">Ver empresa</a>
+  <div class="card-horizontal" id="servicio1">
+    <img src="imagenes/servicio1.jpg" alt="Albañilería" class="card-img">
+    <div class="card-content">
+      <h3>Albañilería Profesional</h3>
+      <p><strong>Empresa ConstruPlus</strong> - Obras residenciales y comerciales.</p>
+      <p>Dirección: Calle 45, Ciudad</p>
+      <p>Servicios: construcción, remodelación y mantenimiento con materiales de alta calidad.</p>
+      <div class="card-buttons">
         <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
+        <a href="catalogos/servicio1.pdf" download>Catálogo</a>
       </div>
     </div>
   </div>
 
-  <!-- RESTAURANT -->
-  <h3 id="restaurant">Restaurant</h3>
-  <div class="cards">
-    <div class="card">
-      <img src="imagenes/servicio1.jpg">
-      <h4>Restaurante especializado</h4>
-      <p>Restaurant El Sabor</p>
-      <p>Comida criolla y servicio gastronómico.</p>
-
-      <div class="acciones">
-        <a href="empresas/empresa.html">Ver empresa</a>
+  <div class="card-horizontal">
+    <img src="imagenes/servicio2.jpg" alt="Electricidad" class="card-img">
+    <div class="card-content">
+      <h3>Instalaciones Eléctricas</h3>
+      <p><strong>Empresa ElectriCo</strong> - Servicios eléctricos residenciales y comerciales.</p>
+      <p>Dirección: Calle 78, Ciudad</p>
+      <p>Servicios: instalación, mantenimiento y reparación eléctrica.</p>
+      <div class="card-buttons">
         <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- TRANSPORTE -->
-  <h3 id="transporte">Transporte</h3>
-  <div class="cards">
-    <div class="card">
-      <img src="imagenes/servicio1.jpg">
-      <h4>Transporte de carga</h4>
-      <p>Transporte Rápido</p>
-      <p>Servicios de traslado y logística.</p>
-
-      <div class="acciones">
-        <a href="empresas/empresa.html">Ver empresa</a>
-        <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- TECNOLOGÍA -->
-  <h3 id="tecnologia">Tecnología</h3>
-  <div class="cards">
-    <div class="card">
-      <img src="imagenes/servicio1.jpg">
-      <h4>Soporte informático</h4>
-      <p>Tech Solutions</p>
-      <p>Mantenimiento y soluciones digitales.</p>
-
-      <div class="acciones">
-        <a href="empresas/empresa.html">Ver empresa</a>
-        <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- VENTAS MAYORISTAS -->
-  <h3 id="mayoristas">Ventas mayoristas</h3>
-  <div class="cards">
-    <div class="card">
-      <img src="imagenes/servicio1.jpg">
-      <h4>Distribución mayorista</h4>
-      <p>Mayorista ABC</p>
-      <p>Suministro a negocios y empresas.</p>
-
-      <div class="acciones">
-        <a href="empresas/empresa.html">Ver empresa</a>
-        <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
+        <a href="catalogos/servicio2.pdf" download>Catálogo</a>
       </div>
     </div>
   </div>
 
 </section>
 
+<section class="section">
+  <h2>Servicios - Restaurante</h2>
+
+  <div class="card-horizontal">
+    <img src="imagenes/servicio3.jpg" alt="Catering" class="card-img">
+    <div class="card-content">
+      <h3>Servicios de Catering</h3>
+      <p><strong>Empresa Gourmet</strong> - Catering y eventos privados.</p>
+      <p>Dirección: Avenida Central 10, Ciudad</p>
+      <p>Servicios: comida personalizada y banquetes para eventos corporativos y sociales.</p>
+      <div class="card-buttons">
+        <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
+        <a href="catalogos/servicio3.pdf" download>Catálogo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agregar más categorías: Transporte, Tecnología, Ventas Mayoristas -->
+</section>
+
 <footer class="footer">
-  <a href="https://wa.me/5355555555" target="_blank">WhatsApp</a>
-  <a href="mailto:contacto@nexo.com">Correo</a>
-  <a href="https://instagram.com/nexo" target="_blank">Instagram</a>
-  <a href="https://facebook.com/nexo" target="_blank">Facebook</a>
-  <a href="https://youtube.com/nexo" target="_blank">YouTube</a>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="imagenes/logo-nexo.png" alt="neXo Logo" class="logo-footer">
+      <p class="footer-frase">Conectando soluciones, creando resultados</p>
+    </div>
+    <div class="footer-contacto">
+      <a href="https://wa.me/5355555555" target="_blank">WhatsApp</a>
+      <a href="mailto:contacto@nexo.com">Correo</a>
+      <a href="https://instagram.com/nexo" target="_blank">Instagram</a>
+      <a href="https://facebook.com/nexo" target="_blank">Facebook</a>
+      <a href="https://youtube.com/nexo" target="_blank">YouTube</a>
+    </div>
+  </div>
 </footer>
 
 </body>
