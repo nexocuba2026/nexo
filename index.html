@@ -5,65 +5,81 @@
   <title>Nexo | Conectando soluciones, creando resultados</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
+<!-- ===== HEADER ===== -->
 <header class="header">
-  <img src="img/logo-nexo.png" alt="Nexo">
-  <p class="slogan">Conectando soluciones, creando resultados</p>
+  <div class="header-content">
+    <img src="img/logo-nexo.png" alt="Nexo" class="logo">
+    <p class="slogan">Conectando soluciones, creando resultados</p>
 
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Buscar servicios, empresas o productos">
-    <button onclick="buscar()">Buscar</button>
-    <div id="searchResults"></div>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Buscar servicios, productos o empresas">
+      <button onclick="buscar()">Buscar</button>
+      <div id="searchResults"></div>
+    </div>
   </div>
 </header>
 
+<!-- ===== SERVICIOS DESTACADOS ===== -->
 <section class="section">
   <h2>Servicios destacados</h2>
 
   <div class="cards">
     <div class="card">
-      <img src="img/marketing.jpg">
+      <img src="img/servicio1.jpg" alt="Servicio">
       <h3>Marketing Digital</h3>
       <p>Empresa XYZ</p>
-      <a href="empresa.html">Ver más</a>
-      <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
-      <a href="catalogos/xyz.pdf" download>Catálogo</a>
+
+      <div class="card-actions">
+        <a href="empresa.html">Ver más</a>
+        <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
+        <a href="catalogos/xyz.pdf" download>Catálogo</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- ===== PRODUCTOS DESTACADOS ===== -->
+<section class="section section-gray">
   <h2>Productos destacados</h2>
 
   <div class="cards">
     <div class="card">
-      <img src="img/producto.jpg">
-      <h3>Impresión publicitaria</h3>
-      <p>$25 USD</p>
-      <a href="empresa.html">Ver más</a>
-      <a href="catalogos/xyz.pdf" download>Catálogo</a>
+      <img src="img/producto1.jpg" alt="Producto">
+      <h3>Impresión Publicitaria</h3>
+      <p class="price">$25 USD</p>
+
+      <div class="card-actions">
+        <a href="empresa.html">Ver más</a>
+        <a href="catalogos/xyz.pdf" download>Catálogo</a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ===== OFERTAS PLUS ===== -->
 <section class="section ofertas">
   <h2>Ofertas Plus de Nexo</h2>
-  <p class="frase">Con Nexo aumenta el crecimiento de tu negocio en un corto plazo</p>
+  <p class="frase">
+    Con Nexo aumenta el crecimiento de tu negocio en un corto plazo
+  </p>
 
-  <ul>
-    <li>Diseño de logotipos</li>
-    <li>Tarjetas de presentación</li>
-    <li>Manual de identidad</li>
-    <li>Flyers</li>
-    <li>Plegables</li>
-    <li>Diseño de interiores</li>
-  </ul>
+  <div class="ofertas-list">
+    <span>Diseño de logotipos</span>
+    <span>Tarjetas de presentación</span>
+    <span>Manual de identidad</span>
+    <span>Flyers</span>
+    <span>Plegables</span>
+    <span>Diseño de interiores</span>
+  </div>
 
   <a class="btn" href="catalogos/nexo.pdf" download>Catálogo</a>
 </section>
 
-<footer>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
   <a href="https://facebook.com/tupagina" target="_blank">Facebook</a>
   <a href="https://instagram.com/tupagina" target="_blank">Instagram</a>
   <a href="https://youtube.com/tucanal" target="_blank">YouTube</a>
