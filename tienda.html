@@ -9,141 +9,132 @@
 <body>
 
 <header>
-<img src="imagenes/logo-nexo.png" alt="neXo Logo" class="logo-header">
-<div class="slogan">Conectando soluciones, creando resultados</div>
-<nav>
-  <a href="index.html">Inicio</a>
-  <a href="servicios.html">Servicios</a>
-  <a href="tienda.html">Tienda</a>
-  <a href="ofertas.html">Ofertas Plus</a>
-  <a href="quienes.html">Quiénes Somos</a>
-  <a href="contactos.html">Contactos</a>
-</nav>
+  <img src="imagenes/logo-nexo.png" alt="neXo Logo" class="logo-header">
+  <div class="slogan">Conectando soluciones, creando resultados</div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="ofertas.html">Ofertas Plus</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="contactos.html">Contactos</a>
+  </nav>
 </header>
 
 <section class="products-section">
-<h2 class="section-title">Productos</h2>
 
-<div class="product-card">
-  <img src="imagenes/producto1.jpg" class="product-img" alt="Producto 1">
-  <div class="product-info">
-    <h3>Producto 1</h3>
-    <p>Material: Acero, Color: Negro, Garantía: 2 años</p>
-    <p>Tienda: XYZ Store</p>
-    <p>Dirección: Calle 123, Ciudad</p>
-    <p>Precio: $25 USD</p>
-    <div class="product-buttons">
-      <button onclick="agregarAlCarrito({nombre:'Producto 1', precio:25})">Añadir al carrito</button>
+  <!-- Categoría: Productos para el hogar -->
+  <h2 class="category-title">Productos para el Hogar</h2>
+  <div class="product-card">
+    <img src="imagenes/hogar1.jpg" class="product-img" alt="Lámpara de mesa">
+    <div class="product-info">
+      <h3>Lámpara de mesa</h3>
+      <p>Material: Metal y vidrio, Color: Blanco, Garantía: 1 año</p>
+      <p>Precio: $30 USD</p>
+      <p>Tienda: Casa Home</p>
+      <p>Dirección: Av. Central 45, Ciudad</p>
+      <div class="product-buttons">
+        <button onclick="contactarProveedor('Lámpara de mesa','Casa Home','+5355512345')">Contactar proveedor</button>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="product-card">
-  <img src="imagenes/producto2.jpg" class="product-img" alt="Producto 2">
-  <div class="product-info">
-    <h3>Producto 2</h3>
-    <p>Material: Madera, Color: Natural, Garantía: 1 año</p>
-    <p>Tienda: Casa Home</p>
-    <p>Dirección: Av. Central 45, Ciudad</p>
-    <p>Precio: $40 USD</p>
-    <div class="product-buttons">
-      <button onclick="agregarAlCarrito({nombre:'Producto 2', precio:40})">Añadir al carrito</button>
+  <div class="product-card">
+    <img src="imagenes/hogar2.jpg" class="product-img" alt="Juego de sábanas">
+    <div class="product-info">
+      <h3>Juego de sábanas</h3>
+      <p>Material: Algodón 100%, Garantía: 6 meses</p>
+      <p>Precio: $45 USD</p>
+      <p>Tienda: Hogar Total</p>
+      <p>Dirección: Calle 12, Ciudad</p>
+      <div class="product-buttons">
+        <button onclick="contactarProveedor('Juego de sábanas','Hogar Total','+5355523456')">Contactar proveedor</button>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Agrega aquí más productos similares -->
+  <!-- Categoría: Ferretería -->
+  <h2 class="category-title">Ferretería</h2>
+  <div class="product-card">
+    <img src="imagenes/ferreteria1.jpg" class="product-img" alt="Taladro eléctrico">
+    <div class="product-info">
+      <h3>Taladro eléctrico</h3>
+      <p>Material: Metal y plástico, Potencia: 500W, Garantía: 2 años</p>
+      <p>Precio: $60 USD</p>
+      <p>Tienda: Ferretería Plus</p>
+      <p>Dirección: Calle 45 #12, Ciudad</p>
+      <div class="product-buttons">
+        <button onclick="contactarProveedor('Taladro eléctrico','Ferretería Plus','+5355534567')">Contactar proveedor</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categoría: Alimentos -->
+  <h2 class="category-title">Alimentos</h2>
+  <div class="product-card">
+    <img src="imagenes/alimentos1.jpg" class="product-img" alt="Aceite de cocina">
+    <div class="product-info">
+      <h3>Aceite de cocina</h3>
+      <p>Botella 1L, Garantía: 12 meses</p>
+      <p>Precio: $10 USD</p>
+      <p>Tienda: Super Alimentos</p>
+      <p>Dirección: Av. Principal 101, Ciudad</p>
+      <div class="product-buttons">
+        <button onclick="contactarProveedor('Aceite de cocina','Super Alimentos','+5355545678')">Contactar proveedor</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categoría: Productos para Autos -->
+  <h2 class="category-title">Productos para Autos</h2>
+  <div class="product-card">
+    <img src="imagenes/autos1.jpg" class="product-img" alt="Aceite motor 5W-30">
+    <div class="product-info">
+      <h3>Aceite motor 5W-30</h3>
+      <p>Marca: Mobil, Litros: 4, Garantía: 6 meses</p>
+      <p>Precio: $35 USD</p>
+      <p>Tienda: Auto Parts</p>
+      <p>Dirección: Calle 67, Ciudad</p>
+      <div class="product-buttons">
+        <button onclick="contactarProveedor('Aceite motor 5W-30','Auto Parts','+5355556789')">Contactar proveedor</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categoría: Productos para Motos -->
+  <h2 class="category-title">Productos para Motos</h2>
+  <div class="product-card">
+    <img src="imagenes/motos1.jpg" class="product-img" alt="Casco Moto">
+    <div class="product-info">
+      <h3>Casco Moto</h3>
+      <p>Material: Fibra, Color: Negro, Talla: M, Garantía: 1 año</p>
+      <p>Precio: $50 USD</p>
+      <p>Tienda: Moto Center</p>
+      <p>Dirección: Calle 89, Ciudad</p>
+      <div class="product-buttons">
+        <button onclick="contactarProveedor('Casco Moto','Moto Center','+5355567890')">Contactar proveedor</button>
+      </div>
+    </div>
+  </div>
 
 </section>
 
-<!-- Botón flotante del carrito -->
-<div id="carrito-flotante">
-  <span>Carrito</span>
-  <div id="carrito-detalle">
-    <p>No hay productos en el carrito.</p>
+<footer>
+  <img src="imagenes/logo-nexo.png" alt="Logo neXo" class="logo-footer">
+  <p>Publicidad y visibilidad para negocios y servicios</p>
+  <div class="footer-buttons">
+    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+    <a href="mailto:correo@nexo.com">Correo</a>
+    <a href="https://wa.me/5355512345" target="_blank">WhatsApp</a>
   </div>
-</div>
+</footer>
 
 <script>
-let carritoProductos = [];
-
-function agregarAlCarrito(producto) {
-    // Ver si ya existe el producto en el carrito
-    const index = carritoProductos.findIndex(p => p.nombre === producto.nombre);
-    if(index !== -1){
-        carritoProductos[index].cantidad += 1;
-    } else {
-        producto.cantidad = 1;
-        carritoProductos.push(producto);
-    }
-    actualizarCarrito();
-}
-
-function actualizarCarrito() {
-    const carritoDetalle = document.getElementById("carrito-detalle");
-    if(carritoProductos.length === 0){
-        carritoDetalle.innerHTML = "<p>No hay productos en el carrito.</p>";
-        return;
-    }
-    let html = '';
-    carritoProductos.forEach((p, index) => {
-        html += `
-        <div class="carrito-item">
-            <p>${p.nombre} - $${p.precio} x <span id="cantidad-${index}">${p.cantidad}</span></p>
-            <button onclick="sumar(${index})">+</button>
-            <button onclick="restar(${index})">-</button>
-        </div>
-        `;
-    });
-
-    html += `
-    <h3>Información de envío</h3>
-    <input type="text" id="nombre" placeholder="Nombre" oninput="checkFormulario()">
-    <input type="text" id="direccion" placeholder="Dirección" oninput="checkFormulario()">
-    <input type="text" id="telefono" placeholder="Teléfono" oninput="checkFormulario()">
-    <button id="enviar-whatsapp" onclick="enviarWhatsApp()" disabled>Enviar pedido por WhatsApp</button>
-    `;
-
-    carritoDetalle.innerHTML = html;
-}
-
-function sumar(index){
-    carritoProductos[index].cantidad += 1;
-    actualizarCarrito();
-}
-
-function restar(index){
-    if(carritoProductos[index].cantidad > 1){
-        carritoProductos[index].cantidad -= 1;
-    } else {
-        carritoProductos.splice(index,1);
-    }
-    actualizarCarrito();
-}
-
-function checkFormulario(){
-    const nombre = document.getElementById("nombre").value.trim();
-    const direccion = document.getElementById("direccion").value.trim();
-    const telefono = document.getElementById("telefono").value.trim();
-    const boton = document.getElementById("enviar-whatsapp");
-    if(nombre !== "" && direccion !== "" && telefono !== ""){
-        boton.disabled = false;
-    } else {
-        boton.disabled = true;
-    }
-}
-
-function enviarWhatsApp(){
-    const nombre = document.getElementById("nombre").value.trim();
-    const direccion = document.getElementById("direccion").value.trim();
-    const telefono = document.getElementById("telefono").value.trim();
-    let mensaje = "Pedido de Nexo:%0A";
-    carritoProductos.forEach(p => {
-        mensaje += `${p.nombre} - Cantidad: ${p.cantidad}%0A`;
-    });
-    mensaje += `Nombre: ${nombre}%0ADirección: ${direccion}%0ATeléfono: ${telefono}`;
-    const numero = "TU_NUMERO_WHATSAPP"; // Cambia por el número de WhatsApp del proveedor
-    window.open(`https://wa.me/${numero}?text=${mensaje}`, "_blank");
+function contactarProveedor(producto, tienda, telefono){
+    const mensaje = `Hola, quiero información sobre el producto: ${producto} de la tienda ${tienda}`;
+    window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
 </script>
 
