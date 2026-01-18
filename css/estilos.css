@@ -1,8 +1,8 @@
 /* Reset básico */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -13,7 +13,7 @@ body {
     line-height: 1.5;
 }
 
-/* Header */
+/* Encabezado */
 header {
     background-color: #000000;
     color: #ffffff;
@@ -22,13 +22,14 @@ header {
 }
 
 header .logo-header {
-    width: 180px;
+    width: 200px;
     margin-bottom: 5px;
 }
 
 header .slogan {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 header nav {
@@ -37,8 +38,9 @@ header nav {
 
 header nav a {
     color: #ffffff;
-    margin: 0 12px;
+    margin: 0 15px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 header nav a:hover {
@@ -48,10 +50,9 @@ header nav a:hover {
 /* Secciones */
 .section-title {
     font-size: 26px;
-    margin-bottom: 20px;
+    margin: 30px 0 20px 0;
     text-align: center;
     color: #ff7a00;
-    margin-top: 30px;
     font-weight: bold;
 }
 
@@ -69,21 +70,30 @@ header nav a:hover {
     display: flex;
     flex-direction: row;
     background: #f4f4f4;
-    margin: 15px auto;
+    margin: 20px auto;
     border-radius: 10px;
     overflow: hidden;
     max-width: 950px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
+.service-card:hover,
+.product-card:hover,
+.oferta-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imágenes en las tarjetas */
 .service-img,
 .product-img,
 .oferta-img {
     width: 300px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 10px 0 0 10px;
 }
 
+/* Información en las tarjetas */
 .service-info,
 .product-info,
 .oferta-info {
@@ -119,6 +129,7 @@ header nav a:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: 0.3s;
+    text-align: center;
 }
 
 .service-buttons a:hover,
@@ -132,7 +143,7 @@ header nav a:hover {
 .carousel {
     position: relative;
     max-width: 100%;
-    margin: auto;
+    margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -142,6 +153,18 @@ header nav a:hover {
     max-height: 400px;
     object-fit: cover;
     display: block;
+}
+
+/* Carrusel de productos o servicios con scroll horizontal */
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Ocultar scrollbar */
 }
 
 /* Footer */
@@ -185,19 +208,7 @@ footer {
     background-color: #e36a00;
 }
 
-/* Horizontal Scroll para carrusel de productos o servicios */
-.carousel-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 10px 0;
-}
-
-.carousel-container::-webkit-scrollbar {
-    display: none; /* Ocultar scrollbar en Chrome/Safari */
-}
-
-/* Responsive */
+/* Responsive para móviles */
 @media (max-width: 768px) {
     .service-card,
     .product-card,
@@ -209,6 +220,12 @@ footer {
     .product-img,
     .oferta-img {
         width: 100%;
+        height: 250px;
         border-radius: 10px 10px 0 0;
+    }
+
+    header nav a {
+        display: block;
+        margin: 5px 0;
     }
 }
