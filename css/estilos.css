@@ -30,6 +30,7 @@ header .slogan {
     font-size: 18px;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #ff7a00; /* Eslogan naranja */
 }
 
 header nav {
@@ -84,7 +85,7 @@ header nav a:hover {
     transform: translateY(-5px);
 }
 
-/* Imágenes en las tarjetas */
+/* Imágenes en tarjetas */
 .service-img,
 .product-img,
 .oferta-img {
@@ -93,7 +94,7 @@ header nav a:hover {
     object-fit: cover;
 }
 
-/* Información en las tarjetas */
+/* Información de tarjetas */
 .service-info,
 .product-info,
 .oferta-info {
@@ -115,7 +116,7 @@ header nav a:hover {
     margin-bottom: 6px;
 }
 
-/* Botones */
+/* Botones interactivos */
 .service-buttons a,
 .product-buttons a,
 .oferta-buttons a,
@@ -124,22 +125,33 @@ header nav a:hover {
     margin-right: 10px;
     margin-top: 10px;
     padding: 10px 15px;
-    background: #ff7a00;
+    background: #111111; /* color inicial negro */
     color: #ffffff;
     border-radius: 5px;
     font-weight: bold;
     transition: 0.3s;
     text-align: center;
+    text-decoration: none;
 }
 
 .service-buttons a:hover,
 .product-buttons a:hover,
 .oferta-buttons a:hover,
 .contact-buttons a:hover {
-    background: #e36a00;
+    background-color: #ff7a00; /* naranja al pasar */
+    color: #ffffff;
 }
 
-/* Carrusel */
+.service-buttons a:active,
+.product-buttons a:active,
+.oferta-buttons a:active,
+.contact-buttons a:active {
+    background-color: #e36a00; /* naranja oscuro al presionar */
+    color: #ffffff;
+    transform: scale(0.98);
+}
+
+/* Carrusel principal */
 .carousel {
     position: relative;
     max-width: 100%;
@@ -155,7 +167,7 @@ header nav a:hover {
     display: block;
 }
 
-/* Carrusel de productos o servicios con scroll horizontal */
+/* Carrusel de productos/servicios horizontal */
 .carousel-container {
     display: flex;
     overflow-x: auto;
@@ -202,6 +214,7 @@ footer {
     border-radius: 5px;
     font-weight: bold;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .footer-contacto a:hover {
