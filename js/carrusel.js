@@ -13,8 +13,5 @@ function nextSlide() {
   showSlide(current);
 }
 
-// Mostrar primera imagen
 showSlide(current);
-
-// Cambiar cada 4 segundos
 setInterval(nextSlide, 4000);
