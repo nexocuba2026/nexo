@@ -1,207 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>neXo | Publicidad para Negocios</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <title>neXo | Publicidad para Negocios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
 <header>
-<img src="imagenes/logo-nexo.png" alt="neXo Logo" class="logo-header">
-<div class="slogan">Conectando soluciones, creando resultados</div>
-<nav>
-  <a href="index.html">Inicio</a>
-  <a href="servicios.html">Servicios</a>
-  <a href="tienda.html">Tienda</a>
-  <a href="ofertas.html">Ofertas Plus</a>
-  <a href="quienes.html">Quiénes Somos</a>
-  <a href="contactos.html">Contactos</a>
-</nav>
+  <div class="logo"><img src="imagenes/logo.png" alt="neXo"></div>
+  <div class="eslogan">Conectando soluciones, creando resultados</div>
+  <nav>
+    <a href="index.html" class="active">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="ofertas.html">Ofertas Plus</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="contactos.html">Contactos</a>
+  </nav>
 </header>
 
-<!-- Carrusel principal -->
-<section class="carousel-container">
-  <div class="carousel-slide" id="main-carousel">
-    <img src="imagenes/slide1.jpg" style="width:100%; height:400px; object-fit:cover;">
-    <img src="imagenes/slide2.jpg" style="width:100%; height:400px; object-fit:cover;">
-    <img src="imagenes/slide3.jpg" style="width:100%; height:400px; object-fit:cover;">
+<!-- Carrusel -->
+<div class="carrusel">
+  <img src="imagenes/carrusel1.jpg" alt="">
+  <div class="texto-carrusel">Servicio y calidad a tu alcance</div>
+</div>
+
+<section>
+  <!-- Buscador -->
+  <div class="buscar-container">
+    <input type="text" placeholder="Buscar servicios, productos o empresas">
+    <button>Buscar</button>
+  </div>
+
+  <!-- Servicios destacados -->
+  <div class="categoria">
+    <h2>Servicios Destacados</h2>
+    <div class="tarjeta">
+      <img src="imagenes/servicio1.jpg" alt="">
+      <div class="contenido">
+        <h3>Marketing Digital</h3>
+        <p>Empresa XYZ – Especialistas en redes sociales y publicidad online</p>
+        <p>Dirección: Calle 123, Ciudad</p>
+        <div class="botones">
+          <a href="servicios.html">Ver más</a>
+          <a href="#">Contactar</a>
+          <a href="#">Catálogo</a>
+        </div>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <img src="imagenes/servicio2.jpg" alt="">
+      <div class="contenido">
+        <h3>Diseño Gráfico</h3>
+        <p>Empresa ABC – Creatividad y branding para tu negocio</p>
+        <p>Dirección: Calle 456, Ciudad</p>
+        <div class="botones">
+          <a href="servicios.html">Ver más</a>
+          <a href="#">Contactar</a>
+          <a href="#">Catálogo</a>
+        </div>
+      </div>
+    </div>
+    <!-- Agrega más tarjetas según sea necesario -->
+  </div>
+
+  <!-- Productos destacados -->
+  <div class="categoria">
+    <h2>Productos Destacados</h2>
+    <div class="tarjeta">
+      <img src="productos/producto1.jpg" alt="">
+      <div class="contenido">
+        <h3>Impresión Publicitaria</h3>
+        <p>Tienda ABC – Material: papel y tinta profesional</p>
+        <p>Precio: $25 USD</p>
+        <p>Dirección: Calle 789, Ciudad</p>
+        <div class="botones">
+          <a href="#">Ver más</a>
+          <a href="#">Contactar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Agrega más productos -->
+  </div>
+
+  <!-- Servicios VIP de Nexo -->
+  <div class="servicios-vip">
+    <h2>Servicios VIP de Nexo</h2>
+    <div class="tarjeta">
+      <img src="imagenes/vip1.jpg" alt="">
+      <div class="contenido">
+        <h3>Diseño de Logotipos</h3>
+        <p>Creatividad y profesionalismo para tu marca</p>
+        <div class="botones">
+          <a href="contactos.html">Contactar con Nexo</a>
+        </div>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <img src="imagenes/vip2.jpg" alt="">
+      <div class="contenido">
+        <h3>Diseño de Manuales de Identidad Visual</h3>
+        <div class="botones">
+          <a href="contactos.html">Contactar con Nexo</a>
+        </div>
+      </div>
+    </div>
+    <!-- Agrega todos los demás servicios VIP -->
   </div>
 </section>
 
-<!-- Servicios Destacados -->
-<section class="services-section">
-<h2 class="section-title">Servicios Destacados</h2>
-
-<div class="service-card">
-<img src="imagenes/servicio1.jpg" class="service-img" alt="Marketing Digital">
-<div class="service-info">
-<h3>Marketing Digital</h3>
-<p><strong>Empresa XYZ</strong></p>
-<p>Empresa dedicada a servicios de marketing y publicidad digital en toda Cuba.</p>
-<p>Dirección: Calle 12, Ciudad</p>
-<div class="service-buttons">
-<a href="servicios.html#marketing-digital">Ver Más</a>
-<a href="https://wa.me/5355555555?text=Quiero%20información%20de%20Marketing%20Digital" target="_blank">Contactar</a>
-</div>
-</div>
-</div>
-
-<!-- Agregar más tarjetas de servicios aquí siguiendo el mismo formato -->
-<div class="service-card">
-<img src="imagenes/servicio1.jpg" class="service-img" alt="Marketing Digital">
-<div class="service-info">
-<h3>Construcción</h3>
-<p><strong>Empresa zzz</strong></p>
-<p>Empresa dedicada a servicios de construcción.</p>
-<p>Dirección: Calle 15, Ciudad</p>
-<div class="service-buttons">
-<a href="servicios.html#Construcción">Ver Más</a>
-<a href="https://wa.me/5355555555?text=Quiero%20información%20de%20Marketing%20Digital" target="_blank">Contactar</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Productos Destacados -->
-<section class="products-section">
-<h2 class="section-title">Productos Destacados</h2>
-
-<div class="product-card">
-<img src="imagenes/producto1.jpg" class="product-img" alt="Set de Ollas">
-<div class="product-info">
-<h3>Set de Ollas</h3>
-<p><strong>Tienda ABC</strong></p>
-<p>Material: Acero inoxidable. Características: 6 piezas, apto inducción. Garantía: 2 años.</p>
-<p>Domicilio: Gratis | Dirección: Calle 12, Ciudad</p>
-<p>Precio: $25 USD</p>
-<div class="product-buttons">
-<a href="https://wa.me/5355555555?text=Quiero%20comprar%20Set%20de%20Ollas" target="_blank">Comprar</a>
-</div>
-</div>
-</div>
-
-<!-- Agregar más productos aquí siguiendo el mismo formato -->
-
-</section>
-
-<!-- Servicios VIP de neXo -->
-<section class="services-section">
-<h2 class="section-title">Servicios VIP de neXo</h2>
-
-<div class="service-card">
-<img src="imagenes/vip1.jpg" class="service-img" alt="Diseño de Logotipos">
-<div class="service-info">
-<h3>Diseño de Logotipos</h3>
-<p>Mejora la identidad visual de tu negocio y aumenta su reconocimiento.</p>
-<div class="service-buttons">
-<a href="contactos.html">Contactar con neXo</a>
-</div>
-</div>
-</div>
-
-<div class="service-card">
-<img src="imagenes/vip2.jpg" class="service-img" alt="Manual de Identidad Visual">
-<div class="service-info">
-<h3>Diseño de Manuales de Identidad Visual</h3>
-<p>Creación de guías de identidad para mantener coherencia visual en tu negocio.</p>
-<div class="service-buttons">
-<a href="contactos.html">Contactar con neXo</a>
-</div>
-</div>
-</div>
-
-<div class="service-card">
-<img src="imagenes/vip3.jpg" class="service-img" alt="Tarjetas de Presentación">
-<div class="service-info">
-<h3>Tarjetas de Presentación</h3>
-<p>Diseño profesional y moderno para causar la mejor impresión a tus clientes.</p>
-<div class="service-buttons">
-<a href="contactos.html">Contactar con neXo</a>
-</div>
-</div>
-</div>
-
-<div class="service-card">
-<img src="imagenes/vip4.jpg" class="service-img" alt="Diseño de Souvenirs">
-<div class="service-info">
-<h3>Diseño de Souvenirs</h3>
-<p>Souvenirs personalizados para promocionar tu marca y fidelizar clientes.</p>
-<div class="service-buttons">
-<a href="contactos.html">Contactar con neXo</a>
-</div>
-</div>
-</div>
-
-<div class="service-card">
-<img src="imagenes/vip5.jpg" class="service-img" alt="Carteles Publicitarios">
-<div class="service-info">
-<h3>Carteles Publicitarios</h3>
-<p>Diseño de carteles llamativos para eventos, promociones y negocios.</p>
-<div class="service-buttons">
-<a href="contactos.html">Contactar con neXo</a>
-</div>
-</div>
-</div>
-
-<div class="service-card">
-<img src="imagenes/vip6.jpg" class="service-img" alt="Decoración de Interiores y Exteriores">
-<div class="service-info">
-<h3>Diseño y Decoración de Interiores y Exteriores</h3>
-<p>Mejora los espacios de tu negocio con diseño profesional y funcional.</p>
-<div class="service-buttons">
-<a href="contactos.html">Contactar con neXo</a>
-</div>
-</div>
-</div>
-
-</section>
-
-<!-- Sección narrativa comercial -->
-<section class="services-section">
-<h2 class="section-title">¿Tienes un negocio?</h2>
-<p style="text-align:center; max-width:800px; margin:auto;">
-Con neXo puedes darle visibilidad a tu negocio, aumentar tus clientes y mejorar tus ventas rápidamente. Nuestro equipo profesional se encarga de publicidad, marketing y diseño visual para que tu negocio destaque. Contáctanos y descubre cómo podemos transformar tu negocio en un éxito tangible.
-</p>
-<div style="text-align:center; margin-top:15px;">
-<a href="contactos.html" class="service-buttons">Contactar con neXo</a>
-</div>
-</section>
-
 <footer>
-<div class="footer-container">
-<div class="footer-logo">
-<img src="imagenes/logo-nexo.png" alt="neXo Logo">
-<p class="footer-frase">Conectando soluciones, creando resultados</p>
-</div>
-<div class="footer-contacto">
-<a href="https://wa.me/5355555555" target="_blank">WhatsApp</a>
-<a href="mailto:contacto@nexo.com">Correo</a>
-<a href="https://instagram.com/nexo" target="_blank">Instagram</a>
-<a href="https://facebook.com/nexo" target="_blank">Facebook</a>
-<a href="https://youtube.com/nexo" target="_blank">YouTube</a>
-</div>
-</div>
+  <div class="logo"><img src="imagenes/logo.png" alt="neXo"></div>
+  <div class="eslogan">Conectando soluciones, creando resultados</div>
+  <div class="contactos">
+    <a href="https://www.facebook.com/">Facebook</a>
+    <a href="https://www.instagram.com/">Instagram</a>
+    <a href="https://www.youtube.com/">YouTube</a>
+    <a href="mailto:contacto@nexo.com">Correo</a>
+    <a href="https://wa.me/1234567890">WhatsApp</a>
+  </div>
 </footer>
-
-<script>
-/* Carrusel principal automático */
-let mainSlide = 0;
-const slides = document.querySelectorAll("#main-carousel img");
-function showSlide() {
-  slides.forEach((img,i)=> img.style.display=(i===mainSlide?"block":"none"));
-  mainSlide++;
-  if(mainSlide>=slides.length) mainSlide=0;
-}
-showSlide();
-setInterval(showSlide,4000);
-</script>
-<div class="floating-bar" onclick="abrirWhatsAppNexo()">
-    Si quieres promocionar tus servicios o productos con nexo, PULSA AQUÍ
-</div>
-
-
 
 </body>
 </html>
