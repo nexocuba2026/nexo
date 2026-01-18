@@ -1,80 +1,214 @@
 /* Reset básico */
-* { box-sizing:border-box; margin:0; padding:0; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-/* Body y tipografía */
-body { font-family: Arial, Helvetica, sans-serif; background-color:#fff; color:#111; line-height:1.5; }
-a { text-decoration:none; }
+/* Body */
+body {
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.5;
+}
 
 /* Header */
-header { background-color: #000; color:#fff; text-align:center; padding:20px 10px; }
-header nav a { color:#fff; margin:0 12px; font-weight:bold; }
-header nav a:hover { text-decoration:underline; }
-.logo-header { width:180px; margin-bottom:5px; }
-.slogan { font-size:16px; margin-bottom:10px; }
-
-/* Tarjetas horizontales de servicios y productos */
-.service-card, .product-card {
-    display:flex;
-    flex-direction:row;
-    background:#f4f4f4;
-    margin:15px auto;
-    border-radius:10px;
-    overflow:hidden;
-    max-width:950px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
 }
 
-.service-img, .product-img {
-    width:300px;
-    object-fit:cover;
-    border-radius:10px 0 0 10px;
+header .logo-header {
+    width: 180px;
+    margin-bottom: 5px;
 }
 
-.service-info, .product-info {
-    padding:20px;
-    flex:1;
+header .slogan {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-.service-info h3, .product-info h3 {
-    font-size:20px;
-    margin-bottom:10px;
+header nav {
+    margin-top: 10px;
 }
 
-.service-info p, .product-info p {
-    font-size:14px;
-    margin-bottom:6px;
+header nav a {
+    color: #ffffff;
+    margin: 0 12px;
+    font-weight: bold;
 }
 
-.service-buttons a, .product-buttons a {
-    display:inline-block;
-    margin-right:10px;
-    margin-top:10px;
-    padding:10px 15px;
-    background:#ff7a00;
-    color:#fff;
-    border-radius:5px;
-    font-weight:bold;
-}
-
-.service-buttons a:hover, .product-buttons a:hover {
-    background:#e36a00;
+header nav a:hover {
+    text-decoration: underline;
 }
 
 /* Secciones */
-.services-section, .products-section { padding:30px 20px; }
-.section-title { font-size:26px; margin-bottom:20px; text-align:center; color:#ff7a00; }
+.section-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff7a00;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.services-section,
+.products-section,
+.ofertas-section,
+.quienes-section {
+    padding: 30px 20px;
+}
+
+/* Tarjetas horizontales */
+.service-card,
+.product-card,
+.oferta-card {
+    display: flex;
+    flex-direction: row;
+    background: #f4f4f4;
+    margin: 15px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 950px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.service-img,
+.product-img,
+.oferta-img {
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.service-info,
+.product-info,
+.oferta-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.service-info h3,
+.product-info h3,
+.oferta-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-info p,
+.product-info p,
+.oferta-info p {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* Botones */
+.service-buttons a,
+.product-buttons a,
+.oferta-buttons a,
+.contact-buttons a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ff7a00;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.service-buttons a:hover,
+.product-buttons a:hover,
+.oferta-buttons a:hover,
+.contact-buttons a:hover {
+    background: #e36a00;
+}
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
 
 /* Footer */
 footer {
-    background:#000;
-    color:#fff;
-    text-align:center;
-    padding:20px 10px;
-    margin-top:30px;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 30px;
 }
 
-.footer-container { display:flex; flex-direction:column; align-items:center; }
-.footer-logo img { width:120px; margin-bottom:5px; }
-.footer-frase { font-size:14px; font-style:italic; margin-bottom:10px; }
-.footer-contacto a { display:inline-block; margin:5px; padding:8px 12px; background-color:#ff7a00; color:#fff; border-radius:5px; }
-.footer-contacto a:hover { background-color:#e36a00; }
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 120px;
+    margin-bottom: 5px;
+}
+
+.footer-frase {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.footer-contacto a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #ff7a00;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.footer-contacto a:hover {
+    background-color: #e36a00;
+}
+
+/* Horizontal Scroll para carrusel de productos o servicios */
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Ocultar scrollbar en Chrome/Safari */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-card,
+    .product-card,
+    .oferta-card {
+        flex-direction: column;
+    }
+
+    .service-img,
+    .product-img,
+    .oferta-img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+}
