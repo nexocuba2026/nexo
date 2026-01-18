@@ -1,211 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>neXo | Tienda</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#fff; color:#111; }
-    header { background:#000; color:#fff; padding:20px; text-align:center; display:flex; align-items:center; justify-content:center; gap:15px; flex-wrap:wrap; }
-    header h1 { margin:0; font-size:28px; }
-    header span { color:#ff7a00; }
-    .page-name { font-size:20px; color:#ff7a00; font-weight:bold; }
-    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
-
-    section { max-width:1200px; margin:auto; padding:40px 20px; }
-
-    /* Productos */
-    .cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-    .card {
-      border:1px solid #ddd;
-      border-radius:8px;
-      padding:15px;
-      width:250px;
-      text-align:center;
-      transition:transform 0.2s;
-      position: relative;
-    }
-    .card:hover { transform:scale(1.03); }
-
-    /* Carrusel */
-    .carousel { position:relative; width:100%; height:180px; margin-bottom:10px; }
-    .carousel img { width:100%; height:100%; object-fit:cover; border-radius:5px; }
-    .carousel-btn {
-      position:absolute;
-      top:50%;
-      transform:translateY(-50%);
-      background:#ff7a00;
-      color:#fff;
-      border:none;
-      padding:5px 10px;
-      cursor:pointer;
-      font-weight:bold;
-      border-radius:3px;
-    }
-    .prev { left:5px; }
-    .next { right:5px; }
-
-    .card h3 { color:#ff7a00; margin-top:0; font-size:18px; }
-    .card p { margin:5px 0; font-size:14px; }
-    .price { font-weight:bold; color:#111; }
-    .discount { color:#ff0000; font-weight:bold; }
-    .delivery { font-size:13px; color:#007700; margin-top:5px; font-weight:bold; }
-    .btn {
-      display:inline-block;
-      padding:10px 16px;
-      background:#ff7a00;
-      color:#fff;
-      text-decoration:none;
-      border-radius:5px;
-      font-weight:bold;
-      margin-top:10px;
-    }
-
-    footer {
-      background:#000;
-      color:#fff;
-      text-align:center;
-      padding:25px;
-      margin-top:40px;
-    }
-    .footer-btn { display:inline-block; margin:10px 10px; padding:10px 20px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; }
-  </style>
+<meta charset="UTF-8">
+<title>Empresa | neXo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/estilos.css">
 </head>
 
 <body>
 
-<header>
-  <h1>ne<span>X</span>o</h1>
-  <div class="page-name">| Tienda</div>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="tienda.html">Tienda</a>
-    <a href="quienes.html">Quiénes Somos</a>
-    <a href="contacto.html">Contacto</a>
+<header class="header">
+  <div class="header-top">
+    <img src="../imagenes/logo-nexo.png" class="logo">
+    <p class="slogan">Conectando soluciones, creando resultados</p>
+  </div>
+
+  <nav class="menu">
+    <a href="../index.html">Inicio</a>
+    <a href="../servicios.html">Servicios</a>
+    <a href="../tienda.html">Tienda</a>
+    <a href="../ofertas.html">Ofertas Plus</a>
+    <a href="../quienes.html">Quiénes Somos</a>
+    <a href="../contactos.html">Contactos</a>
   </nav>
 </header>
 
-<section>
+<section class="section">
+  <h2>Empresa XYZ</h2>
 
-  <div class="cards">
+  <img src="../imagenes/servicio1.jpg" style="width:100%; max-width:600px;">
 
-    <!-- PRODUCTO 1 -->
-    <div class="card">
-      <div class="carousel" data-images='["img/producto1a.jpg","img/producto1b.jpg","img/producto1c.jpg"]'>
-        <img src="img/producto1a.jpg" alt="Producto 1">
-        <button class="carousel-btn prev">&lt;</button>
-        <button class="carousel-btn next">&gt;</button>
-      </div>
-      <h3>Comida Gourmet</h3>
-      <p>Restaurante Delicias</p>
-      <div class="price">Precio: 150 CUP</div>
-      <div class="delivery">Entrega a domicilio gratis</div>
-      <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar proveedor</a>
-    </div>
+  <p>
+    Empresa dedicada a la prestación de servicios profesionales,
+    con experiencia en su sector y enfoque en la calidad.
+  </p>
 
-    <!-- PRODUCTO 2 -->
-    <div class="card">
-      <div class="carousel" data-images='["img/producto2a.jpg","img/producto2b.jpg"]'>
-        <img src="img/producto2a.jpg" alt="Producto 2">
-        <button class="carousel-btn prev">&lt;</button>
-        <button class="carousel-btn next">&gt;</button>
-      </div>
-      <h3>Bebidas Naturales</h3>
-      <p>Jugos Tropicales</p>
-      <div class="price">Precio: 50 CUP <span class="discount">-10%</span></div>
-      <div class="delivery">Entrega a domicilio gratis</div>
-      <a class="btn" href="https://wa.me/1234567892" target="_blank">Contactar proveedor</a>
-    </div>
-
-    <!-- PRODUCTO 3 -->
-    <div class="card">
-      <div class="carousel" data-images='["img/producto3a.jpg","img/producto3b.jpg"]'>
-        <img src="img/producto3a.jpg" alt="Producto 3">
-        <button class="carousel-btn prev">&lt;</button>
-        <button class="carousel-btn next">&gt;</button>
-      </div>
-      <h3>Snacks Saludables</h3>
-      <p>Delicias Naturales</p>
-      <div class="price">Precio: 75 CUP <span class="discount">-10%</span></div>
-      <div class="delivery">Entrega a domicilio gratis</div>
-      <a class="btn" href="https://wa.me/1234567893" target="_blank">Contactar proveedor</a>
-    </div>
-
-    <!-- PRODUCTO 4 -->
-    <div class="card">
-      <div class="carousel" data-images='["img/producto4a.jpg","img/producto4b.jpg"]'>
-        <img src="img/producto4a.jpg" alt="Producto 4">
-        <button class="carousel-btn prev">&lt;</button>
-        <button class="carousel-btn next">&gt;</button>
-      </div>
-      <h3>Jugos Tropicales</h3>
-      <p>Jugos Tropicales</p>
-      <div class="price">Precio: 60 CUP</div>
-      <div class="delivery">Domicilio con costo adicional</div>
-      <a class="btn" href="https://wa.me/1234567892" target="_blank">Contactar proveedor</a>
-    </div>
-
-    <!-- PRODUCTO 5 -->
-    <div class="card">
-      <div class="carousel" data-images='["img/producto5a.jpg","img/producto5b.jpg"]'>
-        <img src="img/producto5a.jpg" alt="Producto 5">
-        <button class="carousel-btn prev">&lt;</button>
-        <button class="carousel-btn next">&gt;</button>
-      </div>
-      <h3>Postres Caseros</h3>
-      <p>Dulce Hogar</p>
-      <div class="price">Precio: 80 CUP</div>
-      <div class="delivery">Domicilio con costo adicional</div>
-      <a class="btn" href="https://wa.me/1234567894" target="_blank">Contactar proveedor</a>
-    </div>
-
-    <!-- PRODUCTO 6 -->
-    <div class="card">
-      <div class="carousel" data-images='["img/producto6a.jpg","img/producto6b.jpg"]'>
-        <img src="img/producto6a.jpg" alt="Producto 6">
-        <button class="carousel-btn prev">&lt;</button>
-        <button class="carousel-btn next">&gt;</button>
-      </div>
-      <h3>Pan Artesanal</h3>
-      <p>Panadería El Trigo</p>
-      <div class="price">Precio: 40 CUP</div>
-      <div class="delivery">Domicilio con costo adicional</div>
-      <a class="btn" href="https://wa.me/1234567895" target="_blank">Contactar proveedor</a>
-    </div>
-
+  <div class="acciones">
+    <a href="https://wa.me/5355555555" target="_blank">Contactar</a>
+    <a href="../catalogos/empresa.pdf" download>Catálogo</a>
   </div>
 </section>
 
-<!-- Footer -->
-<footer>
-  <p>¿Quieres publicar tu negocio o servicio? Contáctanos:</p>
-  <a class="footer-btn" href="contacto.html">Contactar con neXo</a>
-  <a class="footer-btn" href="mailto:tuemail@correo.com">Enviar email</a>
-  <p>© neXo – Plataforma de publicidad y servicios</p>
+<footer class="footer">
+  <a href="https://wa.me/5355555555" target="_blank">WhatsApp</a>
+  <a href="mailto:contacto@nexo.com">Correo</a>
+  <a href="https://instagram.com/nexo" target="_blank">Instagram</a>
+  <a href="https://facebook.com/nexo" target="_blank">Facebook</a>
+  <a href="https://youtube.com/nexo" target="_blank">YouTube</a>
 </footer>
-
-<script>
-document.querySelectorAll('.carousel').forEach(carousel => {
-  const imgs = JSON.parse(carousel.getAttribute('data-images'));
-  const imgTag = carousel.querySelector('img');
-  let index = 0;
-
-  const prevBtn = carousel.querySelector('.prev');
-  const nextBtn = carousel.querySelector('.next');
-
-  prevBtn.addEventListener('click', () => {
-    index = (index - 1 + imgs.length) % imgs.length;
-    imgTag.src = imgs[index];
-  });
-
-  nextBtn.addEventListener('click', () => {
-    index = (index + 1) % imgs.length;
-    imgTag.src = imgs[index];
-  });
-});
-</script>
 
 </body>
 </html>
