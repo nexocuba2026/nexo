@@ -22,173 +22,130 @@
 </header>
 
 <section class="products-section">
-<h2 class="section-title">Productos para el Hogar</h2>
-<div class="carousel-container">
-  <button class="carousel-btn left" onclick="prevSlide('hogar')">&#10094;</button>
-  <div class="carousel-slide" id="carousel-hogar">
-    <!-- Producto 1 -->
-    <div class="product-card">
-      <img src="imagenes/producto1.jpg" class="product-img" alt="Set de Ollas">
-      <div class="product-info">
-        <h3>Set de Ollas</h3>
-        <p><strong>Tienda ABC</strong> | Dirección: Calle 12, Ciudad</p>
-        <p>Material: Acero inoxidable. Características: 6 piezas, apto inducción. Garantía: 2 años.</p>
-        <p>Domicilio: Gratis</p>
-        <p>Precio: $25 USD</p>
-        <div class="product-buttons">
-          <a href="https://wa.me/5355555555?text=Quiero%20comprar%20Set%20de%20Ollas" target="_blank">Comprar</a>
-          <a href="tienda-abc.html">Ver Todos</a>
-        </div>
-      </div>
+<h2 class="section-title">Productos</h2>
+
+<div class="product-card">
+  <img src="imagenes/producto1.jpg" class="product-img" alt="Producto 1">
+  <div class="product-info">
+    <h3>Producto 1</h3>
+    <p>Material: Acero, Color: Negro, Garantía: 2 años</p>
+    <p>Tienda: XYZ Store</p>
+    <p>Dirección: Calle 123, Ciudad</p>
+    <p>Precio: $25 USD</p>
+    <div class="product-buttons">
+      <button onclick="agregarAlCarrito({nombre:'Producto 1', precio:25})">Añadir al carrito</button>
     </div>
-    <!-- Producto 2 -->
-    <div class="product-card">
-      <img src="imagenes/producto2.jpg" class="product-img" alt="Aspiradora">
-      <div class="product-info">
-        <h3>Aspiradora Industrial</h3>
-        <p><strong>Tienda ABC</strong> | Dirección: Calle 12, Ciudad</p>
-        <p>Potencia: 1200W. Capacidad: 10L. Material: Plástico y metal. Garantía: 1 año.</p>
-        <p>Domicilio: $5 USD</p>
-        <p>Precio: $80 USD</p>
-        <div class="product-buttons">
-          <a href="https://wa.me/5355555555?text=Quiero%20comprar%20Aspiradora%20Industrial" target="_blank">Comprar</a>
-          <a href="tienda-abc.html">Ver Todos</a>
-        </div>
-      </div>
-    </div>
-    <!-- Agrega más productos dentro de esta categoría aquí -->
   </div>
-  <button class="carousel-btn right" onclick="nextSlide('hogar')">&#10095;</button>
 </div>
+
+<div class="product-card">
+  <img src="imagenes/producto2.jpg" class="product-img" alt="Producto 2">
+  <div class="product-info">
+    <h3>Producto 2</h3>
+    <p>Material: Madera, Color: Natural, Garantía: 1 año</p>
+    <p>Tienda: Casa Home</p>
+    <p>Dirección: Av. Central 45, Ciudad</p>
+    <p>Precio: $40 USD</p>
+    <div class="product-buttons">
+      <button onclick="agregarAlCarrito({nombre:'Producto 2', precio:40})">Añadir al carrito</button>
+    </div>
+  </div>
+</div>
+
+<!-- Agrega aquí más productos similares -->
+
 </section>
 
-<!-- Otra categoría ejemplo -->
-<section class="products-section">
-<h2 class="section-title">Productos para Autos</h2>
-<div class="carousel-container">
-  <button class="carousel-btn left" onclick="prevSlide('autos')">&#10094;</button>
-  <div class="carousel-slide" id="carousel-autos">
-    <div class="product-card">
-      <img src="imagenes/producto3.jpg" class="product-img" alt="Juego de Tapas">
-      <div class="product-info">
-        <h3>Juego de Tapas de Rueda</h3>
-        <p><strong>Tienda AutoPlus</strong> | Dirección: Av. 45, Ciudad</p>
-        <p>Material: Plástico ABS resistente. Compatible con modelos 2010-2025.</p>
-        <p>Domicilio: Gratis</p>
-        <p>Precio: $15 USD</p>
-        <div class="product-buttons">
-          <a href="https://wa.me/5355555555?text=Quiero%20comprar%20Juego%20de%20Tapas%20de%20Rueda" target="_blank">Comprar</a>
-          <a href="tienda-autoplus.html">Ver Todos</a>
-        </div>
-      </div>
-    </div>
-    <!-- Agrega más productos -->
-  </div>
-  <button class="carousel-btn right" onclick="nextSlide('autos')">&#10095;</button>
-</div>
-</section>
-
-<!-- Footer -->
-<footer>
-<div class="footer-container">
-<div class="footer-logo">
-<img src="imagenes/logo-nexo.png" alt="neXo Logo">
-<p class="footer-frase">Conectando soluciones, creando resultados</p>
-</div>
-<div class="footer-contacto">
-<a href="https://wa.me/5355555555" target="_blank">WhatsApp</a>
-<a href="mailto:contacto@nexo.com">Correo</a>
-<a href="https://instagram.com/nexo" target="_blank">Instagram</a>
-<a href="https://facebook.com/nexo" target="_blank">Facebook</a>
-<a href="https://youtube.com/nexo" target="_blank">YouTube</a>
-</div>
-</div>
-</footer>
-
-<script>
-let carousels = { 'hogar':0, 'autos':0 };
-
-function showCarousel(category){
-  let carousel = document.getElementById('carousel-' + category);
-  let slides = carousel.children;
-  for(let i=0;i<slides.length;i++){ slides[i].style.display='none'; }
-  slides[carousels[category]].style.display='flex';
-}
-
-function nextSlide(category){
-  let carousel = document.getElementById('carousel-' + category);
-  carousels[category]++;
-  if(carousels[category]>=carousel.children.length) carousels[category]=0;
-  showCarousel(category);
-}
-
-function prevSlide(category){
-  let carousel = document.getElementById('carousel-' + category);
-  carousels[category]--;
-  if(carousels[category]<0) carousels[category]=carousel.children.length-1;
-  showCarousel(category);
-}
-
-// Inicializar todas
-showCarousel('hogar');
-showCarousel('autos');
-</script>
-  
-  <!-- Botón flotante del carrito -->
+<!-- Botón flotante del carrito -->
 <div id="carrito-flotante">
   <span>Carrito</span>
   <div id="carrito-detalle">
     <p>No hay productos en el carrito.</p>
-    <button id="cerrar-carrito">Cerrar</button>
   </div>
 </div>
- <script>
-const carritoBoton = document.getElementById("carrito-flotante");
-const carritoDetalle = document.getElementById("carrito-detalle");
-const cerrarCarrito = document.getElementById("cerrar-carrito");
 
-// Mostrar/ocultar carrito al hacer clic
-carritoBoton.addEventListener("click", () => {
-    if(carritoDetalle.style.display === "block") {
-        carritoDetalle.style.display = "none";
-    } else {
-        carritoDetalle.style.display = "block";
-    }
-});
-
-// Cerrar con botón
-cerrarCarrito.addEventListener("click", () => {
-    carritoDetalle.style.display = "none";
-});
-
-// Aquí se puede agregar la lógica para añadir productos dinámicamente
+<script>
 let carritoProductos = [];
 
 function agregarAlCarrito(producto) {
-    carritoProductos.push(producto);
+    // Ver si ya existe el producto en el carrito
+    const index = carritoProductos.findIndex(p => p.nombre === producto.nombre);
+    if(index !== -1){
+        carritoProductos[index].cantidad += 1;
+    } else {
+        producto.cantidad = 1;
+        carritoProductos.push(producto);
+    }
     actualizarCarrito();
 }
 
 function actualizarCarrito() {
-    if(carritoProductos.length === 0) {
-        carritoDetalle.innerHTML = '<p>No hay productos en el carrito.</p><button id="cerrar-carrito">Cerrar</button>';
-    } else {
-        let html = '';
-        carritoProductos.forEach((p, index) => {
-            html += `<p>${p.nombre} - $${p.precio}</p>`;
-        });
-        html += '<button id="cerrar-carrito">Cerrar</button>';
-        carritoDetalle.innerHTML = html;
+    const carritoDetalle = document.getElementById("carrito-detalle");
+    if(carritoProductos.length === 0){
+        carritoDetalle.innerHTML = "<p>No hay productos en el carrito.</p>";
+        return;
+    }
+    let html = '';
+    carritoProductos.forEach((p, index) => {
+        html += `
+        <div class="carrito-item">
+            <p>${p.nombre} - $${p.precio} x <span id="cantidad-${index}">${p.cantidad}</span></p>
+            <button onclick="sumar(${index})">+</button>
+            <button onclick="restar(${index})">-</button>
+        </div>
+        `;
+    });
 
-        // Reasignar el botón de cerrar
-        document.getElementById("cerrar-carrito").addEventListener("click", () => {
-            carritoDetalle.style.display = "none";
-        });
+    html += `
+    <h3>Información de envío</h3>
+    <input type="text" id="nombre" placeholder="Nombre" oninput="checkFormulario()">
+    <input type="text" id="direccion" placeholder="Dirección" oninput="checkFormulario()">
+    <input type="text" id="telefono" placeholder="Teléfono" oninput="checkFormulario()">
+    <button id="enviar-whatsapp" onclick="enviarWhatsApp()" disabled>Enviar pedido por WhatsApp</button>
+    `;
+
+    carritoDetalle.innerHTML = html;
+}
+
+function sumar(index){
+    carritoProductos[index].cantidad += 1;
+    actualizarCarrito();
+}
+
+function restar(index){
+    if(carritoProductos[index].cantidad > 1){
+        carritoProductos[index].cantidad -= 1;
+    } else {
+        carritoProductos.splice(index,1);
+    }
+    actualizarCarrito();
+}
+
+function checkFormulario(){
+    const nombre = document.getElementById("nombre").value.trim();
+    const direccion = document.getElementById("direccion").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const boton = document.getElementById("enviar-whatsapp");
+    if(nombre !== "" && direccion !== "" && telefono !== ""){
+        boton.disabled = false;
+    } else {
+        boton.disabled = true;
     }
 }
+
+function enviarWhatsApp(){
+    const nombre = document.getElementById("nombre").value.trim();
+    const direccion = document.getElementById("direccion").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    let mensaje = "Pedido de Nexo:%0A";
+    carritoProductos.forEach(p => {
+        mensaje += `${p.nombre} - Cantidad: ${p.cantidad}%0A`;
+    });
+    mensaje += `Nombre: ${nombre}%0ADirección: ${direccion}%0ATeléfono: ${telefono}`;
+    const numero = "TU_NUMERO_WHATSAPP"; // Cambia por el número de WhatsApp del proveedor
+    window.open(`https://wa.me/${numero}?text=${mensaje}`, "_blank");
+}
 </script>
- 
+
 </body>
-
-
 </html>
