@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Ofertas Plus | neXo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#fff; color:#111; }
-    header { background:#000; color:#fff; padding:25px; text-align:center; }
-    header span { color:#ff7a00; }
-    .slogan { font-size:18px; margin-top:5px; color:#ff7a00; font-weight:bold; }
-    nav a { color:#fff; margin:0 12px; text-decoration:none; font-weight:bold; }
-    section { padding:50px 20px; max-width:1200px; margin:auto; text-align:center; }
-    .cards { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-    .card { border:1px solid #ddd; border-radius:8px; width:280px; text-align:left; overflow:hidden; transition: transform 0.2s; }
-    .card:hover { transform: scale(1.03); }
-    .card img { width:100%; height:180px; object-fit:cover; }
-    .card-content { padding:15px; }
-    .card h3 { margin-top:0; color:#ff7a00; }
-    .card p { margin:10px 0; font-size:14px; color:#333; }
-    .btn { display:inline-block; padding:10px 18px; background:#ff7a00; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; margin-top:10px; }
-    footer { background:#000; color:#fff; text-align:center; padding:25px; font-size:14px; margin-top:40px; }
-  </style>
+<meta charset="UTF-8">
+<title>Ofertas Plus | neXo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
 
-<header>
-  <h1>Ofertas Plus | neXo</h1>
-  <div class="slogan">Conectando soluciones, creando resultados</div>
-  <nav>
+<header class="header">
+  <div class="header-top">
+    <img src="imagenes/logo-nexo.png" class="logo">
+    <p class="slogan">Conectando soluciones, creando resultados</p>
+  </div>
+
+  <nav class="menu">
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
-    <a href="ofertas.html">Ofertas Plus</a>
     <a href="tienda.html">Tienda</a>
+    <a href="ofertas.html">Ofertas Plus</a>
     <a href="quienes.html">Quiénes Somos</a>
-    <a href="contacto.html">Contacto</a>
+    <a href="contactos.html">Contactos</a>
   </nav>
 </header>
 
-<section>
-  <h2>Ofertas Destacadas</h2>
+<section class="section">
+  <h2>Ofertas Plus de neXo</h2>
+  <p class="descripcion-ofertas">
+    Con Nexo aumenta el crecimiento de tu negocio en un corto plazo.
+  </p>
+
   <div class="cards">
     <div class="card">
-      <img src="images/oferta1.jpg" alt="Oferta 1">
-      <div class="card-content">
-        <h3>Servicio Promocional 1</h3>
-        <p>Descripción breve de la oferta.</p>
-        <a class="btn" href="https://wa.me/1234567890" target="_blank">Contactar proveedor</a>
-      </div>
+      <img src="imagenes/vip1.jpg" alt="Diseño de logotipos">
+      <h3>Diseño de logotipos</h3>
     </div>
-
     <div class="card">
-      <img src="images/oferta2.jpg" alt="Oferta 2">
-      <div class="card-content">
-        <h3>Producto en Oferta 2</h3>
-        <p>Descripción breve de la oferta.</p>
-        <a class="btn" href="https://wa.me/1234567891" target="_blank">Contactar proveedor</a>
-      </div>
+      <img src="imagenes/vip2.jpg" alt="Tarjetas de presentación">
+      <h3>Tarjetas de presentación</h3>
     </div>
+    <div class="card">
+      <img src="imagenes/vip3.jpg" alt="Manual de identidad">
+      <h3>Manual de identidad</h3>
+    </div>
+    <div class="card">
+      <img src="imagenes/vip4.jpg" alt="Flyers y plegables">
+      <h3>Flyers y plegables</h3>
+    </div>
+    <div class="card">
+      <img src="imagenes/vip5.jpg" alt="Diseño de interiores">
+      <h3>Diseño de interiores</h3>
+    </div>
+  </div>
+
+  <!-- Botones generales -->
+  <div style="text-align:center; margin-top: 20px;">
+    <a class="btn-nexo" href="https://wa.me/5355555555?text=Hola%2C+quiero+solicitar+un+servicio+Plus+de+Nexo" target="_blank">
+      Solicitar Servicio
+    </a>
+    <a class="btn-nexo" href="catalogos/ofertas-plus.pdf" download>
+      Descargar Catálogo
+    </a>
   </div>
 </section>
 
-<footer>
-  <p>© neXo – Publicidad y servicios</p>
+<footer class="footer">
+  <a href="https://wa.me/5355555555" target="_blank">WhatsApp</a>
+  <a href="mailto:contacto@nexo.com">Correo</a>
+  <a href="https://instagram.com/nexo" target="_blank">Instagram</a>
+  <a href="https://facebook.com/nexo" target="_blank">Facebook</a>
+  <a href="https://youtube.com/nexo" target="_blank">YouTube</a>
 </footer>
 
 </body>
