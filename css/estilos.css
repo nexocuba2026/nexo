@@ -101,11 +101,11 @@ nav a.active {
     width: 100%;
     padding: 12px 15px;
     font-size: 16px;
-    border: 2px solid #ccc;
+    border: none;
     border-radius: 6px;
     outline: none;
     margin-bottom: 10px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
     transition: border-color 0.3s;
 }
 
@@ -231,15 +231,16 @@ nav a.active {
 
 .btn,
 .btn-card {
-    background-color: #ff7a00;
+   background-color: #ff7a00;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-    transition: all 0.3s;
+    margin-top: 12px;   /* un poco más de espacio arriba */
+    margin-right: 10px; /* separa botones horizontalmente */
+    display: inline-block;
 }
 
 .btn:hover,
