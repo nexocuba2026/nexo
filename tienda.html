@@ -1,92 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Tienda | neXo</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <title>neXo | Tienda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+
+<!-- ENCABEZADO -->
 <header>
-  <div class="logo"><img src="imagenes/logo.png" alt="neXo"></div>
+  <img src="imagenes/logo_nexo.png" alt="Logo neXo" class="logo">
   <div class="eslogan">Conectando soluciones, creando resultados</div>
   <nav>
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
-    <a href="tienda.html" class="active">Tienda</a>
+    <a href="tienda.html">Tienda</a>
     <a href="ofertas.html">Ofertas Plus</a>
-    <a href="quienes.html">Quiénes Somos</a>
+    <a href="quienes.html">Quienes Somos</a>
     <a href="contactos.html">Contactos</a>
   </nav>
 </header>
 
-<section>
-  <div class="buscar-container">
-    <input type="text" placeholder="Buscar productos">
-    <button>Buscar</button>
-  </div>
+<!-- BLOQUE DE BUSQUEDA -->
+<div class="busqueda">
+  <input type="text" placeholder="Buscar productos">
+  <a href="#" class="btn-card">Buscar</a>
+</div>
 
-  <!-- Categorías -->
-  <div class="categoria">
-    <h2>Productos para el hogar</h2>
-    <!-- Tienda X -->
-    <div class="categoria">
-      <h3>Tienda X</h3>
-      <div class="tarjeta">
-        <img src="productos/producto1.jpg" alt="">
-        <div class="contenido">
-          <h3>Producto 1</h3>
-          <p>Descripción detallada del producto 1</p>
-          <p>Precio: $25 USD</p>
-          <p>Dirección: Calle 123, Ciudad</p>
-          <div class="botones">
-            <a href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20el%20producto%20Producto%201">Contactar proveedor</a>
-          </div>
-        </div>
+<!-- PRODUCTOS POR CATEGORÍAS -->
+
+<h2>Productos para el Hogar</h2>
+<div class="cards-container">
+  <!-- Producto 1 -->
+  <div class="card">
+    <img src="imagenes/hogar1.jpg" alt="Producto Hogar 1">
+    <div class="card-content">
+      <h3>Lámpara de Mesa</h3>
+      <p>Descripción: Lámpara moderna de metal y vidrio, ideal para salas y dormitorios.</p>
+      <p>Precio: $25 USD</p>
+      <p>Tienda: Hogar y Decoración S.A.</p>
+      <p>Dirección: Calle 10, La Habana</p>
+      <div class="card-buttons">
+        <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Lámpara+de+Mesa" target="_blank" class="btn-card">Contactar Proveedor</a>
       </div>
-      <!-- Más productos de esta tienda -->
     </div>
-    <!-- Más tiendas en la categoría -->
   </div>
-  <!-- Más categorías -->
-</section>
+  
+  <!-- Producto 2 -->
+  <div class="card">
+    <img src="imagenes/hogar2.jpg" alt="Producto Hogar 2">
+    <div class="card-content">
+      <h3>Sofá 3 plazas</h3>
+      <p>Descripción: Sofá tapizado en tela resistente, color gris, con estructura de madera.</p>
+      <p>Precio: $120 USD</p>
+      <p>Tienda: Hogar y Decoración S.A.</p>
+      <p>Dirección: Calle 10, La Habana</p>
+      <div class="card-buttons">
+        <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Sofá+3+plazas" target="_blank" class="btn-card">Contactar Proveedor</a>
+      </div>
+    </div>
+  </div>
+</div>
 
+<h2>Productos de Ferretería</h2>
+<div class="cards-container">
+  <div class="card">
+    <img src="imagenes/ferreteria1.jpg" alt="Producto Ferretería 1">
+    <div class="card-content">
+      <h3>Taladro Eléctrico</h3>
+      <p>Descripción: Taladro de 500W con brocas incluidas, uso doméstico e industrial.</p>
+      <p>Precio: $40 USD</p>
+      <p>Tienda: Ferretería Central</p>
+      <p>Dirección: Calle 15, Santiago de Cuba</p>
+      <div class="card-buttons">
+        <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Taladro+Eléctrico" target="_blank" class="btn-card">Contactar Proveedor</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Productos Alimenticios</h2>
+<div class="cards-container">
+  <div class="card">
+    <img src="imagenes/alimentos1.jpg" alt="Producto Alimentos 1">
+    <div class="card-content">
+      <h3>Café Molido</h3>
+      <p>Descripción: Café 100% arábico, paquete de 500g.</p>
+      <p>Precio: $8 USD</p>
+      <p>Tienda: Café Gourmet S.A.</p>
+      <p>Dirección: Calle 20, La Habana</p>
+      <div class="card-buttons">
+        <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Café+Molido" target="_blank" class="btn-card">Contactar Proveedor</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Productos para Autos</h2>
+<div class="cards-container">
+  <div class="card">
+    <img src="imagenes/autos1.jpg" alt="Producto Auto 1">
+    <div class="card-content">
+      <h3>Neumático 195/65 R15</h3>
+      <p>Descripción: Neumático de alta durabilidad y agarre seguro en carretera.</p>
+      <p>Precio: $50 USD</p>
+      <p>Tienda: Autopartes S.A.</p>
+      <p>Dirección: Calle 12, La Habana</p>
+      <div class="card-buttons">
+        <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Neumático+195/65+R15" target="_blank" class="btn-card">Contactar Proveedor</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Productos para Motos</h2>
+<div class="cards-container">
+  <div class="card">
+    <img src="imagenes/motos1.jpg" alt="Producto Moto 1">
+    <div class="card-content">
+      <h3>Casco Protector</h3>
+      <p>Descripción: Casco homologado, talla M, color negro con visera anti-rayaduras.</p>
+      <p>Precio: $30 USD</p>
+      <p>Tienda: MotoSegura</p>
+      <p>Dirección: Calle 5, Santiago de Cuba</p>
+      <div class="card-buttons">
+        <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Casco+Protector" target="_blank" class="btn-card">Contactar Proveedor</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PIE DE PÁGINA -->
 <footer>
-
-  <div class="footer-logo">
-    <span>@</span>
-    <img src="img/logo-nexo.png" alt="Nexo">
-  </div>
-
+  <img src="imagenes/logo_nexo.png" alt="Logo neXo" class="logo-footer">
   <div class="footer-buttons">
-
-    <a href="https://wa.me/5350000000" target="_blank" class="footer-btn">
-      <img src="img/icons/whatsapp.svg" alt="WhatsApp">
-      WhatsApp
+    <a href="https://wa.me/53XXXXXXXXX" target="_blank" class="btn-card">
+      <img src="imagenes/whatsapp.png" alt="WhatsApp"> WhatsApp
     </a>
-
-    <a href="mailto:contacto@nexo.com" class="footer-btn">
-      <img src="img/icons/email.svg" alt="Correo">
-      Correo
+    <a href="mailto:correo@nexo.com" class="btn-card">
+      <img src="imagenes/correo.png" alt="Correo"> Correo
     </a>
-
-    <a href="https://www.instagram.com/nexo" target="_blank" class="footer-btn">
-      <img src="img/icons/instagram.svg" alt="Instagram">
-      Instagram
+    <a href="https://instagram.com/nexo" target="_blank" class="btn-card">
+      <img src="imagenes/instagram.png" alt="Instagram"> Instagram
     </a>
-
-    <a href="https://www.facebook.com/nexo" target="_blank" class="footer-btn">
-      <img src="img/icons/facebook.svg" alt="Facebook">
-      Facebook
+    <a href="https://facebook.com/nexo" target="_blank" class="btn-card">
+      <img src="imagenes/facebook.png" alt="Facebook"> Facebook
     </a>
-
-    <a href="https://www.youtube.com/@nexo" target="_blank" class="footer-btn">
-      <img src="img/icons/youtube.svg" alt="YouTube">
-      YouTube
+    <a href="https://youtube.com/nexo" target="_blank" class="btn-card">
+      <img src="imagenes/youtube.png" alt="YouTube"> YouTube
     </a>
-
   </div>
-
+  <p class="eslogan">Conectando soluciones, creando resultados</p>
 </footer>
 
 </body>
