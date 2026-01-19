@@ -57,6 +57,59 @@
     <div id="sugerencias" class="sugerencias"></div>
   </div>
 </section>
+<script>
+  const datosBusqueda = [
+    { palabra: "construcción", url: "servicios.html#construccion" },
+    { palabra: "restaurant", url: "servicios.html#restaurant" },
+    { palabra: "transporte", url: "servicios.html#transporte" },
+    { palabra: "tecnología", url: "servicios.html#tecnologia" },
+    { palabra: "ventas mayoristas", url: "servicios.html#ventas" },
+    { palabra: "productos para el hogar", url: "tienda.html#hogar" },
+    { palabra: "alimentos", url: "tienda.html#alimentos" },
+    { palabra: "productos para autos", url: "tienda.html#autos" },
+    { palabra: "productos para motos", url: "tienda.html#motos" },
+    { palabra: "ofertas plus", url: "ofertas.html" },
+    { palabra: "publicidad nexo", url: "contactos.html" }
+  ];
+
+  const input = document.getElementById("busquedaInput");
+  const sugerencias = document.getElementById("sugerencias");
+  const btnBuscar = document.getElementById("buscarBtn");
+
+  // Mostrar sugerencias
+  input.addEventListener("input", () => {
+    const texto = input.value.toLowerCase();
+    sugerencias.innerHTML = "";
+    if (texto === "") return;
+    const filtradas = datosBusqueda.filter(item => item.palabra.toLowerCase().includes(texto));
+    filtradas.forEach(item => {
+      const div = document.createElement("div");
+      div.textContent = item.palabra;
+      div.addEventListener("click", () => {
+        window.location.href = item.url;
+      });
+      sugerencias.appendChild(div);
+    });
+  });
+
+  // Acción del botón de búsqueda
+  btnBuscar.addEventListener("click", () => {
+    const texto = input.value.toLowerCase();
+    const encontrado = datosBusqueda.find(item => item.palabra.toLowerCase().includes(texto));
+    if (encontrado) {
+      window.location.href = encontrado.url;
+    } else {
+      alert("No se encontró ninguna coincidencia.");
+    }
+  });
+
+  // Ocultar sugerencias al hacer clic afuera
+  document.addEventListener("click", (e) => {
+    if (!input.contains(e.target) && !sugerencias.contains(e.target)) {
+      sugerencias.innerHTML = "";
+    }
+  });
+</script>
 
 <!-- SERVICIOS DESTACADOS -->
 <section class="destacados">
