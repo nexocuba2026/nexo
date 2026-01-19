@@ -170,21 +170,25 @@ section {
   line-height: 1.3;
 }
 
-/* BOTONES DE TARJETAS */
+/* BOTONES DE TARJETAS - NARANJA, RELIEVE, LETRA BLANCA */
 .tarjeta .btn {
-  padding: 8px 12px;
+  padding: 10px 16px;
   background-color: #ff7a00; /* naranja */
-  color: #fff; /* letra blanca */
+  color: #ffffff; /* letra blanca */
   border: none;
   border-radius: 5px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
   cursor: pointer;
-  margin-top: 5px;
-  width: max-content;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* relieve del botón */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* relieve sutil */
   transition: background 0.2s, transform 0.2s;
 }
+
+.tarjeta .btn:hover {
+  background-color: #e06600; /* naranja más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* efecto de levitación */
+}
+
 
 .tarjeta .btn:hover {
   background-color: #e06600;
