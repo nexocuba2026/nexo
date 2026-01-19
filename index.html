@@ -119,8 +119,24 @@
   </div>
 </footer>
 
-<script src="js/carrusel.js"></script>
-<script src="js/buscador.js"></script>
+<script>
+let indice = 0;
+const slides = document.querySelectorAll('.carrusel .slide');
+
+function mostrarSlide() {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === indice ? 'block' : 'none';
+    });
+    indice = (indice + 1) % slides.length;
+}
+
+// Mostrar la primera imagen al cargar
+mostrarSlide();
+
+// Cambiar imagen cada 3 segundos
+setInterval(mostrarSlide, 3000);
+</script>
+
 
 </body>
 </html>
