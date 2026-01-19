@@ -87,6 +87,53 @@ nav a.active {
 .carrusel .texto {
     display: none;
 }
+/* =========================
+   CARRUSEL EN TARJETAS
+========================= */
+
+.card-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Botones */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 8px;
+}
+
+.carousel-btn.next {
+  right: 8px;
+}
+
+.carousel-btn:hover {
+  background: orange;
+}
 
 }
 
