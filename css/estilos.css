@@ -118,25 +118,55 @@ main {
   transform: translateY(-2px);
 }
 
-/* ===== PIE DE PÁGINA ===== */
+/* =======================
+   FOOTER GENERAL
+======================= */
+
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  background: var(--negro);
+  background-color: #000;
+  padding: 30px 20px;
   text-align: center;
-  padding: 15px 0;
+  margin-top: 60px;
 }
 
-footer img {
-  height: 50px;
-  margin-bottom: 10px;
+/* Logo */
+.footer-logo img {
+  max-width: 140px;
+  margin-bottom: 15px;
 }
 
-footer .redes a {
-  margin: 0 5px;
+/* Contenedor de botones */
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-footer .redes a img {
-  width: 28px;
+/* Botones sociales */
+.footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ff7a00;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Iconos */
+.footer-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Hover */
+.footer-btn:hover {
+  background-color: #e06800;
+  transform: translateY(-2px);
 }
