@@ -74,14 +74,10 @@ nav a.active {
     display: block;
 }
 
-.carrusel .texto {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    font-size: 22px;
-    font-weight: bold;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+.carrusel .slide {
+    display: none; /* Se mostrará solo la activa */
+}
+
 }
 
 /* ========================================
