@@ -41,6 +41,10 @@ header .eslogan {
 nav {
     margin-top: 10px;
 }
+header, nav {
+    border: none; /* Elimina cualquier línea que aparezca */
+    box-shadow: none; /* Por si es sombra y se ve como línea */
+}
 
 nav a {
     color: #fff;
