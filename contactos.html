@@ -1,111 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Contactos | neXo</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <title>neXo | Contactos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-<!-- HEADER CENTRADO -->
+
+<!-- ENCABEZADO -->
 <header>
-  <div style="text-align:center; padding:20px;">
-    <div class="logo">
-      <img src="imagenes/logo.png" alt="neXo" style="height:80px;">
-    </div>
-    <div class="eslogan" style="color:#ff7a00; font-weight:bold; margin:10px 0;">
-      Conectando soluciones, creando resultados
-    </div>
-    <nav style="margin-top:10px;">
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="tienda.html">Tienda</a>
-      <a href="ofertas.html">Ofertas Plus</a>
-      <a href="quienes.html">Quiénes Somos</a>
-      <a href="contactos.html">Contactos</a>
-    </nav>
-  </div>
+  <img src="imagenes/logo_nexo.png" alt="Logo neXo" class="logo">
+  <div class="eslogan">Conectando soluciones, creando resultados</div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="ofertas.html">Ofertas Plus</a>
+    <a href="quienes.html">Quienes Somos</a>
+    <a href="contactos.html">Contactos</a>
+  </nav>
 </header>
 
-<section>
-  <h2>Contacta con Nexo</h2>
-  <div class="categoria">
-    <div class="tarjeta">
-      <img src="imagenes/facebook.png" alt="Facebook">
-      <div class="contenido">
-        <h3>Facebook</h3>
-        <div class="botones"><a href="https://www.facebook.com/">Visitar</a></div>
-      </div>
+<!-- SECCIÓN CONTACTOS -->
+<section class="contactos">
+  <h2>Contacta con nosotros</h2>
+  <div class="cards-container">
+
+    <!-- WhatsApp -->
+    <div class="card">
+      <img src="imagenes/whatsapp.png" alt="WhatsApp" class="icon-card">
+      <h3>WhatsApp</h3>
+      <p>Escríbenos directamente por WhatsApp para cualquier consulta.</p>
+      <a href="https://wa.me/53XXXXXXXXX" target="_blank" class="btn-card">Visitar</a>
     </div>
-    <div class="tarjeta">
-      <img src="imagenes/instagram.png" alt="Instagram">
-      <div class="contenido">
-        <h3>Instagram</h3>
-        <div class="botones"><a href="https://www.instagram.com/">Visitar</a></div>
-      </div>
+
+    <!-- Correo -->
+    <div class="card">
+      <img src="imagenes/correo.png" alt="Correo" class="icon-card">
+      <h3>Correo</h3>
+      <p>Envíanos un email con tus dudas, solicitudes o propuestas.</p>
+      <a href="mailto:correo@nexo.com" class="btn-card">Visitar</a>
     </div>
-    <div class="tarjeta">
-      <img src="imagenes/youtube.png" alt="YouTube">
-      <div class="contenido">
-        <h3>YouTube</h3>
-        <div class="botones"><a href="https://www.youtube.com/">Visitar</a></div>
-      </div>
+
+    <!-- Instagram -->
+    <div class="card">
+      <img src="imagenes/instagram.png" alt="Instagram" class="icon-card">
+      <h3>Instagram</h3>
+      <p>Síguenos y conoce nuestras novedades en redes sociales.</p>
+      <a href="https://instagram.com/nexo" target="_blank" class="btn-card">Visitar</a>
     </div>
-    <div class="tarjeta">
-      <img src="imagenes/correo.png" alt="Correo">
-      <div class="contenido">
-        <h3>Correo</h3>
-        <div class="botones"><a href="mailto:contacto@nexo.com">Enviar correo</a></div>
-      </div>
+
+    <!-- Facebook -->
+    <div class="card">
+      <img src="imagenes/facebook.png" alt="Facebook" class="icon-card">
+      <h3>Facebook</h3>
+      <p>Mantente informado con nuestras actualizaciones en Facebook.</p>
+      <a href="https://facebook.com/nexo" target="_blank" class="btn-card">Visitar</a>
     </div>
-    <div class="tarjeta">
-      <img src="imagenes/whatsapp.png" alt="WhatsApp">
-      <div class="contenido">
-        <h3>WhatsApp</h3>
-        <div class="botones"><a href="https://wa.me/1234567890">Escribir</a></div>
-      </div>
+
+    <!-- YouTube -->
+    <div class="card">
+      <img src="imagenes/youtube.png" alt="YouTube" class="icon-card">
+      <h3>YouTube</h3>
+      <p>Mira nuestros tutoriales, presentaciones y más en nuestro canal.</p>
+      <a href="https://youtube.com/nexo" target="_blank" class="btn-card">Visitar</a>
     </div>
+
   </div>
 </section>
 
+<!-- PIE DE PÁGINA -->
 <footer>
-
-  <div class="footer-logo">
-    <span>@</span>
-    <img src="img/logo-nexo.png" alt="Nexo">
-  </div>
-
+  <img src="imagenes/logo_nexo.png" alt="Logo neXo" class="logo-footer">
   <div class="footer-buttons">
-
-    <a href="https://wa.me/5350000000" target="_blank" class="footer-btn">
-      <img src="img/icons/whatsapp.svg" alt="WhatsApp">
-      WhatsApp
+    <a href="https://wa.me/53XXXXXXXXX" target="_blank" class="btn-card">
+      <img src="imagenes/whatsapp.png" alt="WhatsApp"> WhatsApp
     </a>
-
-    <a href="mailto:contacto@nexo.com" class="footer-btn">
-      <img src="img/icons/email.svg" alt="Correo">
-      Correo
+    <a href="mailto:correo@nexo.com" class="btn-card">
+      <img src="imagenes/correo.png" alt="Correo"> Correo
     </a>
-
-    <a href="https://www.instagram.com/nexo" target="_blank" class="footer-btn">
-      <img src="img/icons/instagram.svg" alt="Instagram">
-      Instagram
+    <a href="https://instagram.com/nexo" target="_blank" class="btn-card">
+      <img src="imagenes/instagram.png" alt="Instagram"> Instagram
     </a>
-
-    <a href="https://www.facebook.com/nexo" target="_blank" class="footer-btn">
-      <img src="img/icons/facebook.svg" alt="Facebook">
-      Facebook
+    <a href="https://facebook.com/nexo" target="_blank" class="btn-card">
+      <img src="imagenes/facebook.png" alt="Facebook"> Facebook
     </a>
-
-    <a href="https://www.youtube.com/@nexo" target="_blank" class="footer-btn">
-      <img src="img/icons/youtube.svg" alt="YouTube">
-      YouTube
+    <a href="https://youtube.com/nexo" target="_blank" class="btn-card">
+      <img src="imagenes/youtube.png" alt="YouTube"> YouTube
     </a>
-
   </div>
-
+  <p class="eslogan">Conectando soluciones, creando resultados</p>
 </footer>
-
 
 </body>
 </html>
