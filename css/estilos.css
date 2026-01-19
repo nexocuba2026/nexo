@@ -1,4 +1,4 @@
- /* ========================================
+/* ========================================
    RESET BÁSICO
 ======================================== */
 * {
@@ -51,13 +51,14 @@ nav a {
     transition: all 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     background-color: #ff7a00;
     border-radius: 6px;
 }
 
 /* ========================================
-   CARRUSEL
+   CARRUSEL (si lo usas en index)
 ======================================== */
 .carrusel {
     width: 90%;
@@ -156,9 +157,10 @@ nav a:hover {
 }
 
 /* ========================================
-   TARJETAS
+   TARJETAS DE PRODUCTOS / SERVICIOS
 ======================================== */
-.tarjetas-container {
+.tarjetas-container,
+.cards-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -167,6 +169,7 @@ nav a:hover {
     max-width: 1200px;
 }
 
+.card,
 .tarjeta {
     background-color: #fff;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
@@ -178,44 +181,56 @@ nav a:hover {
     transition: transform 0.3s;
 }
 
+.card:hover,
 .tarjeta:hover {
     transform: translateY(-5px);
 }
 
+.card img,
 .tarjeta img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
+.card .card-content,
 .tarjeta .contenido {
     padding: 15px;
 }
 
+.card h3,
 .tarjeta .contenido h3 {
     color: #111;
     margin-bottom: 10px;
 }
 
+.card .description,
 .tarjeta .contenido p {
     color: #555;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-.tarjeta .contenido .empresa {
+.card .price {
     font-weight: bold;
-    color: #ff7a00;
     margin-bottom: 8px;
+    color: #ff7a00;
 }
 
-.tarjeta .contenido .direccion {
-    font-size: 13px;
+.card .provider {
+    font-weight: bold;
     color: #333;
 }
 
-/* BOTONES DE TARJETAS */
-.tarjeta .btn {
+.card-buttons,
+.tarjeta .contenido .btn {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn,
+.btn-card {
     background-color: #ff7a00;
     color: #fff;
     padding: 10px 20px;
@@ -223,21 +238,29 @@ nav a:hover {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    margin-top: 10px;
-    display: inline-block;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     transition: all 0.3s;
 }
 
-.tarjeta .btn:hover {
+.btn:hover,
+.btn-card:hover {
     background-color: #e06600;
     transform: translateY(-2px);
 }
 
+.btn.secondary {
+    background-color: #555;
+}
+
+.btn.secondary:hover {
+    background-color: #333;
+}
+
 /* ========================================
-   SECCIONES
+   CATEGORIAS / TITULOS NARANJAS
 ======================================== */
-h2.categoria {
+h2.categoria,
+.section-title h2 {
     color: #ff7a00;
     font-size: 22px;
     margin: 40px 0 20px;
@@ -245,7 +268,79 @@ h2.categoria {
 }
 
 /* ========================================
-   PIE DE PÁGINA
+   BARRA DE INFORMACION DE TIENDAS
+======================================== */
+.barra-tienda {
+    background-color: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 10px 0 20px 0;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* ========================================
+   HORIZONTAL SCROLL PARA TARJETAS
+======================================== */
+.horizontal-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background-color: #ff7a00;
+    border-radius: 4px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+/* ========================================
+   SECCIONES DE QUIENES SOMOS
+======================================== */
+.quienes-somos {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.descripcion-quienes {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.ventajas {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.card-vip {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #ff7a00;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card-vip h3 {
+    color: #ff7a00;
+    margin-bottom: 10px;
+}
+
+/* ========================================
+   FOOTER
 ======================================== */
 footer {
     background-color: #000;
@@ -260,10 +355,17 @@ footer img.logo-footer {
     margin: 0 auto 10px auto;
 }
 
-footer p.eslogan-footer {
+footer p.eslogan {
     color: #fff;
     font-weight: bold;
     margin-bottom: 15px;
+}
+
+footer .footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 footer .footer-buttons a {
@@ -291,10 +393,46 @@ footer .footer-buttons img {
 }
 
 /* ========================================
+   BOTON FLOTANTE DE WHATSAPP
+======================================== */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.4);
+}
+
+/* ICONO DENTRO DEL BOTON FLOTANTE */
+.floating-whatsapp img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ========================================
    RESPONSIVE
 ======================================== */
 @media (max-width: 768px) {
-    .tarjetas-container {
+    .tarjetas-container,
+    .cards-grid,
+    .horizontal-scroll {
         flex-direction: column;
         align-items: center;
     }
