@@ -50,8 +50,12 @@
 
 <!-- FILTRO DE BÚSQUEDA -->
 <section class="busqueda">
-  <input type="text" id="search" placeholder="Buscar servicios, productos o empresas">
-  <button class="btn-card" onclick="buscar()">Buscar</button>
+  <h2>Buscar servicios, productos o empresas</h2>
+  <div class="buscador-container">
+    <input type="text" id="busquedaInput" placeholder="Escribe lo que deseas buscar...">
+    <button id="buscarBtn" class="btn-card">Buscar</button>
+    <div id="sugerencias" class="sugerencias"></div>
+  </div>
 </section>
 
 <!-- SERVICIOS DESTACADOS -->
