@@ -392,39 +392,6 @@ footer .footer-buttons img {
     height: 18px;
 }
 
-/* ========================================
-   BOTON FLOTANTE DE WHATSAPP
-======================================== */
-.floating-whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-    z-index: 999;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 14px;
-    transition: all 0.3s;
-}
-
-.floating-whatsapp:hover {
-    transform: translateY(-3px);
-    box-shadow: 2px 4px 12px rgba(0,0,0,0.4);
-}
-
-/* ICONO DENTRO DEL BOTON FLOTANTE */
-.floating-whatsapp img {
-    width: 20px;
-    height: 20px;
-}
 
 /* ========================================
    RESPONSIVE
