@@ -16,14 +16,13 @@
 
 /* ===== ENCABEZADO ===== */
 header {
-  position: fixed;
-  top: 0;
+  position: relative; /* ya no es fijo */
   width: 100%;
-  background: var(--negro);
-  text-align: center;
-  padding: 15px 0;
-  z-index: 1000;
+  background-color: #000000; /* mantiene color negro */
+  z-index: auto; /* ya no sobrepone contenido */
+  text-align: center; /* mantiene centrado */
 }
+
 
 header img {
   height: 70px;
