@@ -1,132 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>neXo | Ofertas Plus</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <title>Ofertas Plus | nexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- ICONOS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- ENCABEZADO -->
-<header>
-  <img src="imagenes/logo_nexo.png" alt="Logo neXo" class="logo">
-  <div class="eslogan">Conectando soluciones, creando resultados</div>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="tienda.html">Tienda</a>
-    <a href="ofertas.html">Ofertas Plus</a>
-    <a href="quienes.html">Quienes Somos</a>
-    <a href="contactos.html">Contactos</a>
-  </nav>
+<!-- =======================
+     ENCABEZADO (IGUAL)
+======================= -->
+<header class="header">
+    <div class="header-container">
+        <h1 class="logo">nexo</h1>
+        <nav class="nav">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="ofertas.html" class="active">Ofertas Plus</a>
+            <a href="quienes-somos.html">Quiénes somos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
 </header>
 
-<!-- OFERTAS PLUS -->
-<section class="ofertas-plus">
-  <h2>Ofertas Plus de neXo</h2>
-  <p class="descripcion-ofertas">
-    Con neXo aumenta el crecimiento de tu negocio en un corto plazo. Aprovecha nuestros servicios
-    exclusivos para mejorar la imagen y visibilidad de tu empresa.
-  </p>
+<!-- =======================
+     CONTENIDO PRINCIPAL
+======================= -->
+<main class="main">
 
-  <div class="cards-container">
-    <!-- Diseño de Logotipos -->
-    <div class="card">
-      <img src="imagenes/logo_design.jpg" alt="Diseño de Logotipos">
-      <div class="card-content">
-        <h3>Diseño de Logotipos</h3>
-        <p>Creación de logotipos profesionales para fortalecer la identidad visual de tu negocio.</p>
-        <div class="card-buttons">
-          <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Diseño+de+Logotipos" target="_blank" class="btn-card">Contactar con neXo</a>
+    <!-- TITULO -->
+    <section class="section-title">
+        <h2>Ofertas Plus de nexo</h2>
+        <p>
+            Con nexo aumenta el crecimiento de tu negocio en un corto plazo mediante soluciones estratégicas,
+            creativas y funcionales.
+        </p>
+    </section>
+
+    <!-- =======================
+         GRID DE OFERTAS
+    ======================= -->
+    <section class="cards-grid">
+
+        <!-- LOGOTIPO -->
+        <article class="card">
+            <img src="img/ofertas/logo.jpg" alt="Diseño de logotipos">
+            <div class="card-content">
+                <h3>Diseño de Logotipos</h3>
+                <p class="description">
+                    Identidad visual profesional alineada con la esencia y objetivos de tu marca.
+                </p>
+            </div>
+        </article>
+
+        <!-- TARJETAS -->
+        <article class="card">
+            <img src="img/ofertas/tarjetas.jpg" alt="Tarjetas de presentación">
+            <div class="card-content">
+                <h3>Tarjetas de Presentación</h3>
+                <p class="description">
+                    Diseño elegante y funcional que refuerza tu imagen corporativa.
+                </p>
+            </div>
+        </article>
+
+        <!-- MANUAL -->
+        <article class="card">
+            <img src="img/ofertas/manual.jpg" alt="Manual de identidad">
+            <div class="card-content">
+                <h3>Manual de Identidad</h3>
+                <p class="description">
+                    Lineamientos visuales claros para el uso coherente de tu marca.
+                </p>
+            </div>
+        </article>
+
+        <!-- FLYERS -->
+        <article class="card">
+            <img src="img/ofertas/flyer.jpg" alt="Flyers publicitarios">
+            <div class="card-content">
+                <h3>Flyers Publicitarios</h3>
+                <p class="description">
+                    Material gráfico atractivo para campañas promocionales efectivas.
+                </p>
+            </div>
+        </article>
+
+        <!-- PLEGABLES -->
+        <article class="card">
+            <img src="img/ofertas/plegables.jpg" alt="Plegables informativos">
+            <div class="card-content">
+                <h3>Plegables</h3>
+                <p class="description">
+                    Comunicación visual clara para presentar servicios y productos.
+                </p>
+            </div>
+        </article>
+
+        <!-- INTERIORES -->
+        <article class="card">
+            <img src="img/ofertas/interiores.jpg" alt="Diseño de interiores">
+            <div class="card-content">
+                <h3>Diseño de Interiores</h3>
+                <p class="description">
+                    Soluciones espaciales que optimizan funcionalidad, estética y experiencia.
+                </p>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- =======================
+         BOTONES GENERALES
+    ======================= -->
+    <section class="action-center">
+        <a href="catalogos/ofertas-nexo.pdf" class="btn secondary" download>
+            Descargar Catálogo
+        </a>
+
+        <a 
+            href="https://wa.me/5350000000?text=Estoy%20interesado%20en%20las%20Ofertas%20Plus%20de%20nexo"
+            target="_blank"
+            class="btn primary">
+            Solicitar información
+        </a>
+    </section>
+
+</main>
+
+<!-- =======================
+     FOOTER (IGUAL)
+======================= -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>© nexo – Conectando soluciones, creando resultados</p>
+        <div class="footer-buttons">
+            <a href="contacto.html" class="btn footer-btn">Publica tu negocio</a>
+            <a href="https://wa.me/5350000000" target="_blank" class="btn footer-btn">Contacto directo</a>
         </div>
-      </div>
     </div>
-
-    <!-- Manuales de Identidad Visual -->
-    <div class="card">
-      <img src="imagenes/manual_identidad.jpg" alt="Manual de Identidad Visual">
-      <div class="card-content">
-        <h3>Manual de Identidad Visual</h3>
-        <p>Diseño de manual completo de identidad corporativa, incluyendo colores, tipografías y estilo.</p>
-        <div class="card-buttons">
-          <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Manual+de+Identidad+Visual" target="_blank" class="btn-card">Contactar con neXo</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tarjetas de Presentación -->
-    <div class="card">
-      <img src="imagenes/tarjetas.jpg" alt="Tarjetas de Presentación">
-      <div class="card-content">
-        <h3>Tarjetas de Presentación</h3>
-        <p>Diseño moderno y profesional de tarjetas para fortalecer la presentación de tu empresa.</p>
-        <div class="card-buttons">
-          <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Tarjetas+de+Presentación" target="_blank" class="btn-card">Contactar con neXo</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Flyers y Plegables -->
-    <div class="card">
-      <img src="imagenes/flyers.jpg" alt="Flyers y Plegables">
-      <div class="card-content">
-        <h3>Flyers y Plegables</h3>
-        <p>Diseño de material impreso promocional para eventos, ofertas y difusión de productos.</p>
-        <div class="card-buttons">
-          <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Flyers+y+Plegables" target="_blank" class="btn-card">Contactar con neXo</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Carteles Publicitarios -->
-    <div class="card">
-      <img src="imagenes/carteles.jpg" alt="Carteles Publicitarios">
-      <div class="card-content">
-        <h3>Carteles Publicitarios</h3>
-        <p>Diseño de carteles para promociones, eventos y comunicación visual efectiva.</p>
-        <div class="card-buttons">
-          <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Carteles+Publicitarios" target="_blank" class="btn-card">Contactar con neXo</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Diseño de Interiores -->
-    <div class="card">
-      <img src="imagenes/interiores.jpg" alt="Diseño de Interiores">
-      <div class="card-content">
-        <h3>Diseño de Interiores y Exteriores</h3>
-        <p>Optimización del espacio y decoración profesional para tu negocio, interiores y exteriores.</p>
-        <div class="card-buttons">
-          <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Diseño+de+Interiores" target="_blank" class="btn-card">Contactar con neXo</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PIE DE PÁGINA -->
-<footer>
-  <img src="imagenes/logo_nexo.png" alt="Logo neXo" class="logo-footer">
-  <div class="footer-buttons">
-    <a href="https://wa.me/53XXXXXXXXX" target="_blank" class="btn-card">
-      <img src="imagenes/whatsapp.png" alt="WhatsApp"> WhatsApp
-    </a>
-    <a href="mailto:correo@nexo.com" class="btn-card">
-      <img src="imagenes/correo.png" alt="Correo"> Correo
-    </a>
-    <a href="https://instagram.com/nexo" target="_blank" class="btn-card">
-      <img src="imagenes/instagram.png" alt="Instagram"> Instagram
-    </a>
-    <a href="https://facebook.com/nexo" target="_blank" class="btn-card">
-      <img src="imagenes/facebook.png" alt="Facebook"> Facebook
-    </a>
-    <a href="https://youtube.com/nexo" target="_blank" class="btn-card">
-      <img src="imagenes/youtube.png" alt="YouTube"> YouTube
-    </a>
-  </div>
-  <p class="eslogan">Conectando soluciones, creando resultados</p>
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>
