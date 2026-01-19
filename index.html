@@ -131,6 +131,48 @@ mostrarSlide();
 setInterval(mostrarSlide, 3000);
 </script>
 
+const buscarBtn = document.getElementById('buscarBtn');
+const busquedaInput = document.getElementById('busquedaInput');
 
+buscarBtn.addEventListener('click', () => {
+    const query = busquedaInput.value.toLowerCase().trim();
+
+    if (!query) {
+        alert("Por favor, escribe algo para buscar.");
+        return;
+    }
+
+    // Aquí defines tus términos de búsqueda y a qué página deben redirigir
+    const rutas = {
+        "marketing digital": "servicios.html",
+        "diseño gráfico": "servicios.html",
+        "tienda abc": "tienda.html",
+        "cemento portland": "tienda.html",
+        "ofertas plus": "ofertas.html"
+        // Agrega todas las palabras clave que necesites
+    };
+
+    let paginaEncontrada = null;
+
+    for (let clave in rutas) {
+        if (query.includes(clave)) {
+            paginaEncontrada = rutas[clave];
+            break;
+        }
+    }
+
+    if (paginaEncontrada) {
+        window.location.href = paginaEncontrada;
+    } else {
+        alert("No se encontró ningún resultado para tu búsqueda.");
+    }
+});
+
+// Opcional: Enter también activa la búsqueda
+busquedaInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        buscarBtn.click();
+    }
+});
 </body>
 </html>
