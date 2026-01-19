@@ -31,11 +31,17 @@
 </div>
 
 <!-- BUSCADOR -->
-<div class="buscador">
-  <input type="text" id="busquedaInput" placeholder="Buscar servicios, productos o empresas">
-  <button id="buscarBtn">Buscar</button>
-  <div class="sugerencias-list" id="sugerencias"></div>
+<div class="buscador-container">
+  <input
+    type="text"
+    id="buscador"
+    placeholder="Buscar servicios, productos o tiendas..."
+    autocomplete="off"
+  >
+  <button id="btnBuscar">Buscar</button>
+  <ul id="sugerencias"></ul>
 </div>
+
 
 
 <!-- SERVICIOS DESTACADOS -->
@@ -131,54 +137,8 @@ mostrarSlide();
 setInterval(mostrarSlide, 3000);
 </script>
 
-<script>
-  // Lista de servicios, productos o empresas disponibles para búsqueda
-  const elementosBusqueda = [
-    { nombre: "Marketing Digital", link: "servicios.html#marketing-digital" },
-    { nombre: "Diseño de Logotipos", link: "ofertas.html#diseno-logotipos" },
-    { nombre: "Construcción y Remodelación", link: "servicios.html#construccion-remodelacion" },
-    { nombre: "Impresión Publicitaria", link: "tienda.html#impresion-publicitaria" },
-    // Agrega todos los elementos que quieras buscar
-  ];
+<script src="js/buscador.js"></script>
 
-  const input = document.getElementById('busquedaInput');
-  const sugerencias = document.getElementById('sugerencias');
-  const btnBuscar = document.getElementById('buscarBtn');
-
-  // Mostrar sugerencias mientras se escribe
-  input.addEventListener('input', () => {
-    const valor = input.value.toLowerCase();
-    sugerencias.innerHTML = '';
-    if (valor === '') return;
-
-    const filtrados = elementosBusqueda.filter(e => e.nombre.toLowerCase().includes(valor));
-    filtrados.forEach(item => {
-      const div = document.createElement('div');
-      div.textContent = item.nombre;
-      div.addEventListener('click', () => {
-        window.location.href = item.link;
-      });
-      sugerencias.appendChild(div);
-    });
-  });
-
-  // Botón de buscar
-  btnBuscar.addEventListener('click', () => {
-    const valor = input.value.toLowerCase();
-    const encontrado = elementosBusqueda.find(e => e.nombre.toLowerCase() === valor);
-    if (encontrado) {
-      window.location.href = encontrado.link;
-    } else {
-      alert("No se encontró ningún resultado para tu búsqueda.");
-    }
-  });
-
-  // Ocultar sugerencias al hacer click fuera
-  document.addEventListener('click', (e) => {
-    if (!input.contains(e.target) && !sugerencias.contains(e.target)) {
-      sugerencias.innerHTML = '';
-    }
-  });
-</script>
+ 
 </body>
 </html>
