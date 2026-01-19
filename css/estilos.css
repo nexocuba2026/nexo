@@ -90,63 +90,79 @@ nav a:hover {
   font-size: 1.2em;
 }
 
-/* BLOQUE DE BUSQUEDA */
-/* BUSCADOR */
-.buscador-container {
-  position: relative;
-  max-width: 500px;
-  margin: 20px auto;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.buscador input {
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #000;
-  border-radius: 5px;
-}
-
-.buscador button {
-  background-color: #ff7a00;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.buscador button:hover {
-  background-color: #e06900;
-}
-
-.sugerencias-list {
-  position: absolute;
-  top: 45px;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  z-index: 100;
-  max-height: 200px;
-  overflow-y: auto;
+/* CONTENEDOR DEL BUSCADOR */
+.buscador {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* INPUT DEL BUSCADOR */
+#busquedaInput {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;       /* borde neutro minimalista */
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); /* efecto a relieve */
+  transition: border-color 0.3s;
+}
+
+#busquedaInput:focus {
+  border-color: #ff7a00;       /* borde naranja al enfocar */
+}
+
+/* BOTÓN DEL BUSCADOR */
+#buscarBtn {
+  background-color: #ff7a00;    /* fondo naranja igual que los demás botones */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2); /* relieve */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#buscarBtn:hover {
+  background-color: #e06600;  /* se oscurece al pasar cursor */
+  transform: translateY(-2px);
+}
+
+/* LISTA DE SUGERENCIAS */
+.sugerencias-list {
+  position: absolute;
+  top: 70px;               /* debajo del input */
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+  z-index: 999;
 }
 
 .sugerencias-list div {
-  padding: 8px;
+  padding: 10px 15px;
   cursor: pointer;
-  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
 }
 
 .sugerencias-list div:hover {
   background-color: #ff7a00;
   color: #fff;
+  font-weight: bold;
 }
+
 /* TARJETAS GENERALES */
 .cards-container {
   display: flex;
