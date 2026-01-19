@@ -2,58 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>neXo | Publicidad y Servicios</title>
+  <title>neXo | Publicidad para Negocios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/buscador.js" defer></script>
-  <script src="js/carrusel.js" defer></script>
 </head>
 <body>
 
-<!-- ENCABEZADO -->
 <header>
-  <img src="imagenes/logo.png" alt="Logo neXo" class="logo">
+  <img src="imagenes/logo.png" alt="neXo" class="logo">
   <div class="eslogan">Conectando soluciones, creando resultados</div>
   <nav>
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
     <a href="tienda.html">Tienda</a>
     <a href="ofertas.html">Ofertas Plus</a>
-    <a href="quienes.html">Quiénes Somos</a>
+    <a href="quienes.html">Quienes Somos</a>
     <a href="contactos.html">Contactos</a>
   </nav>
 </header>
 
-<!-- CARRUSEL -->
-<section class="carrusel">
-  <div class="slide">
-    <img src="imagenes/carrusel1.jpg" alt="Slide 1">
-    <div class="texto">Publicidad efectiva para tu negocio</div>
-  </div>
-  <div class="slide">
-    <img src="imagenes/carrusel2.jpg" alt="Slide 2">
-    <div class="texto">Servicios creativos y visuales</div>
-  </div>
-  <div class="slide">
-    <img src="imagenes/carrusel3.jpg" alt="Slide 3">
-    <div class="texto">Productos de calidad a tu alcance</div>
-  </div>
-  <div class="slide">
-    <img src="imagenes/carrusel4.jpg" alt="Slide 4">
-    <div class="texto">Impulsa tu crecimiento con neXo</div>
-  </div>
-  <div class="slide">
-    <img src="imagenes/carrusel5.jpg" alt="Slide 5">
-    <div class="texto">Soluciones para cada tipo de negocio</div>
-  </div>
-</section>
-
 <!-- BUSCADOR -->
-<section class="buscador">
-  <input type="text" id="busquedaInput" placeholder="Buscar servicios, productos o empresas...">
+<div class="buscador">
+  <input type="text" id="busquedaInput" placeholder="Buscar servicios, productos o empresas">
   <button id="buscarBtn">Buscar</button>
   <div class="sugerencias-list" id="sugerencias"></div>
-</section>
+</div>
+
+<!-- CARRUSEL -->
+<div class="carrusel">
+  <div><img src="imagenes/carrusel1.jpg" alt=""><div class="texto">Servicio 1</div></div>
+  <div><img src="imagenes/carrusel2.jpg" alt=""><div class="texto">Servicio 2</div></div>
+  <div><img src="imagenes/carrusel3.jpg" alt=""><div class="texto">Servicio 3</div></div>
+  <div><img src="imagenes/carrusel4.jpg" alt=""><div class="texto">Servicio 4</div></div>
+  <div><img src="imagenes/carrusel5.jpg" alt=""><div class="texto">Servicio 5</div></div>
+</div>
 
 <!-- SERVICIOS DESTACADOS -->
 <h2 class="categoria">Servicios Destacados</h2>
@@ -63,34 +45,13 @@
     <div class="contenido">
       <div class="empresa">Empresa XYZ</div>
       <h3>Marketing Digital</h3>
-      <p>Gestión de redes sociales y campañas online.</p>
-      <div class="direccion">Dirección: Calle 1, Ciudad</div>
-      <a href="servicios.html#marketing" class="btn">Ver Más</a>
-      <a href="https://wa.me/123456789?text=Estoy%20interesado%20en%20Marketing%20Digital" class="btn">Contactar</a>
+      <p>Descripción breve del servicio que ofrece la empresa.</p>
+      <p class="direccion">Dirección: Calle 123, Ciudad</p>
+      <a href="servicios.html" class="btn">Ver más</a>
+      <a href="https://wa.me/123456789?text=Estoy+interesado+en+este+servicio" class="btn">Contactar</a>
     </div>
   </div>
-  <div class="tarjeta">
-    <img src="imagenes/servicio2.jpg" alt="Servicio 2">
-    <div class="contenido">
-      <div class="empresa">Empresa ABC</div>
-      <h3>Diseño Gráfico</h3>
-      <p>Creación de logotipos, flyers y material visual.</p>
-      <div class="direccion">Dirección: Calle 2, Ciudad</div>
-      <a href="servicios.html#diseno" class="btn">Ver Más</a>
-      <a href="https://wa.me/123456789?text=Estoy%20interesado%20en%20Dise%C3%B1o%20Gr%C3%A1fico" class="btn">Contactar</a>
-    </div>
-  </div>
-  <div class="tarjeta">
-    <img src="imagenes/servicio3.jpg" alt="Servicio 3">
-    <div class="contenido">
-      <div class="empresa">Empresa 123</div>
-      <h3>Publicidad Exterior</h3>
-      <p>Vallas, carteles y señalización para negocios.</p>
-      <div class="direccion">Dirección: Calle 3, Ciudad</div>
-      <a href="servicios.html#publicidad" class="btn">Ver Más</a>
-      <a href="https://wa.me/123456789?text=Estoy%20interesado%20en%20Publicidad%20Exterior" class="btn">Contactar</a>
-    </div>
-  </div>
+  <!-- Repetir más tarjetas según necesidad -->
 </div>
 
 <!-- PRODUCTOS DESTACADOS -->
@@ -99,103 +60,56 @@
   <div class="tarjeta">
     <img src="imagenes/producto1.jpg" alt="Producto 1">
     <div class="contenido">
-      <div class="empresa">Tienda Hogar</div>
-      <h3>Set de Ollas</h3>
-      <p>Material: acero inoxidable. Juego de 5 piezas.</p>
+      <div class="empresa">Tienda ABC</div>
+      <h3>Impresión Publicitaria</h3>
       <p>Precio: $25 USD</p>
-      <div class="direccion">Dirección: Calle 4, Ciudad</div>
-      <a href="tienda.html#set-ollas" class="btn">Ver Más</a>
-      <a href="https://wa.me/123456789?text=Estoy%20interesado%20en%20Set%20de%20Ollas" class="btn">Contactar</a>
+      <p>Materiales y características del producto.</p>
+      <p class="direccion">Dirección: Calle 456, Ciudad</p>
+      <a href="tienda.html" class="btn">Ver más</a>
+      <a href="https://wa.me/123456789?text=Estoy+interesado+en+este+producto" class="btn">Contactar</a>
     </div>
   </div>
-  <div class="tarjeta">
-    <img src="imagenes/producto2.jpg" alt="Producto 2">
-    <div class="contenido">
-      <div class="empresa">Tienda Hogar</div>
-      <h3>Cafetera Eléctrica</h3>
-      <p>Capacidad 1.5L, acero inoxidable.</p>
-      <p>Precio: $45 USD</p>
-      <div class="direccion">Dirección: Calle 4, Ciudad</div>
-      <a href="tienda.html#cafetera" class="btn">Ver Más</a>
-      <a href="https://wa.me/123456789?text=Estoy%20interesado%20en%20Cafetera%20El%C3%A9ctrica" class="btn">Contactar</a>
-    </div>
-  </div>
-  <div class="tarjeta">
-    <img src="imagenes/producto3.jpg" alt="Producto 3">
-    <div class="contenido">
-      <div class="empresa">Tienda Autos</div>
-      <h3>Aceite Motor 5W30</h3>
-      <p>Garantía: 1 año, compatible con motores modernos.</p>
-      <p>Precio: $15 USD</p>
-      <div class="direccion">Dirección: Calle 5, Ciudad</div>
-      <a href="tienda.html#aceite" class="btn">Ver Más</a>
-      <a href="https://wa.me/123456789?text=Estoy%20interesado%20en%20Aceite%20Motor%205W30" class="btn">Contactar</a>
-    </div>
-  </div>
+  <!-- Repetir más productos -->
 </div>
 
 <!-- SERVICIOS VIP DE NEXO -->
 <h2 class="categoria">Servicios VIP de neXo</h2>
 <div class="tarjetas-container">
   <div class="tarjeta">
-    <img src="imagenes/vip1.jpg" alt="Diseño de Logotipos">
+    <img src="imagenes/logo_design.jpg" alt="Diseño de Logotipos">
     <div class="contenido">
       <h3>Diseño de Logotipos</h3>
-      <a href="contactos.html" class="btn">Contactar con neXo</a>
+      <p>Creación profesional de logotipos para tu negocio.</p>
+      <a href="contactos.html" class="btn">Contactar con Nexo</a>
     </div>
   </div>
+  <!-- Repetir para los demás servicios VIP -->
+</div>
+
+<!-- BLOQUE COMERCIAL -->
+<div class="tarjetas-container">
   <div class="tarjeta">
-    <img src="imagenes/vip2.jpg" alt="Diseño de Manuales">
-    <div class="contenido">
-      <h3>Diseño de Manuales de Identidad Visual</h3>
-      <a href="contactos.html" class="btn">Contactar con neXo</a>
-    </div>
-  </div>
-  <div class="tarjeta">
-    <img src="imagenes/vip3.jpg" alt="Tarjetas de Presentación">
-    <div class="contenido">
-      <h3>Tarjetas de Presentación</h3>
-      <a href="contactos.html" class="btn">Contactar con neXo</a>
-    </div>
-  </div>
-  <div class="tarjeta">
-    <img src="imagenes/vip4.jpg" alt="Diseño de Carteles">
-    <div class="contenido">
-      <h3>Diseño de Carteles y Flyers</h3>
-      <a href="contactos.html" class="btn">Contactar con neXo</a>
-    </div>
-  </div>
-  <div class="tarjeta">
-    <img src="imagenes/vip5.jpg" alt="Diseño de Interiores">
-    <div class="contenido">
-      <h3>Diseño de Interiores y Exteriores</h3>
-      <a href="contactos.html" class="btn">Contactar con neXo</a>
-    </div>
+    <h3>¿Tienes un negocio? Publica con neXo</h3>
+    <p>Da visibilidad a tu empresa, aumenta tus clientes y potencia tus ventas usando los servicios de publicidad de neXo.</p>
+    <a href="contactos.html" class="btn">Publica con neXo</a>
   </div>
 </div>
 
 <!-- PIE DE PÁGINA -->
 <footer>
-  <img src="imagenes/logo.png" alt="Logo neXo" class="logo-footer">
-  <p class="eslogan-footer">Conectando soluciones, creando resultados</p>
+  <img src="imagenes/logo.png" alt="neXo" class="logo-footer">
+  <p class="eslogan-footer">@neXo - Conectando soluciones, creando resultados</p>
   <div class="footer-buttons">
-    <a href="https://wa.me/123456789" target="_blank">
-      <img src="imagenes/whatsapp.png" alt="WhatsApp"> WhatsApp
-    </a>
-    <a href="mailto:contacto@nexo.com">
-      <img src="imagenes/email.png" alt="Correo"> Correo
-    </a>
-    <a href="https://instagram.com/nexo" target="_blank">
-      <img src="imagenes/instagram.png" alt="Instagram"> Instagram
-    </a>
-    <a href="https://facebook.com/nexo" target="_blank">
-      <img src="imagenes/facebook.png" alt="Facebook"> Facebook
-    </a>
-    <a href="https://youtube.com/nexo" target="_blank">
-      <img src="imagenes/youtube.png" alt="YouTube"> YouTube
-    </a>
+    <a href="https://wa.me/123456789"><img src="imagenes/whatsapp.png" alt=""> WhatsApp</a>
+    <a href="mailto:contacto@nexo.com"><img src="imagenes/correo.png" alt=""> Correo</a>
+    <a href="https://instagram.com"><img src="imagenes/instagram.png" alt=""> Instagram</a>
+    <a href="https://facebook.com"><img src="imagenes/facebook.png" alt=""> Facebook</a>
+    <a href="https://youtube.com"><img src="imagenes/youtube.png" alt=""> YouTube</a>
   </div>
 </footer>
+
+<script src="js/carrusel.js"></script>
+<script src="js/buscador.js"></script>
 
 </body>
 </html>
