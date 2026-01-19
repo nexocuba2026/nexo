@@ -1,156 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Ofertas Plus | nexo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS GENERAL -->
-    <link rel="stylesheet" href="css/estilos.css">
-
-    <!-- ICONOS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Ofertas Plus | neXo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
 
-<!-- =======================
-     ENCABEZADO (IGUAL)
-======================= -->
-<header class="header">
-    <div class="header-container">
-        <h1 class="logo">nexo</h1>
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="tienda.html">Tienda</a>
-            <a href="ofertas.html" class="active">Ofertas Plus</a>
-            <a href="quienes-somos.html">Quiénes somos</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </div>
+<!-- ENCABEZADO -->
+<header>
+  <img src="imagenes/logo.png" alt="neXo" class="logo">
+  <div class="eslogan">Conectando soluciones, creando resultados</div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="ofertas.html" class="active">Ofertas Plus</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="contactos.html">Contactos</a>
+  </nav>
 </header>
 
-<!-- =======================
-     CONTENIDO PRINCIPAL
-======================= -->
-<main class="main">
+<!-- BOTON FLOTANTE -->
+<a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20los%20servicios%20de%20nexo" 
+   target="_blank" class="whatsapp-float">
+  <img src="imagenes/whatsapp.png" alt="WhatsApp"> NEXO
+</a>
 
-    <!-- TITULO -->
-    <section class="section-title">
-        <h2>Ofertas Plus de nexo</h2>
-        <p>
-            Con nexo aumenta el crecimiento de tu negocio en un corto plazo mediante soluciones estratégicas,
-            creativas y funcionales.
-        </p>
-    </section>
+<!-- TITULO -->
+<h2 class="categoria">Ofertas Plus de NEXO</h2>
+<p class="descripcion-ofertas">
+  Con NEXO aumenta el crecimiento de tu negocio en un corto plazo mediante soluciones estratégicas, creativas y funcionales.
+</p>
 
-    <!-- =======================
-         GRID DE OFERTAS
-    ======================= -->
-    <section class="cards-grid">
+<!-- GRID DE OFERTAS -->
+<section class="tarjetas-container">
 
-        <!-- LOGOTIPO -->
-        <article class="card">
-            <img src="img/ofertas/logo.jpg" alt="Diseño de logotipos">
-            <div class="card-content">
-                <h3>Diseño de Logotipos</h3>
-                <p class="description">
-                    Identidad visual profesional alineada con la esencia y objetivos de tu marca.
-                </p>
-            </div>
-        </article>
-
-        <!-- TARJETAS -->
-        <article class="card">
-            <img src="img/ofertas/tarjetas.jpg" alt="Tarjetas de presentación">
-            <div class="card-content">
-                <h3>Tarjetas de Presentación</h3>
-                <p class="description">
-                    Diseño elegante y funcional que refuerza tu imagen corporativa.
-                </p>
-            </div>
-        </article>
-
-        <!-- MANUAL -->
-        <article class="card">
-            <img src="img/ofertas/manual.jpg" alt="Manual de identidad">
-            <div class="card-content">
-                <h3>Manual de Identidad</h3>
-                <p class="description">
-                    Lineamientos visuales claros para el uso coherente de tu marca.
-                </p>
-            </div>
-        </article>
-
-        <!-- FLYERS -->
-        <article class="card">
-            <img src="img/ofertas/flyer.jpg" alt="Flyers publicitarios">
-            <div class="card-content">
-                <h3>Flyers Publicitarios</h3>
-                <p class="description">
-                    Material gráfico atractivo para campañas promocionales efectivas.
-                </p>
-            </div>
-        </article>
-
-        <!-- PLEGABLES -->
-        <article class="card">
-            <img src="img/ofertas/plegables.jpg" alt="Plegables informativos">
-            <div class="card-content">
-                <h3>Plegables</h3>
-                <p class="description">
-                    Comunicación visual clara para presentar servicios y productos.
-                </p>
-            </div>
-        </article>
-
-        <!-- INTERIORES -->
-        <article class="card">
-            <img src="img/ofertas/interiores.jpg" alt="Diseño de interiores">
-            <div class="card-content">
-                <h3>Diseño de Interiores</h3>
-                <p class="description">
-                    Soluciones espaciales que optimizan funcionalidad, estética y experiencia.
-                </p>
-            </div>
-        </article>
-
-    </section>
-
-    <!-- =======================
-         BOTONES GENERALES
-    ======================= -->
-    <section class="action-center">
-        <a href="catalogos/ofertas-nexo.pdf" class="btn secondary" download>
-            Descargar Catálogo
-        </a>
-
-        <a 
-            href="https://wa.me/5350000000?text=Estoy%20interesado%20en%20las%20Ofertas%20Plus%20de%20nexo"
-            target="_blank"
-            class="btn primary">
-            Solicitar información
-        </a>
-    </section>
-
-</main>
-
-<!-- =======================
-     FOOTER (IGUAL)
-======================= -->
-<footer class="footer">
-    <div class="footer-content">
-        <p>© nexo – Conectando soluciones, creando resultados</p>
-        <div class="footer-buttons">
-            <a href="contacto.html" class="btn footer-btn">Publica tu negocio</a>
-            <a href="https://wa.me/5350000000" target="_blank" class="btn footer-btn">Contacto directo</a>
-        </div>
+  <!-- Diseño de logotipos -->
+  <div class="tarjeta">
+    <img src="imagenes/ofertas/logo.jpg" alt="Diseño de Logotipos">
+    <div class="contenido">
+      <h3>Diseño de Logotipos</h3>
+      <p class="descripcion">Identidad visual profesional alineada con la esencia y objetivos de tu marca.</p>
+      <a href="catalogos/ofertas-nexo.pdf" class="btn" download>Catálogo</a>
+      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20Diseño%20de%20Logotipos" target="_blank" class="btn">Contactar proveedor</a>
     </div>
-</footer>
+  </div>
 
-</body>
-</html>
+  <!-- Tarjetas de presentación -->
+  <div class="tarjeta">
+    <img src="imagenes/ofertas/tarjetas.jpg" alt="Tarjetas de Presentación">
+    <div class="contenido">
+      <h3>Tarjetas de Presentación</h3>
+      <p class="descripcion">Diseño elegante y funcional que refuerza tu imagen corporativa.</p>
+      <a href="catalogos/ofertas-nexo.pdf" class="btn" download>Catálogo</a>
+      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20Tarjetas%20de%20Presentación" target="_blank" class="btn">Contactar proveedor</a>
+    </div>
+  </div>
+
+  <!-- Manual de identidad -->
+  <div class="tarjeta">
+    <img src="imagenes/ofertas/manual.jpg" alt="Manual de Identidad">
+    <div class="contenido">
+      <h3>Manual de Identidad</h3>
+      <p class="descripcion">Lineamientos visuales claros para el uso coherente de tu marca.</p>
+      <a href="catalogos/ofertas-nexo.pdf" class="btn" download>Catálogo</a>
+      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20Manual%20de%20Identidad" target="_blank" class="btn">Contactar proveedor</a>
+    </div>
+  </div>
+
+  <!-- Flyers publicitarios -->
+  <div class="tarjeta">
+    <img src="imagenes/ofertas/flyer.jpg" alt="Flyers Publicitarios">
+    <div class="contenido">
+      <h3>Flyers Publicitarios</h3>
+      <p class="descripcion">Material gráfico atractivo para campañas promocionales efectivas.</p>
+      <a href="catalogos/ofertas-nexo.pdf" class="btn" download>Catálogo</a>
+      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20Flyers%20Publicitarios" target="_blank" class="btn">Contactar proveedor</a>
+    </div>
+  </div>
+
+  <!-- Plegables -->
+  <div class="tarjeta">
+    <img src="imagenes/ofertas/plegables.jpg" alt="Plegables">
+    <div class="contenido">
+      <h3>Plegables</h3>
+      <p class="descripcion">Comunicación visual clara para presentar servicios y productos.</p>
+      <a href="catalogos/ofertas-nexo.pdf" class="btn" download>Catálogo</a>
+      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20Plegables" target="_blank" class="btn">Contactar proveedor</a>
+    </div>
+  </div>
+
+  <!-- Diseño de interiores -->
+  <div class="tarjeta">
+    <img src="imagenes/ofertas/interiores.jpg" alt="Diseño de Interiores">
+    <div class="contenido">
+      <h3>Diseño de Interiores</h3>
+      <p class="descripcion">Soluciones espaciales que optimizan funcionalidad, estética y experiencia.</p>
+      <a href="catalogos/ofertas-nexo.pdf" class="btn" download>Catálogo</a>
+      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20Diseño%20de%20Interiores" target="_blank" class="btn">Contactar proveedor</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- PIE DE PÁGINA -->
+<footer>
+  <img src="imagenes/logo.png" alt="neXo" class="logo-footer">
+  <p class="eslogan-footer">@neXo - Conectando soluciones, creando resultados</p>
+  <div class="footer-buttons">
+    <a href="https://wa.me/5355415537" target="_blank"><img src="imagenes/whatsapp.png" alt=""> WhatsApp</a>
+    <a href="mailto:correo@nexo.com"><img src="imagenes/correo.png" alt=""> Correo</a>
+    <a href="https://instagram.com/nexo_cuba" target="_blank"><img src="imagenes/instagram.png" alt=""> Instagram</a>
+    <a href="https://facebook.com/nexo" target="_blank"><img src="imagenes/facebook.png" alt=""> Facebook</a>
+    <a href="https://youtube.com/nexo" target="_blank"><img src="imagenes/youtube.png" alt=""> YouTube</a>
+  </div>
+</footer>
 
 </body>
 </html>
