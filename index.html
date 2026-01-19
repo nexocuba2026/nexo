@@ -1,186 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>neXo | Publicidad para negocios</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/estilos.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="UTF-8">
+  <title>neXo</title>
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<header>
-  <img src="imagenes/logo.png" alt="neXo Logo">
-  <div class="eslogan">Conectando soluciones, creando resultados</div>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="tienda.html">Tienda</a>
-    <a href="ofertas.html">Ofertas Plus</a>
-    <a href="quienes.html">Quiénes Somos</a>
-    <a href="contactos.html">Contactos</a>
-  </nav>
-</header>
+<!-- HEADER -->
+<!-- (pega aquí el encabezado común) -->
 
-<!-- BUSCADOR -->
-<section class="buscador-section">
-  <div class="buscar-container" style="text-align:center; margin:20px 0;">
-    <input type="text" id="buscador" placeholder="Buscar servicios, productos o empresas" list="sugerencias">
-    <datalist id="sugerencias">
-      <option value="Construcción">
-      <option value="Restaurant">
-      <option value="Transporte">
-      <option value="Tecnología">
-      <option value="Ventas Mayoristas">
-      <option value="Productos para el Hogar">
-      <option value="Ferretería">
-      <option value="Alimentos">
-      <option value="Autos">
-      <option value="Motos">
-    </datalist>
-    <button onclick="realizarBusqueda()">Buscar</button>
-  </div>
-</section>
+<main>
 
-<script>
-function realizarBusqueda() {
-  const input = document.getElementById('buscador').value.toLowerCase();
-  if(input.includes("construcción")) window.location.href="servicios.html#construccion";
-  else if(input.includes("restaurant")) window.location.href="servicios.html#restaurant";
-  else if(input.includes("transporte")) window.location.href="servicios.html#transporte";
-  else if(input.includes("tecnología")) window.location.href="servicios.html#tecnologia";
-  else if(input.includes("ventas")) window.location.href="servicios.html#ventas";
-  else if(input.includes("hogar")) window.location.href="tienda.html#hogar";
-  else if(input.includes("ferretería")) window.location.href="tienda.html#ferreteria";
-  else if(input.includes("alimentos")) window.location.href="tienda.html#alimentos";
-  else if(input.includes("autos")) window.location.href="tienda.html#autos";
-  else if(input.includes("motos")) window.location.href="tienda.html#motos";
-  else alert("No se encontraron resultados");
-}
-</script>
+  <h2 class="categoria">Servicios Destacados</h2>
 
-<!-- CARRUSEL AUTOMÁTICO -->
-<section class="carrusel">
-  <div class="slide"><img src="imagenes/slide1.jpg" alt=""><p>Texto 1</p></div>
-  <div class="slide"><img src="imagenes/slide2.jpg" alt=""><p>Texto 2</p></div>
-  <div class="slide"><img src="imagenes/slide3.jpg" alt=""><p>Texto 3</p></div>
-  <div class="slide"><img src="imagenes/slide4.jpg" alt=""><p>Texto 4</p></div>
-  <div class="slide"><img src="imagenes/slide5.jpg" alt=""><p>Texto 5</p></div>
-</section>
-
-<script>
-let slideIndex = 0;
-showSlides();
-function showSlides() {
-  let slides = document.getElementsByClassName("slide");
-  for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-  slideIndex++;
-  if(slideIndex > slides.length) { slideIndex = 1; }
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4000); // cambia cada 4s
-}
-</script>
-
-<!-- SERVICIOS DESTACADOS -->
-<section>
-  <h2 style="color:#ff7a00; text-align:center;">Servicios Destacados</h2>
-  <div class="tarjetas-container">
-   <div class="tarjeta">
-  <img src="imagenes/servicio1.jpg" alt="Servicio 1">
-  <div class="contenido">
-    <h3>Marketing Digital</h3>
-    <p>Empresa XYZ – Publicidad y estrategia digital.</p>
-    <p>Dirección: Calle 123, Ciudad</p>
-    <a href="servicios.html#servicio1" class="btn">Ver más</a>
-    <a href="https://wa.me/1234567890" class="btn">Contactar</a>
-  </div>
-</div>
-
-    </div>
-    <!-- Añadir más tarjetas aquí -->
-  </div>
-</section>
-
-<!-- PRODUCTOS DESTACADOS -->
-<section>
-  <h2 style="color:#ff7a00; text-align:center;">Productos Destacados</h2>
-  <div class="tarjetas-container">
   <div class="tarjeta">
-  <img src="imagenes/producto1.jpg" alt="Producto 1">
-  <div class="contenido">
-    <h3>Impresora HP</h3>
-    <p>Material: Plástico resistente, características técnicas: XYZ, garantía 1 año</p>
-    <p>Precio: $200 USD</p>
-    <p>Tienda: Tienda ABC - Dirección: Calle 456, Ciudad</p>
-    <a href="https://wa.me/1234567890" class="btn">Contactar proveedor</a>
-  </div>
-</div>
-
+    <img src="imagenes/servicio1.jpg">
+    <div class="contenido">
+      <h3>Marketing Digital</h3>
+      <p>Empresa XYZ – Publicidad y posicionamiento</p>
+      <p>Dirección: Calle Principal #123</p>
+      <a class="btn">Ver más</a>
+      <a class="btn">Contactar</a>
     </div>
-    <!-- Añadir más productos aquí -->
   </div>
-</section>
 
-<!-- SERVICIOS VIP -->
-<section>
-  <h2 style="color:#ff7a00; text-align:center;">Servicios VIP de Nexo</h2>
-  <p style="text-align:center;">Con Nexo aumenta el crecimiento de tu negocio en un corto plazo</p>
-  <div class="tarjetas-container">
-    <div class="tarjeta">
-      <img src="imagenes/vip1.jpg" alt="">
-      <div class="contenido">
-        <h3>Diseño de Logotipos</h3>
-        <div class="botones"><a href="contactos.html">Contactar con Nexo</a></div>
-      </div>
+  <h2 class="categoria">Productos Destacados</h2>
+
+  <div class="tarjeta">
+    <img src="imagenes/producto1.jpg">
+    <div class="contenido">
+      <h3>Impresión Publicitaria</h3>
+      <p>Material resistente – Alta calidad</p>
+      <p>Precio: $25 USD</p>
+      <a class="btn">Contactar proveedor</a>
     </div>
-    <div class="tarjeta">
-      <img src="imagenes/vip2.jpg" alt="">
-      <div class="contenido">
-        <h3>Tarjetas de Presentación</h3>
-        <div class="botones"><a href="contactos.html">Contactar con Nexo</a></div>
-      </div>
+  </div>
+
+  <h2 class="categoria">Servicios VIP de nexo</h2>
+
+  <div class="tarjeta">
+    <img src="imagenes/vip1.jpg">
+    <div class="contenido">
+      <h3>Diseño de Identidad Visual</h3>
+      <p>Logotipos, manuales, tarjetas, carteles</p>
+      <a class="btn">Contactar con nexo</a>
     </div>
-    <!-- Más servicios VIP -->
-  </div>
-</section>
-
-<!-- BLOQUE COMERCIAL -->
-<section style="text-align:center; margin:30px 0;">
-  <p>Si tienes un negocio y quieres darle publicidad profesional con Nexo, obtén exposición inmediata y mayor alcance a tus clientes potenciales.</p>
-  <a href="contactos.html" class="btn-contacto">Publica con Nexo</a>
-</section>
-
-<footer>
-  <img src="imagenes/logo.png" alt="neXo Logo">
-
-
-  
-  <footer>
-  <!-- Logo centrado -->
-  <div class="footer-logo">
-    <img src="imagenes/logo.png" alt="Logo neXo">
   </div>
 
-  <!-- Botones de contacto -->
-  <div class="footer-contacto">
-    <a href="https://wa.me/1234567890" target="_blank">
-      <img src="imagenes/whatsapp.png" alt="WhatsApp"> WhatsApp
-    </a>
-    <a href="mailto:correo@nexo.com" target="_blank">
-      <img src="imagenes/email.png" alt="Correo"> Correo
-    </a>
-    <a href="https://instagram.com" target="_blank">
-      <img src="imagenes/instagram.png" alt="Instagram"> Instagram
-    </a>
-    <a href="https://facebook.com" target="_blank">
-      <img src="imagenes/facebook.png" alt="Facebook"> Facebook
-    </a>
-    <a href="https://youtube.com" target="_blank">
-      <img src="imagenes/youtube.png" alt="YouTube"> YouTube
-    </a>
-  </div>
-</footer>
+</main>
 
+<!-- FOOTER -->
+<!-- (pega aquí el footer común) -->
 
 </body>
 </html>
