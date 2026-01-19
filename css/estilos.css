@@ -93,74 +93,50 @@ nav a.active {
 /* ========================================
    BUSCADOR
 ======================================== */
-.buscador {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px auto;
-    width: 100%;
-    max-width: 700px;
-    position: relative;
+.buscador-container {
+  position: relative;
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
 }
 
-#busquedaInput {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-    margin-bottom: 10px;
-    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
-    transition: border-color 0.3s;
+#buscador {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-#busquedaInput:focus {
-    border-color: #ff7a00;
+#btnBuscar {
+  padding: 10px 15px;
+  background-color: orange;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 5px;
 }
 
-#buscarBtn {
-    background-color: #ff7a00;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
+#sugerencias {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
 }
 
-#buscarBtn:hover {
-    background-color: #e06600;
-    transform: translateY(-2px);
+#sugerencias li {
+  padding: 10px;
+  cursor: pointer;
 }
 
-.sugerencias-list {
-    position: absolute;
-    top: 70px;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-    z-index: 999;
+#sugerencias li:hover {
+  background-color: #f2f2f2;
 }
 
-.sugerencias-list div {
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.sugerencias-list div:hover {
-    background-color: #ff7a00;
-    color: #fff;
-    font-weight: bold;
-}
 
 /* ========================================
    TARJETAS DE PRODUCTOS / SERVICIOS
