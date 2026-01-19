@@ -1,131 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>neXo | Servicios</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <title>neXo | Servicios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- ENCABEZADO -->
 <header>
-  <img src="imagenes/logo_nexo.png" alt="Logo neXo" class="logo">
-  <div class="eslogan">Conectando soluciones, creando resultados</div>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="tienda.html">Tienda</a>
-    <a href="ofertas.html">Ofertas Plus</a>
-    <a href="quienes.html">Quienes Somos</a>
-    <a href="contactos.html">Contactos</a>
-  </nav>
+    <div class="header-logo">
+        <img src="imagenes/logo_nexo.png" alt="neXo Logo">
+        <p class="eslogan">Conectando soluciones, creando resultados</p>
+    </div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="ofertas.html">Ofertas Plus</a>
+        <a href="quienes.html">Quiénes Somos</a>
+        <a href="contactos.html">Contactos</a>
+    </nav>
 </header>
 
+<main>
+    <!-- BARRA DE BUSQUEDA -->
+    <section class="search-section">
+        <input type="text" id="search-input" placeholder="Buscar servicios..." />
+        <button id="search-btn" class="btn-card">Buscar</button>
+    </section>
 
-<!-- SERVICIOS POR CATEGORIAS -->
-<h2>Servicios de Construcción</h2>
- <div class="card">
-    <img src="imagenes/servicio1.jpg" alt="Servicio 1">
-    <div class="card-content">
-        <h3>Nombre del Servicio</h3>
-        <p>Descripción breve del servicio ofrecido por la empresa.</p>
-        <p><strong>Empresa:</strong> XYZ</p>
-        <p><strong>Dirección:</strong> Calle 123, Ciudad</p>
-        <div class="card-buttons">
-            <a href="servicios.html" class="btn-card">Ver más</a>
-            <a href="https://wa.me/5371234567?text=Estoy%20interesado%20en%20este%20servicio" class="btn-card">Contactar</a>
+    <!-- SERVICIOS POR CATEGORIAS -->
+    <section class="services-section">
+        <h2 class="category-title" style="color:#ff7a00;">Construcción</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="imagenes/construccion1.jpg" alt="Servicio Construcción 1">
+                <div class="card-content">
+                    <h3>Construcción de Viviendas</h3>
+                    <p>Empresa ABC - Especializados en construcción de viviendas residenciales.</p>
+                    <p><strong>Dirección:</strong> Calle 123, Ciudad</p>
+                    <div class="card-buttons">
+                        <a href="servicios.html" class="btn-card">Ver más</a>
+                        <a href="https://wa.me/5371234567?text=Estoy%20interesado%20en%20este%20servicio" class="btn-card">Contactar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imagenes/construccion2.jpg" alt="Servicio Construcción 2">
+                <div class="card-content">
+                    <h3>Remodelaciones</h3>
+                    <p>Empresa DEF - Remodelaciones y ampliaciones de espacios.</p>
+                    <p><strong>Dirección:</strong> Avenida Central 45</p>
+                    <div class="card-buttons">
+                        <a href="servicios.html" class="btn-card">Ver más</a>
+                        <a href="https://wa.me/5371234567?text=Estoy%20interesado%20en%20este%20servicio" class="btn-card">Contactar</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-  <!-- Agrega más servicios de construcción aquí -->
-</div>
 
-<h2>Servicios de Restaurantes</h2>
-<div class="cards-container">
-  <div class="card">
-    <img src="imagenes/restaurante1.jpg" alt="Servicio Restaurante 1">
-    <div class="card-content">
-      <h3>Comida a Domicilio</h3>
-      <p>Restaurante Delicias: Servicio de comida rápida y saludable.</p>
-      <p>Dirección: Calle 23, Santiago de Cuba</p>
-      <div class="card-buttons">
-        <a href="servicios.html#restauranteDelicias" class="btn-card">Ver más</a>
-        <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Comida+a+Domicilio" target="_blank" class="btn-card">Contactar</a>
-      </div>
-    </div>
-  </div>
-</div>
+        <h2 class="category-title" style="color:#ff7a00;">Restaurant</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="imagenes/restaurant1.jpg" alt="Restaurant 1">
+                <div class="card-content">
+                    <h3>Servicio de Catering</h3>
+                    <p>Empresa GHI - Catering para eventos y celebraciones.</p>
+                    <p><strong>Dirección:</strong> Calle 56, Ciudad</p>
+                    <div class="card-buttons">
+                        <a href="servicios.html" class="btn-card">Ver más</a>
+                        <a href="https://wa.me/5371234567?text=Estoy%20interesado%20en%20este%20servicio" class="btn-card">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<h2>Servicios de Transporte</h2>
-<div class="cards-container">
-  <div class="card">
-    <img src="imagenes/transporte1.jpg" alt="Servicio Transporte 1">
-    <div class="card-content">
-      <h3>Transporte de Carga</h3>
-      <p>Transportes Rápidos S.A.: Servicios de transporte urbano e interprovincial.</p>
-      <p>Dirección: Calle 5, Villa Clara</p>
-      <div class="card-buttons">
-        <a href="servicios.html#transporteRapidos" class="btn-card">Ver más</a>
-        <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Transporte+de+Carga" target="_blank" class="btn-card">Contactar</a>
-      </div>
-    </div>
-  </div>
-</div>
+        <h2 class="category-title" style="color:#ff7a00;">Transporte</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="imagenes/transporte1.jpg" alt="Transporte 1">
+                <div class="card-content">
+                    <h3>Transporte de Mercancías</h3>
+                    <p>Empresa JKL - Transporte seguro y puntual de mercancías.</p>
+                    <p><strong>Dirección:</strong> Avenida 78, Ciudad</p>
+                    <div class="card-buttons">
+                        <a href="servicios.html" class="btn-card">Ver más</a>
+                        <a href="https://wa.me/5371234567?text=Estoy%20interesado%20en%20este%20servicio" class="btn-card">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<h2>Servicios de Tecnología</h2>
-<div class="cards-container">
-  <div class="card">
-    <img src="imagenes/tecnologia1.jpg" alt="Servicio Tecnología 1">
-    <div class="card-content">
-      <h3>Soporte Técnico</h3>
-      <p>Tech Solutions: Servicios de reparación y mantenimiento de computadoras.</p>
-      <p>Dirección: Calle 18, La Habana</p>
-      <div class="card-buttons">
-        <a href="servicios.html#techSolutions" class="btn-card">Ver más</a>
-        <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Soporte+Técnico" target="_blank" class="btn-card">Contactar</a>
-      </div>
-    </div>
-  </div>
-</div>
+        <h2 class="category-title" style="color:#ff7a00;">Tecnología</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="imagenes/tecnologia1.jpg" alt="Tecnología 1">
+                <div class="card-content">
+                    <h3>Soporte Informático</h3>
+                    <p>Empresa MNO - Mantenimiento y soporte de sistemas y redes.</p>
+                    <p><strong>Dirección:</strong> Calle 90, Ciudad</p>
+                    <div class="card-buttons">
+                        <a href="servicios.html" class="btn-card">Ver más</a>
+                        <a href="https://wa.me/5371234567?text=Estoy%20interesado%20en%20este%20servicio" class="btn-card">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<h2>Servicios de Ventas Mayoristas</h2>
-<div class="cards-container">
-  <div class="card">
-    <img src="imagenes/ventas1.jpg" alt="Servicio Ventas Mayoristas 1">
-    <div class="card-content">
-      <h3>Distribuidora Mayorista</h3>
-      <p>Distribuciones XYZ: Venta de productos al por mayor para negocios.</p>
-      <p>Dirección: Calle 30, Cienfuegos</p>
-      <div class="card-buttons">
-        <a href="servicios.html#distribucionesXYZ" class="btn-card">Ver más</a>
-        <a href="https://wa.me/53XXXXXXXXX?text=Estoy+interesado+en+Distribuidora+Mayorista" target="_blank" class="btn-card">Contactar</a>
-      </div>
-    </div>
-  </div>
-</div>
+        <h2 class="category-title" style="color:#ff7a00;">Ventas Mayoristas</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="imagenes/ventas1.jpg" alt="Ventas 1">
+                <div class="card-content">
+                    <h3>Distribución Mayorista</h3>
+                    <p>Empresa PQR - Venta y distribución mayorista de productos variados.</p>
+                    <p><strong>Dirección:</strong> Calle 12, Ciudad</p>
+                    <div class="card-buttons">
+                        <a href="servicios.html" class="btn-card">Ver más</a>
+                        <a href="https://wa.me/5371234567?text=Estoy%20interesado%20en%20este%20servicio" class="btn-card">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<!-- PIE DE PÁGINA -->
+    </section>
+</main>
+
+<!-- FOOTER -->
 <footer>
-  <img src="imagenes/logo_nexo.png" alt="Logo neXo" class="logo-footer">
-  <div class="footer-buttons">
-    <a href="https://wa.me/53XXXXXXXXX" target="_blank" class="btn-card">
-      <img src="imagenes/whatsapp.png" alt="WhatsApp"> WhatsApp
-    </a>
-    <a href="mailto:correo@nexo.com" class="btn-card">
-      <img src="imagenes/correo.png" alt="Correo"> Correo
-    </a>
-    <a href="https://instagram.com/nexo" target="_blank" class="btn-card">
-      <img src="imagenes/instagram.png" alt="Instagram"> Instagram
-    </a>
-    <a href="https://facebook.com/nexo" target="_blank" class="btn-card">
-      <img src="imagenes/facebook.png" alt="Facebook"> Facebook
-    </a>
-    <a href="https://youtube.com/nexo" target="_blank" class="btn-card">
-      <img src="imagenes/youtube.png" alt="YouTube"> YouTube
-    </a>
-  </div>
-  <p class="eslogan">Conectando soluciones, creando resultados</p>
+    <div class="footer-logo">
+        <img src="imagenes/logo_nexo.png" alt="neXo Logo">
+        <p class="footer-eslogan">Conectando soluciones, creando resultados</p>
+    </div>
+    <div class="footer-buttons">
+        <a href="https://wa.me/5371234567" class="btn-footer"><img src="imagenes/whatsapp.png" alt="WhatsApp"> WhatsApp</a>
+        <a href="mailto:correo@nexo.com" class="btn-footer"><img src="imagenes/email.png" alt="Correo"> Correo</a>
+        <a href="https://www.instagram.com/" class="btn-footer"><img src="imagenes/instagram.png" alt="Instagram"> Instagram</a>
+        <a href="https://www.facebook.com/" class="btn-footer"><img src="imagenes/facebook.png" alt="Facebook"> Facebook</a>
+        <a href="https://www.youtube.com/" class="btn-footer"><img src="imagenes/youtube.png" alt="YouTube"> YouTube</a>
+    </div>
 </footer>
 
 </body>
