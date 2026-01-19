@@ -1,143 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Tienda | nexo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CSS GENERAL -->
-    <link rel="stylesheet" href="css/estilos.css">
-
-    <!-- ICONOS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Tienda | neXo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
 
-<!-- =======================
-     ENCABEZADO (IGUAL)
-======================= -->
-<header class="header">
-    <div class="header-container">
-        <h1 class="logo">nexo</h1>
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="tienda.html" class="active">Tienda</a>
-            <a href="quienes-somos.html">Quiénes somos</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </div>
+<!-- ENCABEZADO -->
+<header>
+  <img src="imagenes/logo.png" alt="neXo" class="logo">
+  <div class="eslogan">Conectando soluciones, creando resultados</div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="tienda.html" class="active">Tienda</a>
+    <a href="ofertas.html">Ofertas Plus</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="contactos.html">Contactos</a>
+  </nav>
 </header>
 
-<!-- =======================
-     CONTENIDO PRINCIPAL
-======================= -->
-<main class="main">
+<!-- BOTON FLOTANTE -->
+<a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20los%20servicios%20de%20nexo" 
+   target="_blank" class="whatsapp-float">
+  <img src="imagenes/whatsapp.png" alt="WhatsApp"> NEXO
+</a>
 
-    <!-- TITULO -->
-    <section class="section-title">
-        <h2>Productos disponibles</h2>
-        <p>Explora productos publicados por proveedores verificados en nexo</p>
-    </section>
+<!-- TITULO TIENDA -->
+<h2 class="categoria">Productos Disponibles</h2>
 
-    <!-- =======================
-         GRID DE PRODUCTOS
-    ======================= -->
-    <section class="cards-grid">
+<section class="tarjetas-container">
 
-        <!-- PRODUCTO 1 -->
-        <article class="card">
-            <img src="img/productos/cemento.jpg" alt="Cemento Portland">
-            <div class="card-content">
-                <h3>Cemento Portland</h3>
-                <p class="provider">Proveedor: ConstruRed</p>
-                <p class="price">$9.50 USD</p>
-                <p class="description">
-                    Cemento de alta resistencia para obras civiles y residenciales.
-                </p>
+  <!-- PRODUCTO 1 -->
+  <div class="tarjeta">
+    <img src="imagenes/productos/cemento.jpg" alt="Cemento Portland">
+    <div class="contenido">
+      <h3>Cemento Portland</h3>
+      <p class="empresa">Proveedor: ConstruRed</p>
+      <p class="precio">$9.50 USD</p>
+      <p class="descripcion">Cemento de alta resistencia para obras civiles y residenciales.</p>
 
-                <div class="card-buttons">
-                    <a 
-                        href="https://wa.me/5355555555?text=Estoy%20interesado%20en%20comprar%20este%20producto%20(Cemento%20Portland)%20que%20vi%20publicado%20en%20nexo"
-                        target="_blank"
-                        class="btn primary">
-                        Contactar proveedor
-                    </a>
-
-                    <a href="catalogos/construred.pdf" class="btn secondary" download>
-                        Catálogo
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- PRODUCTO 2 -->
-        <article class="card">
-            <img src="img/productos/nevera.jpg" alt="Nevera Industrial">
-            <div class="card-content">
-                <h3>Nevera Industrial</h3>
-                <p class="provider">Proveedor: FríoPro</p>
-                <p class="price">$1,250 USD</p>
-                <p class="description">
-                    Nevera profesional ideal para restaurantes y negocios gastronómicos.
-                </p>
-
-                <div class="card-buttons">
-                    <a 
-                        href="https://wa.me/5354444444?text=Estoy%20interesado%20en%20comprar%20este%20producto%20(Nevera%20Industrial)%20que%20vi%20publicado%20en%20nexo"
-                        target="_blank"
-                        class="btn primary">
-                        Contactar proveedor
-                    </a>
-
-                    <a href="catalogos/friopro.pdf" class="btn secondary" download>
-                        Catálogo
-                    </a>
-                </div>
-            </div>
-        </article>
-
-        <!-- PRODUCTO 3 -->
-        <article class="card">
-            <img src="img/productos/mueble.jpg" alt="Mueble Comercial">
-            <div class="card-content">
-                <h3>Mueble Comercial</h3>
-                <p class="provider">Proveedor: Diseño Interior Plus</p>
-                <p class="price">$480 USD</p>
-                <p class="description">
-                    Mobiliario moderno para tiendas y espacios comerciales.
-                </p>
-
-                <div class="card-buttons">
-                    <a 
-                        href="https://wa.me/5353333333?text=Estoy%20interesado%20en%20comprar%20este%20producto%20(Mueble%20Comercial)%20que%20vi%20publicado%20en%20nexo"
-                        target="_blank"
-                        class="btn primary">
-                        Contactar proveedor
-                    </a>
-
-                    <a href="catalogos/interiorplus.pdf" class="btn secondary" download>
-                        Catálogo
-                    </a>
-                </div>
-            </div>
-        </article>
-
-    </section>
-</main>
-
-<!-- =======================
-     FOOTER (IGUAL)
-======================= -->
-<footer class="footer">
-    <div class="footer-content">
-        <p>© nexo – Conectando soluciones, creando resultados</p>
-        <div class="footer-buttons">
-            <a href="contacto.html" class="btn footer-btn">Publica tu producto</a>
-            <a href="https://wa.me/5350000000" target="_blank" class="btn footer-btn">Contacto directo</a>
-        </div>
+      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20comprar%20este%20producto%20(Cemento%20Portland)%20que%20vi%20publicado%20en%20nexo" class="btn" target="_blank">Contactar proveedor</a>
+      <a href="catalogos/construred.pdf" class="btn" download>Catálogo</a>
     </div>
+  </div>
+
+  <!-- PRODUCTO 2 -->
+  <div class="tarjeta">
+    <img src="imagenes/productos/nevera.jpg" alt="Nevera Industrial">
+    <div class="contenido">
+      <h3>Nevera Industrial</h3>
+      <p class="empresa">Proveedor: FríoPro</p>
+      <p class="precio">$1,250 USD</p>
+      <p class="descripcion">Nevera profesional ideal para restaurantes y negocios gastronómicos.</p>
+
+      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20comprar%20este%20producto%20(Nevera%20Industrial)%20que%20vi%20publicado%20en%20nexo" class="btn" target="_blank">Contactar proveedor</a>
+      <a href="catalogos/friopro.pdf" class="btn" download>Catálogo</a>
+    </div>
+  </div>
+
+  <!-- PRODUCTO 3 -->
+  <div class="tarjeta">
+    <img src="imagenes/productos/mueble.jpg" alt="Mueble Comercial">
+    <div class="contenido">
+      <h3>Mueble Comercial</h3>
+      <p class="empresa">Proveedor: Diseño Interior Plus</p>
+      <p class="precio">$480 USD</p>
+      <p class="descripcion">Mobiliario moderno para tiendas y espacios comerciales.</p>
+
+      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20comprar%20este%20producto%20(Mueble%20Comercial)%20que%20vi%20publicado%20en%20nexo" class="btn" target="_blank">Contactar proveedor</a>
+      <a href="catalogos/interiorplus.pdf" class="btn" download>Catálogo</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- PIE DE PÁGINA -->
+<footer>
+  <img src="imagenes/logo.png" alt="neXo" class="logo-footer">
+  <p class="eslogan-footer">@neXo - Conectando soluciones, creando resultados</p>
+  <div class="footer-buttons">
+    <a href="https://wa.me/5355415537" target="_blank"><img src="imagenes/whatsapp.png" alt=""> WhatsApp</a>
+    <a href="mailto:correo@nexo.com"><img src="imagenes/correo.png" alt=""> Correo</a>
+    <a href="https://instagram.com/nexo_cuba" target="_blank"><img src="imagenes/instagram.png" alt=""> Instagram</a>
+    <a href="https://facebook.com/nexo" target="_blank"><img src="imagenes/facebook.png" alt=""> Facebook</a>
+    <a href="https://youtube.com/nexo" target="_blank"><img src="imagenes/youtube.png" alt=""> YouTube</a>
+  </div>
 </footer>
 
 </body>
