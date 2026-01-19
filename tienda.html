@@ -28,54 +28,90 @@
   <img src="imagenes/whatsapp.png" alt="WhatsApp"> NEXO
 </a>
 
-<!-- TITULO TIENDA -->
-<h2 class="categoria">Productos Disponibles</h2>
+<main class="main">
 
-<section class="tarjetas-container">
+    <!-- TITULO GENERAL -->
+    <section class="section-title">
+        <h2>Productos disponibles</h2>
+        <p>Explora productos publicados por proveedores verificados en NEXO</p>
+    </section>
 
-  <!-- PRODUCTO 1 -->
-  <div class="tarjeta">
-    <img src="imagenes/productos/cemento.jpg" alt="Cemento Portland">
-    <div class="contenido">
-      <h3>Cemento Portland</h3>
-      <p class="empresa">Proveedor: ConstruRed</p>
-      <p class="precio">$9.50 USD</p>
-      <p class="descripcion">Cemento de alta resistencia para obras civiles y residenciales.</p>
+    <!-- =======================
+         TIENDA 1
+    ======================= -->
+    <section class="tienda">
+        <h2 class="categoria">ConstruRed</h2>
 
-      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20comprar%20este%20producto%20(Cemento%20Portland)%20que%20vi%20publicado%20en%20nexo" class="btn" target="_blank">Contactar proveedor</a>
-      <a href="catalogos/construred.pdf" class="btn" download>Catálogo</a>
-    </div>
-  </div>
+        <!-- BARRA INFORMATIVA DE LA TIENDA -->
+        <div class="barra-tienda">
+            <p><strong>Dirección:</strong> Calle Martí #45, Sagua la Grande</p>
+            <p><strong>Objeto social:</strong> Venta de materiales de construcción y servicios de asesoría técnica.</p>
+        </div>
 
-  <!-- PRODUCTO 2 -->
-  <div class="tarjeta">
-    <img src="imagenes/productos/nevera.jpg" alt="Nevera Industrial">
-    <div class="contenido">
-      <h3>Nevera Industrial</h3>
-      <p class="empresa">Proveedor: FríoPro</p>
-      <p class="precio">$1,250 USD</p>
-      <p class="descripcion">Nevera profesional ideal para restaurantes y negocios gastronómicos.</p>
+        <!-- TARJETAS DE PRODUCTOS -->
+        <div class="cards-grid horizontal-scroll">
+            <article class="card">
+                <img src="img/productos/cemento.jpg" alt="Cemento Portland">
+                <div class="card-content">
+                    <h3>Cemento Portland</h3>
+                    <p class="price">$9.50 USD</p>
+                    <p class="description">Cemento de alta resistencia para obras civiles y residenciales.</p>
+                    <div class="card-buttons">
+                        <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20comprar%20Cemento%20Portland" 
+                           target="_blank" class="btn primary">Contactar proveedor</a>
+                        <a href="catalogos/construred.pdf" download class="btn secondary">Catálogo</a>
+                    </div>
+                </div>
+            </article>
 
-      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20comprar%20este%20producto%20(Nevera%20Industrial)%20que%20vi%20publicado%20en%20nexo" class="btn" target="_blank">Contactar proveedor</a>
-      <a href="catalogos/friopro.pdf" class="btn" download>Catálogo</a>
-    </div>
-  </div>
+            <article class="card">
+                <img src="img/productos/ladrillo.jpg" alt="Ladrillos">
+                <div class="card-content">
+                    <h3>Ladrillos</h3>
+                    <p class="price">$0.50 USD</p>
+                    <p class="description">Ladrillos de alta calidad para construcción de viviendas y obras civiles.</p>
+                    <div class="card-buttons">
+                        <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20comprar%20Ladrillos" 
+                           target="_blank" class="btn primary">Contactar proveedor</a>
+                        <a href="catalogos/construred.pdf" download class="btn secondary">Catálogo</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
 
-  <!-- PRODUCTO 3 -->
-  <div class="tarjeta">
-    <img src="imagenes/productos/mueble.jpg" alt="Mueble Comercial">
-    <div class="contenido">
-      <h3>Mueble Comercial</h3>
-      <p class="empresa">Proveedor: Diseño Interior Plus</p>
-      <p class="precio">$480 USD</p>
-      <p class="descripcion">Mobiliario moderno para tiendas y espacios comerciales.</p>
+    <!-- =======================
+         TIENDA 2
+    ======================= -->
+    <section class="tienda">
+        <h2 class="categoria">FríoPro</h2>
 
-      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20comprar%20este%20producto%20(Mueble%20Comercial)%20que%20vi%20publicado%20en%20nexo" class="btn" target="_blank">Contactar proveedor</a>
-      <a href="catalogos/interiorplus.pdf" class="btn" download>Catálogo</a>
-    </div>
-  </div>
+        <!-- BARRA INFORMATIVA DE LA TIENDA -->
+        <div class="barra-tienda">
+            <p><strong>Dirección:</strong> Avenida Central #120, Sagua la Grande</p>
+            <p><strong>Objeto social:</strong> Venta de equipos de refrigeración industrial y comercial.</p>
+        </div>
 
-</section>
+        <!-- TARJETAS DE PRODUCTOS -->
+        <div class="cards-grid horizontal-scroll">
+            <article class="card">
+                <img src="img/productos/nevera.jpg" alt="Nevera Industrial">
+                <div class="card-content">
+                    <h3>Nevera Industrial</h3>
+                    <p class="price">$1,250 USD</p>
+                    <p class="description">Nevera profesional ideal para restaurantes y negocios gastronómicos.</p>
+                    <div class="card-buttons">
+                        <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20comprar%20Nevera%20Industrial" 
+                           target="_blank" class="btn primary">Contactar proveedor</a>
+                        <a href="catalogos/friopro.pdf" download class="btn secondary">Catálogo</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</main>
+
 
 <!-- PIE DE PÁGINA -->
 <footer>
