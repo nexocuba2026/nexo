@@ -133,30 +133,40 @@
     <a href="https://youtube.com/nexocuba" target="_blank"><img src="imagenes/youtube.png" alt=""> YouTube</a>
   </div>
 </footer>
-document.querySelectorAll('.tarjeta').forEach((tarjeta) => {
-  const imgs = tarjeta.querySelectorAll('.card-carousel-wrapper img');
-  const prev = tarjeta.querySelector('.prev');
-  const next = tarjeta.querySelector('.next');
-  let index = 0;
+<!-- =========================
+     SCRIPT PARA CARRUSEL DE TARJETAS
+========================= -->
+<script>
+  // Selecciona todas las tarjetas que tienen carrusel
+  document.querySelectorAll('.tarjeta').forEach((tarjeta) => {
+    const imgs = tarjeta.querySelectorAll('.card-carousel-wrapper img');
+    const prev = tarjeta.querySelector('.prev');
+    const next = tarjeta.querySelector('.next');
+    let index = 0;
 
-  function showImg(i) {
-    imgs.forEach((img, idx) => {
-      img.classList.toggle('active', idx === i);
+    // Función para mostrar la imagen correspondiente
+    function showImg(i) {
+      imgs.forEach((img, idx) => {
+        img.classList.toggle('active', idx === i);
+      });
+    }
+
+    // Flecha izquierda
+    prev.addEventListener('click', () => {
+      index = (index - 1 + imgs.length) % imgs.length;
+      showImg(index);
     });
-  }
 
-  prev.addEventListener('click', () => {
-    index = (index - 1 + imgs.length) % imgs.length;
+    // Flecha derecha
+    next.addEventListener('click', () => {
+      index = (index + 1) % imgs.length;
+      showImg(index);
+    });
+
+    // Muestra la primera imagen al cargar
     showImg(index);
   });
-
-  next.addEventListener('click', () => {
-    index = (index + 1) % imgs.length;
-    showImg(index);
-  });
-
-  showImg(index);
-});
+</script>
 
 </body>
 </html>
