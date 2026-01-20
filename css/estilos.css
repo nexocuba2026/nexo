@@ -210,23 +210,26 @@ nav a.active {
     background-color: #fff;
     padding: 15px 20px;
     margin: 30px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15); /* Relieve */
     border-radius: 10px;
 }
 
+/* Header dentro del banner: nombre + botón */
 .tienda-header {
     display: flex;
     justify-content: space-between; /* Nombre a la izquierda, botón a la derecha */
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
+/* Nombre de la tienda */
 .nombre-tienda {
     color: #ff7a00; /* Naranja */
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
+/* Botón de contacto del proveedor */
 .btn-contacto {
     background-color: #ff7a00;
     color: #fff;
@@ -242,11 +245,18 @@ nav a.active {
     transform: translateY(-2px);
 }
 
-.descripcion-tienda,
-.direccion-tienda {
-    margin: 2px 0;
+/* Descripción de la tienda */
+.descripcion-tienda {
+    margin: 5px 0 2px 0;
     font-size: 14px;
     color: #333;
+}
+
+/* Dirección de la tienda */
+.direccion-tienda {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    color: #555;
 }
 
 
