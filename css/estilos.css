@@ -307,6 +307,76 @@ nav a.active {
 .btn.secondary:hover {
     background-color: #333;
 }
+.tienda-banner {
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.tienda-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tienda-nombre {
+  font-size: 1.5em;
+  color: #ff6600; /* Naranja como categorías */
+}
+
+.contactar-proveedor {
+  font-size: 0.9em;
+  padding: 6px 12px;
+}
+
+.tienda-descripcion,
+.tienda-direccion {
+  margin: 5px 0;
+}
+
+/* Carrusel en la tarjeta */
+.card-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Ajustar según tamaño de tarjeta */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card-carousel-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.card-carousel-wrapper img.active {
+  display: block;
+}
+
+/* Botones de flechas en carrusel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carousel-btn.prev {
+  left: 5px;
+}
+
+.carousel-btn.next {
+  right: 5px;
+}
 
 /* ========================================
    CATEGORIAS / TITULOS NARANJAS
