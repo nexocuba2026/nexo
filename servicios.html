@@ -81,4 +81,73 @@
         <div class="carousel">
             <img src="imagenes/servicio-transporte1.jpg" alt="Transporte 1">
             <img src="imagenes/servicio-transporte2.jpg" alt="Transporte 2">
-            <img src="imagenes/servicio-transporte3.
+            <img src="imagenes/servicio-transporte3.jpg" alt="Transporte 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <div class="contenido">
+            <h3>Transporte de Cargas y Pasajeros</h3>
+            <p class="empresa">Transporte Rápido — Servicios interprovinciales y locales.</p>
+            <p class="direccion">Dirección: Terminal Vieja, Sagua la Grande</p>
+            <a href="servicios.html" class="btn">Ver más</a>
+            <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20un%20servicio%20publicado%20en%20NEXO" class="btn" target="_blank">Contactar</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- ========================================
+     PIE DE PÁGINA
+======================================== -->
+<footer>
+    <img src="imagenes/logo-nexo.png" alt="NEXO" class="logo-footer">
+    <p class="eslogan-footer">Conectando soluciones, creando resultados</p>
+    <div class="footer-buttons">
+        <a href="https://wa.me/5355415537" target="_blank" class="btn footer-btn">
+            <img src="imagenes/whatsapp.png" alt=""> WhatsApp
+        </a>
+        <a href="mailto:nexo@email.com" class="btn footer-btn">
+            <img src="imagenes/correo.png" alt=""> Correo
+        </a>
+        <a href="#" target="_blank" class="btn footer-btn">
+            <img src="imagenes/instagram.png" alt=""> Instagram
+        </a>
+        <a href="#" target="_blank" class="btn footer-btn">
+            <img src="imagenes/facebook.png" alt=""> Facebook
+        </a>
+        <a href="#" target="_blank" class="btn footer-btn">
+            <img src="imagenes/youtube.png" alt=""> YouTube
+        </a>
+    </div>
+</footer>
+
+<!-- ============================
+     SCRIPT DEL CARRUSEL
+============================ -->
+<script>
+document.querySelectorAll('.tarjeta').forEach(function(tarjeta){
+    let carousel = tarjeta.querySelector('.carousel');
+    let images = carousel.querySelectorAll('img');
+    let index = 0;
+
+    let prev = carousel.querySelector('.prev');
+    let next = carousel.querySelector('.next');
+
+    images.forEach((img, i) => { img.style.display = i === 0 ? 'block' : 'none'; });
+
+    prev.addEventListener('click', () => {
+        images[index].style.display = 'none';
+        index = (index - 1 + images.length) % images.length;
+        images[index].style.display = 'block';
+    });
+
+    next.addEventListener('click', () => {
+        images[index].style.display = 'none';
+        index = (index + 1) % images.length;
+        images[index].style.display = 'block';
+    });
+});
+</script>
+
+</body>
+</html>
