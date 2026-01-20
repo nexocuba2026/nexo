@@ -205,33 +205,48 @@ nav a.active {
   gap: 15px;
 }
 
-/* Banner de tienda sobre las tarjetas */
+/* Banner de la tienda */
 .tienda-banner {
-  background-color: #f7f7f7;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+    background-color: #fff;
+    padding: 15px 20px;
+    margin: 30px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
 
-.tienda-info h3 {
-  margin: 0;
-  color: #ff6600;
-  font-size: 20px;
+.tienda-header {
+    display: flex;
+    justify-content: space-between; /* Nombre a la izquierda, botón a la derecha */
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.tienda-info p {
-  margin: 3px 0;
-  font-size: 14px;
+.nombre-tienda {
+    color: #ff7a00; /* Naranja */
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.tienda-info .btn {
-  margin-left: 10px;
-  font-size: 14px;
-  padding: 5px 10px;
+.btn-contacto {
+    background-color: #ff7a00;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-contacto:hover {
+    background-color: #e06600;
+    transform: translateY(-2px);
+}
+
+.descripcion-tienda,
+.direccion-tienda {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #333;
 }
 
 
