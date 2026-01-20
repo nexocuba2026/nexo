@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#ff7a00">
+<meta name="theme-color" content="#ff6600">
+
 </head>
 <body>
 
@@ -144,14 +145,13 @@ setInterval(mostrarSlide, 3000);
 
 <script src="js/buscador.js"></script>
 
- <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js')
-      .then(reg => console.log('Service Worker registrado', reg))
-      .catch(err => console.log('Error en SW', err));
-  });
-}
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log("Service Worker registrado"))
+      .catch((err) => console.error("Error registrando Service Worker", err));
+  }
 </script>
+
 </body>
 </html>
