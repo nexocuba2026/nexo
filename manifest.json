@@ -1,7 +1,7 @@
 {
   "name": "neXo",
   "short_name": "neXo",
-  "description": "Publicidad y visibilidad para negocios",
+  "description": "Plataforma de servicios, productos y negocios",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
