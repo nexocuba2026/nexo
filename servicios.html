@@ -1,167 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Tienda | nexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <title>Servicios | NEXO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<!-- ENCABEZADO -->
+<!-- ========================================
+     ENCABEZADO
+======================================== -->
 <header>
     <img src="imagenes/logo-nexo.png" alt="NEXO" class="logo">
     <div class="eslogan">Conectando soluciones, creando resultados</div>
     <nav>
         <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="tienda.html" class="active">Tienda</a>
+        <a href="servicios.html" class="active">Servicios</a>
+        <a href="tienda.html">Tienda</a>
         <a href="ofertas.html">Ofertas Plus</a>
         <a href="quienes.html">Quiénes Somos</a>
         <a href="contactos.html">Contactos</a>
     </nav>
 </header>
 
-<main class="main">
+<!-- ========================================
+     SERVICIOS
+======================================== -->
+<h2 class="categoria">Servicios de Construcción</h2>
 
-  <!-- TIENDA 1 -->
-  <h2 class="categoria">Tienda X</h2>
-  <div class="tienda-banner">
-    <div class="tienda-info">
-      <h3>Tienda X</h3>
-      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20los%20productos%20de%20Tienda%20X" 
-         class="btn">Contactar proveedor</a>
-      <p>Productos: Materiales de construcción y herramientas</p>
-      <p>Dirección: Calle 123, Sagua la Grande</p>
-    </div>
-  </div>
+<section class="tarjetas-container">
 
-  <section class="tarjetas-container">
-
-    <!-- PRODUCTO 1 -->
     <div class="tarjeta">
-      <div class="card-carousel-wrapper">
-        <img src="img/productos/cemento1.jpg" alt="Cemento Portland">
-        <img src="img/productos/cemento2.jpg" alt="Cemento Portland">
-        <img src="img/productos/cemento3.jpg" alt="Cemento Portland">
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-      </div>
-      <div class="contenido">
-        <h3>Cemento Portland</h3>
-        <p class="price">$9.50 USD</p>
-        <p class="description">Cemento de alta resistencia para obras civiles y residenciales.</p>
-        <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20el%20producto%20Cemento%20Portland%20de%20Tienda%20X" 
-           class="btn">Solicitar producto</a>
-      </div>
+        <div class="carousel">
+            <img src="imagenes/servicio-construccion1.jpg" alt="Construcción 1">
+            <img src="imagenes/servicio-construccion2.jpg" alt="Construcción 2">
+            <img src="imagenes/servicio-construccion3.jpg" alt="Construcción 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <div class="contenido">
+            <h3>Construcción y Remodelación</h3>
+            <p class="empresa">Empresa ABC — Construcción de viviendas, locales y naves industriales.</p>
+            <p class="direccion">Dirección: Calle Martí #45, Sagua la Grande</p>
+            <a href="servicios.html" class="btn">Ver más</a>
+            <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20un%20servicio%20publicado%20en%20NEXO" class="btn" target="_blank">Contactar</a>
+        </div>
     </div>
 
-    <!-- PRODUCTO 2 -->
+</section>
+
+<h2 class="categoria">Servicios Gastronómicos</h2>
+
+<section class="tarjetas-container">
+
     <div class="tarjeta">
-      <div class="card-carousel-wrapper">
-        <img src="img/productos/ladrillo1.jpg" alt="Ladrillos">
-        <img src="img/productos/ladrillo2.jpg" alt="Ladrillos">
-        <img src="img/productos/ladrillo3.jpg" alt="Ladrillos">
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-      </div>
-      <div class="contenido">
-        <h3>Ladrillos</h3>
-        <p class="price">$12.00 USD</p>
-        <p class="description">Ladrillos resistentes y duraderos para construcción de muros.</p>
-        <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20el%20producto%20Ladrillos%20de%20Tienda%20X" 
-           class="btn">Solicitar producto</a>
-      </div>
+        <div class="carousel">
+            <img src="imagenes/servicio-restaurante1.jpg" alt="Restaurante 1">
+            <img src="imagenes/servicio-restaurante2.jpg" alt="Restaurante 2">
+            <img src="imagenes/servicio-restaurante3.jpg" alt="Restaurante 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <div class="contenido">
+            <h3>Servicios Gastronómicos</h3>
+            <p class="empresa">Restaurante El Sabor — Cocina criolla e internacional.</p>
+            <p class="direccion">Dirección: Avenida Central #120, Sagua la Grande</p>
+            <a href="servicios.html" class="btn">Ver más</a>
+            <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20un%20servicio%20publicado%20en%20NEXO" class="btn" target="_blank">Contactar</a>
+        </div>
     </div>
 
-  </section>
+</section>
 
-  <!-- TIENDA 2 -->
-  <h2 class="categoria">Tienda Y</h2>
-  <div class="tienda-banner">
-    <div class="tienda-info">
-      <h3>Tienda Y</h3>
-      <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20los%20productos%20de%20Tienda%20Y" 
-         class="btn">Contactar proveedor</a>
-      <p>Productos: Muebles y decoración</p>
-      <p>Dirección: Avenida Central 456, Sagua la Grande</p>
-    </div>
-  </div>
+<h2 class="categoria">Servicios de Transporte</h2>
 
-  <section class="tarjetas-container">
+<section class="tarjetas-container">
 
-    <!-- PRODUCTO 1 -->
     <div class="tarjeta">
-      <div class="card-carousel-wrapper">
-        <img src="img/productos/mueble1.jpg" alt="Silla Oficina">
-        <img src="img/productos/mueble2.jpg" alt="Silla Oficina">
-        <img src="img/productos/mueble3.jpg" alt="Silla Oficina">
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-      </div>
-      <div class="contenido">
-        <h3>Silla Oficina</h3>
-        <p class="price">$75.00 USD</p>
-        <p class="description">Silla ergonómica para oficinas y escritorios.</p>
-        <a href="https://wa.me/5355415537?text=Estoy%20interesado%20en%20el%20producto%20Silla%20Oficina%20de%20Tienda%20Y" 
-           class="btn">Solicitar producto</a>
-      </div>
-    </div>
-
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-    <img src="imagenes/logo-nexo.png" alt="NEXO" class="logo-footer">
-    <div class="footer-buttons">
-        <a href="https://wa.me/5355415537" target="_blank" class="btn-card">
-            <img src="imagenes/whatsapp.png" alt="WhatsApp"> WhatsApp
-        </a>
-        <a href="mailto:correo@nexo.com" class="btn-card">
-            <img src="imagenes/correo.png" alt="Correo"> Correo
-        </a>
-        <a href="https://instagram.com/nexo" target="_blank" class="btn-card">
-            <img src="imagenes/instagram.png" alt="Instagram"> Instagram
-        </a>
-        <a href="https://facebook.com/nexo" target="_blank" class="btn-card">
-            <img src="imagenes/facebook.png" alt="Facebook"> Facebook
-        </a>
-        <a href="https://youtube.com/nexo" target="_blank" class="btn-card">
-            <img src="imagenes/youtube.png" alt="YouTube"> YouTube
-        </a>
-    </div>
-    <p class="eslogan">Conectando soluciones, creando resultados</p>
-</footer>
-
-<!-- SCRIPT CARRUSEL -->
-<script>
-document.querySelectorAll('.tarjeta').forEach(tarjeta => {
-  const imgs = tarjeta.querySelectorAll('.card-carousel-wrapper img');
-  const prev = tarjeta.querySelector('.prev');
-  const next = tarjeta.querySelector('.next');
-  let index = 0;
-
-  function showImg(i) {
-    imgs.forEach((img, idx) => {
-      img.classList.toggle('active', idx === i);
-    });
-  }
-
-  prev.addEventListener('click', () => {
-    index = (index - 1 + imgs.length) % imgs.length;
-    showImg(index);
-  });
-
-  next.addEventListener('click', () => {
-    index = (index + 1) % imgs.length;
-    showImg(index);
-  });
-
-  showImg(index);
-});
-</script>
-
-</body>
-</html>
+        <div class="carousel">
+            <img src="imagenes/servicio-transporte1.jpg" alt="Transporte 1">
+            <img src="imagenes/servicio-transporte2.jpg" alt="Transporte 2">
+            <img src="imagenes/servicio-transporte3.
