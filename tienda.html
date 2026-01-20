@@ -137,35 +137,34 @@
      SCRIPT PARA CARRUSEL DE TARJETAS
 ========================= -->
 <script>
-  // Selecciona todas las tarjetas que tienen carrusel
-  document.querySelectorAll('.tarjeta').forEach((tarjeta) => {
-    const imgs = tarjeta.querySelectorAll('.card-carousel-wrapper img');
-    const prev = tarjeta.querySelector('.prev');
-    const next = tarjeta.querySelector('.next');
-    let index = 0;
+// Recorre todas las tarjetas con carrusel
+document.querySelectorAll('.card-carousel-wrapper').forEach(wrapper => {
+  const images = wrapper.querySelectorAll('img');
+  let currentIndex = 0;
 
-    // Función para mostrar la imagen correspondiente
-    function showImg(i) {
-      imgs.forEach((img, idx) => {
-        img.classList.toggle('active', idx === i);
-      });
-    }
+  // Muestra la primera imagen
+  images[currentIndex].classList.add('active');
 
-    // Flecha izquierda
-    prev.addEventListener('click', () => {
-      index = (index - 1 + imgs.length) % imgs.length;
-      showImg(index);
-    });
+  // Función para actualizar imagen activa
+  function showImage(index) {
+    images.forEach(img => img.classList.remove('active'));
+    images[index].classList.add('active');
+  }
 
-    // Flecha derecha
-    next.addEventListener('click', () => {
-      index = (index + 1) % imgs.length;
-      showImg(index);
-    });
-
-    // Muestra la primera imagen al cargar
-    showImg(index);
+  // Flecha siguiente
+  const next = wrapper.querySelector('.next');
+  next.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
   });
+
+  // Flecha anterior
+  const prev = wrapper.querySelector('.prev');
+  prev.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+});
 </script>
 
 </body>
