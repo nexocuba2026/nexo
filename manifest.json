@@ -1,10 +1,12 @@
 {
   "name": "NEXO",
   "short_name": "NEXO",
+  "description": "Plataforma integral de promoción de negocios cubanos",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ff6600",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "imagenes/icon-192.png",
