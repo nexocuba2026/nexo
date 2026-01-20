@@ -1,6 +1,5 @@
 const CACHE_NAME = "nexo-cache-v1";
 const urlsToCache = [
-  "/",
   "/index.html",
   "/servicios.html",
   "/tienda.html",
