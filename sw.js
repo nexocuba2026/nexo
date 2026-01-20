@@ -2,9 +2,17 @@ const CACHE_NAME = "nexo-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
+  "/servicios.html",
+  "/tienda.html",
+  "/ofertas.html",
+  "/quienes.html",
+  "/contactos.html",
   "/css/estilos.css",
-  "/js/script.js",
-  "/imagenes/logo-nexo.png"
+  "/js/carrusel.js",
+  "/js/buscador.js",
+  "/imagenes/logo-nexo.png",
+  "/imagenes/icon-192.png",
+  "/imagenes/icon-512.png"
 ];
 
 self.addEventListener("install", (event) => {
