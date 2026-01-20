@@ -133,6 +133,30 @@
     <a href="https://youtube.com/nexocuba" target="_blank"><img src="imagenes/youtube.png" alt=""> YouTube</a>
   </div>
 </footer>
-<script src="js/carrusel.js"></script>
+document.querySelectorAll('.tarjeta').forEach((tarjeta) => {
+  const imgs = tarjeta.querySelectorAll('.card-carousel-wrapper img');
+  const prev = tarjeta.querySelector('.prev');
+  const next = tarjeta.querySelector('.next');
+  let index = 0;
+
+  function showImg(i) {
+    imgs.forEach((img, idx) => {
+      img.classList.toggle('active', idx === i);
+    });
+  }
+
+  prev.addEventListener('click', () => {
+    index = (index - 1 + imgs.length) % imgs.length;
+    showImg(index);
+  });
+
+  next.addEventListener('click', () => {
+    index = (index + 1) % imgs.length;
+    showImg(index);
+  });
+
+  showImg(index);
+});
+
 </body>
 </html>
