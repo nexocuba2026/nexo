@@ -153,8 +153,13 @@ document.querySelectorAll('.tarjeta').forEach(function(tarjeta){
 </script>
 <script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/nexo/pwabuilder-sw.js')
+      .then(reg => console.log('Service Worker registrado correctamente'))
+      .catch(err => console.error('Error al registrar el SW:', err));
+  });
 }
 </script>
+
 </body>
 </html>
