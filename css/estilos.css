@@ -60,6 +60,29 @@ nav a.active {
     background-color: #ff7a00;
     border-radius: 6px;
 }
+nav {
+    display: flex;               /* Muestra los enlaces en fila */
+    justify-content: center;     /* Centra los botones horizontalmente */
+    align-items: center;         /* Centra verticalmente */
+    gap: 12px;                   /* Espacio entre botones */
+    flex-wrap: nowrap;           /* Evita que se rompa la línea */
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    white-space: nowrap;         /* Evita que el texto se rompa */
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #ff7a00;
+}
 
 /* ========================================
    CARRUSEL (si lo usas en index)
