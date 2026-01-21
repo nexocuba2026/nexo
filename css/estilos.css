@@ -38,27 +38,13 @@ header .eslogan {
     margin: 10px 0;
 }
 
-nav {
-    margin-top: 10px;
+
 }
 header, nav {
     border: none; /* Elimina cualquier línea que aparezca */
     box-shadow: none; /* Por si es sombra y se ve como línea */
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
-    padding: 8px 12px;
-    transition: all 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-    background-color: #ff7a00;
-    border-radius: 6px;
 }
 nav {
     display: flex;               /* Muestra los enlaces en fila */
