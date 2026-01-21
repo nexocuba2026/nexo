@@ -627,9 +627,9 @@ h2.categoria,
 /* Botón flotante de instalación */
 .btn-flotante {
     position: fixed;
-    bottom: 80px; /* subido un poco para que no tape el footer */
-    right: 20px;  /* margen desde el borde derecho */
-    background-color: #ff6600; /* color naranja de tu branding */
+    bottom: 80px;
+    right: 20px;
+    background-color: #ff6600;
     color: white;
     border: none;
     border-radius: 50%;
@@ -639,7 +639,7 @@ h2.categoria,
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     z-index: 9999;
-    display: none; /* inicialmente oculto */
+    display: block; /* Ahora siempre visible */
     transition: transform 0.2s;
 }
 
