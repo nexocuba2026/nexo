@@ -153,36 +153,29 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.error('Error al registrar el SW:', err));
   });
 }
-</script>
-<!-- Botón flotante de instalación -->
-<button id="btnInstall" class="btn-flotante" title="Instalar app">
-    ⬇️
-</button>
-
 <script>
 let deferredPrompt;
 const btnInstall = document.getElementById('btnInstall');
 
-// Mostrar siempre el botón
-btnInstall.style.display = 'block';
-
+// Detecta cuando la PWA puede ser instalada
 window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
+    e.preventDefault();           // Evita el prompt automático
+    deferredPrompt = e;           // Guarda el evento
+    btnInstall.style.display = 'block'; // Muestra el botón
 });
 
+// Acción al pulsar el botón
 btnInstall.addEventListener('click', async () => {
     if (deferredPrompt) {
-        deferredPrompt.prompt();
+        deferredPrompt.prompt();  // Muestra el prompt de instalación
         const { outcome } = await deferredPrompt.userChoice;
-        console.log(`Resultado de instalación: ${outcome}`);
-        deferredPrompt = null;
-        btnInstall.style.display = 'none'; // Oculta tras instalar
-    } else {
-        alert("La instalación solo funciona en móviles o navegadores compatibles con PWA.");
+        console.log('Resultado de instalación:', outcome);
+        deferredPrompt = null;   // Limpiar referencia
+        btnInstall.style.display = 'none'; // Ocultar el botón si se instaló
     }
 });
 </script>
+
 
 
 
