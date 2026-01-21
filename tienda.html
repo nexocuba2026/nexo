@@ -214,6 +214,15 @@ document.querySelectorAll('.card-carousel-wrapper').forEach(wrapper => {
   });
 });
 </script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/nexo/pwabuilder-sw.js')
+      .then(reg => console.log('Service Worker registrado correctamente'))
+      .catch(err => console.error('Error al registrar el SW:', err));
+  });
+}
+</script>
 
 </body>
 </html>
