@@ -1,14 +1,14 @@
 {
-  "id": "/nexo/",
+  "id": "nexo.app",
   "name": "NEXO",
   "short_name": "NEXO",
-  "description": "Plataforma digital para promocionar negocios, servicios y productos en Cuba.",
+  "description": "Plataforma digital de servicios y productos en Cuba.",
   "start_url": "/nexo/index.html",
   "scope": "/nexo/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ff7a00",
-  "orientation": "portrait",
+  "theme_color": "#ff7700",
+  "orientation": "any",
   "lang": "es",
   "icons": [
     {
@@ -21,5 +21,9 @@
       "sizes": "512x512",
       "type": "image/png"
     }
+  ],
+  "categories": [
+    "business",
+    "shopping"
   ]
 }
