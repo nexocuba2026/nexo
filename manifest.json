@@ -1,14 +1,15 @@
 {
   "id": "/nexo/",
-  "name": "nexo",
-  "short_name": "nexo",
+  "name": "NEXO",
+  "short_name": "NEXO",
+  "description": "Plataforma digital para promocionar negocios, servicios y productos en Cuba.",
   "start_url": "/nexo/index.html",
+  "scope": "/nexo/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ff6600",
+  "theme_color": "#ff7a00",
   "orientation": "portrait",
-  "scope": "/nexo/",
-  "description": "nexo – Plataforma integral para promoción, visibilidad y posicionamiento de negocios cubanos.",
+  "lang": "es",
   "icons": [
     {
       "src": "imagenes/icon-192.png",
