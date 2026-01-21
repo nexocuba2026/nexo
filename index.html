@@ -163,10 +163,12 @@ if ('serviceWorker' in navigator) {
 let deferredPrompt;
 const btnInstall = document.getElementById('btnInstall');
 
+// Mostrar siempre el botón
+btnInstall.style.display = 'block';
+
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    btnInstall.style.display = 'block'; // Muestra el botón
 });
 
 btnInstall.addEventListener('click', async () => {
@@ -175,10 +177,13 @@ btnInstall.addEventListener('click', async () => {
         const { outcome } = await deferredPrompt.userChoice;
         console.log(`Resultado de instalación: ${outcome}`);
         deferredPrompt = null;
-        btnInstall.style.display = 'none'; // Oculta el botón tras instalar
+        btnInstall.style.display = 'none'; // Oculta tras instalar
+    } else {
+        alert("La instalación solo funciona en móviles o navegadores compatibles con PWA.");
     }
 });
 </script>
+
 
 
 
