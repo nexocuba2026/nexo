@@ -124,30 +124,7 @@
     <a href="https://youtube.com/nexocuba" target="_blank"><img src="imagenes/youtube.png" alt=""> YouTube</a>
   </div>
 </footer>
-<button id="btnInstall" class="btn-flotante" title="Instalar app">
-    ⬇️
-</button>
 
-<script>
-let deferredPrompt;
-const btnInstall = document.getElementById('btnInstall');
-
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    btnInstall.style.display = 'block';
-});
-
-btnInstall.addEventListener('click', async () => {
-    if (deferredPrompt) {
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        console.log(`Resultado de instalación: ${outcome}`);
-        deferredPrompt = null;
-        btnInstall.style.display = 'none';
-    }
-});
-</script>
 <script>
 let indice = 0;
 const slides = document.querySelectorAll('.carrusel .slide');
@@ -176,6 +153,31 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.error('Error al registrar el SW:', err));
   });
 }
+</script>
+<!-- Botón flotante de instalación -->
+<button id="btnInstall" class="btn-flotante" title="Instalar app">
+    ⬇️
+</button>
+
+<script>
+let deferredPrompt;
+const btnInstall = document.getElementById('btnInstall');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    btnInstall.style.display = 'block'; // Muestra el botón
+});
+
+btnInstall.addEventListener('click', async () => {
+    if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        console.log(`Resultado de instalación: ${outcome}`);
+        deferredPrompt = null;
+        btnInstall.style.display = 'none'; // Oculta el botón tras instalar
+    }
+});
 </script>
 
 
