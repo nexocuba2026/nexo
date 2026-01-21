@@ -116,6 +116,15 @@
     <a href="https://youtube.com/nexocuba" target="_blank"><img src="imagenes/youtube.png" alt=""> YouTube</a>
   </div>
 </footer>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/nexo/pwabuilder-sw.js')
+      .then(reg => console.log('Service Worker registrado correctamente'))
+      .catch(err => console.error('Error al registrar el SW:', err));
+  });
+}
+</script>
 
 
 </body>
