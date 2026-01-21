@@ -146,12 +146,17 @@ setInterval(mostrarSlide, 3000);
 <script src="js/buscador.js"></script>
 
 <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-      .then(() => console.log("Service Worker registrado"))
-      .catch((err) => console.error("Error registrando Service Worker", err));
-  }
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/nexo/sw.js')
+    .then((registration) => {
+      console.log('Service Worker registrado con éxito:', registration.scope);
+    })
+    .catch((error) => {
+      console.log('Error al registrar el Service Worker:', error);
+    });
+}
 </script>
+
 
 </body>
 </html>
