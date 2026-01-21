@@ -1,27 +1,57 @@
-const CACHE_NAME = "nexo-cache-v1";
+// Nombre de la cache
+const CACHE_NAME = 'nexo-cache-v1';
+
+// Archivos que queremos cachear
 const urlsToCache = [
-  "/index.html",
-  "/servicios.html",
-  "/tienda.html",
-  "/ofertas.html",
-  "/quienes.html",
-  "/contactos.html",
-  "/css/estilos.css",
-  "/js/carrusel.js",
-  "/js/buscador.js",
-  "/imagenes/logo-nexo.png",
-  "/imagenes/icon-192.png",
-  "/imagenes/icon-512.png"
+  '/',
+  '/index.html',
+  '/servicios.html',
+  '/tienda.html',
+  '/ofertas.html',
+  '/quienes.html',
+  '/contactos.html',
+  '/css/estilos.css',
+  '/js/main.js',  // Si tienes JS aparte
+  '/imagenes/logo-nexo.png',
+  '/imagenes/icon-192.png',
+  '/imagenes/icon-512.png'
+  // Agrega aquí otras imágenes o archivos necesarios
 ];
 
-self.addEventListener("install", (event) => {
+// Instalación del service worker
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log('Cache abierto');
+        return cache.addAll(urlsToCache);
+      })
   );
 });
 
-self.addEventListener("fetch", (event) => {
+// Activación del service worker y limpieza de cache antigua
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(
+        keyList.map((key) => {
+          if (key !== CACHE_NAME) {
+            console.log('Borrando cache antigua', key);
+            return caches.delete(key);
+          }
+        })
+      );
+    })
+  );
+});
+
+// Interceptar peticiones y responder desde cache o red
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) => response || fetch(event.request))
+    caches.match(event.request)
+      .then((response) => {
+        // Devuelve del cache si existe, si no va a la red
+        return response || fetch(event.request);
+      })
   );
 });
