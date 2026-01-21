@@ -3,7 +3,7 @@
   "name": "NEXO",
   "short_name": "NEXO",
   "description": "Plataforma digital de servicios y productos en Cuba.",
-  "start_url": "/nexo/index.html",
+  "start_url": "/nexo/",
   "scope": "/nexo/",
   "display": "standalone",
   "background_color": "#ffffff",
