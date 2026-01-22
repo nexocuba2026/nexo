@@ -85,10 +85,12 @@ nav a.active {
 
 .carrusel img {
     width: 100%;
-    height: 100%;  /* Ocupa toda la altura del carrusel */
-    object-fit: cover; /* Mantiene proporciones y recorta si es necesario */
+    height: 100%;
+    object-fit: contain;   /* ✅ MUESTRA LA IMAGEN COMPLETA */
+    background-color: #000; /* Opcional: relleno elegante */
     display: block;
 }
+
 
 .carrusel .slide {
     display: none; /* Se mostrará solo la activa */
