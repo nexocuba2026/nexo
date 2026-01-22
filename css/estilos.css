@@ -640,11 +640,14 @@ h2.categoria,
    FOOTER
 ======================================== */
 footer {
-    background-color: #000;
-    color: #fff;
+    width: 100%;
+    margin: 0;
     padding: 20px 0;
-    text-align: center;
+    box-sizing: border-box; /* Asegura que padding no rompa el ancho */
+    position: relative;
+    left: 0;
 }
+
 
 footer img.logo-footer {
     width: 150px;
