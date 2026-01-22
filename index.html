@@ -149,11 +149,11 @@ setInterval(mostrarSlide, 3000);
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/nexo/pwabuilder-sw.js')
-      .then(reg => console.log('Service Worker registrado correctamente'))
-      .catch(err => console.error('Error al registrar el SW:', err));
+      .then(() => console.log('Service Worker OK'))
+      .catch(err => console.error('SW error:', err));
   });
 }
-<script>
+</script>
 
   
 
