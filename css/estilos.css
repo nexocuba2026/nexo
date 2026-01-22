@@ -80,17 +80,16 @@ nav a.active {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    height: auto;
+    height: auto; /* <--- quitar altura fija */
 }
 
 .carrusel img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;   /* ✅ MUESTRA LA IMAGEN COMPLETA */
-    background-color: #000; /* Opcional: relleno elegante */
+    height: auto;   /* <--- altura automática */
+    object-fit: contain; /* <--- muestra toda la imagen */
     display: block;
-   max-height: 400px;
 }
+
 
 
 .carrusel .slide {
