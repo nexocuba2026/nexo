@@ -76,6 +76,7 @@ nav a.active {
 .carrusel {
     width: 90%;
     max-width: 1200px;
+    min-height: 300px; /* ajusta según prefieras */
     margin: 30px auto;
     position: relative;
     overflow: hidden;
