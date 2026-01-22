@@ -3,18 +3,18 @@ const CACHE_NAME = 'nexo-cache-v1';
 
 // Archivos que queremos cachear
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/servicios.html',
-  '/tienda.html',
-  '/ofertas.html',
-  '/quienes.html',
-  '/contactos.html',
-  '/css/estilos.css',
-  '/js/main.js',  // Si tienes JS aparte
-  '/imagenes/logo-nexo.png',
-  '/imagenes/icon-192.png',
-  '/imagenes/icon-512.png'
+  '/nexo/',
+  '/nexo/index.html',
+  '/nexo/servicios.html',
+  '/nexo/tienda.html',
+  '/nexo/ofertas.html',
+  '/nexo/quienes.html',
+  '/nexo/contactos.html',
+  '/nexo/css/estilos.css',
+  '/nexo/js/main.js', // si tienes JS aparte
+  '/nexo/imagenes/logo-nexo.png',
+  '/nexo/imagenes/icon-192.png',
+  '/nexo/imagenes/icon-512.png'
   // Agrega aquí otras imágenes o archivos necesarios
 ];
 
@@ -27,6 +27,7 @@ self.addEventListener('install', (event) => {
         return cache.addAll(urlsToCache);
       })
   );
+  self.skipWaiting(); // Forzar que este SW se active inmediatamente
 });
 
 // Activación del service worker y limpieza de cache antigua
@@ -43,6 +44,7 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
+  self.clients.claim(); // Tomar control inmediato de las pestañas abiertas
 });
 
 // Interceptar peticiones y responder desde cache o red
@@ -55,4 +57,3 @@ self.addEventListener('fetch', (event) => {
       })
   );
 });
-
