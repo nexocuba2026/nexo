@@ -154,26 +154,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 <script>
-let deferredPrompt;
-const btnInstall = document.getElementById('btnInstall');
 
-// Detecta cuando la PWA puede ser instalada
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();           // Evita el prompt automático
-    deferredPrompt = e;           // Guarda el evento
-    btnInstall.style.display = 'block'; // Muestra el botón
-});
-
-// Acción al pulsar el botón
-btnInstall.addEventListener('click', async () => {
-    if (deferredPrompt) {
-        deferredPrompt.prompt();  // Muestra el prompt de instalación
-        const { outcome } = await deferredPrompt.userChoice;
-        console.log('Resultado de instalación:', outcome);
-        deferredPrompt = null;   // Limpiar referencia
-        btnInstall.style.display = 'none'; // Ocultar el botón si se instaló
-    }
-});
 </script>
 <script src="pwabuilder.js"></script>
 
