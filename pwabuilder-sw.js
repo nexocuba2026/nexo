@@ -1,5 +1,4 @@
 const CACHE_NAME = 'nexo-cache-v2';
-
 const FILES_TO_CACHE = [
   '/nexo/?v=2',
   '/nexo/index.html?v=2',
@@ -53,4 +52,13 @@ self.addEventListener('fetch', event => {
       return response || fetch(event.request);
     })
   );
+});
+
+// ==========================
+// ESCUCHA MENSAJES DEL CLIENTE PARA ACTUALIZACIÓN
+// ==========================
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
