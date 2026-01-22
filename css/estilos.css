@@ -639,18 +639,20 @@ h2.categoria,
 /* ========================================
    FOOTER
 ======================================== */
+/* Footer completo ancho para index */
 footer {
     width: 100%;
-    margin: 0;
+    background-color: #000; /* fondo negro */
+    color: #fff;
     padding: 20px 0;
-    box-sizing: border-box; /* Asegura que padding no rompa el ancho */
-    position: relative;
-    left: 0;
+    text-align: center;
+    margin: 0;   /* elimina cualquier margen externo */
 }
 
 
+
 footer img.logo-footer {
-    width: 150px;
+    width: 100px;
     display: block;
     margin: 0 auto 10px auto;
 }
@@ -769,6 +771,6 @@ footer .footer-buttons i {
 body {
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #000;
     color: #111;
 }
