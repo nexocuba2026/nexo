@@ -142,13 +142,27 @@ setInterval(mostrarSlide, 5000);
 
 <script>
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/nexo/pwabuilder-sw.js')
-      .then(() => console.log('Service Worker OK'))
-      .catch(err => console.error('SW error:', err));
-  });
+  navigator.serviceWorker.register('/nexo/pwabuilder-sw.js')
+    .then(reg => {
+      console.log('Service Worker registrado correctamente');
+
+      // Detecta cuando hay una nueva versión del SW
+      reg.onupdatefound = () => {
+        const newWorker = reg.installing;
+        newWorker.onstatechange = () => {
+          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            // Nueva versión lista, forzar activación
+            newWorker.postMessage({ type: 'SKIP_WAITING' });
+            // Recargar la página para usar la nueva versión
+            window.location.reload();
+          }
+        };
+      };
+    })
+    .catch(err => console.error('Error al registrar el SW:', err));
 }
 </script>
+
 
   
 
