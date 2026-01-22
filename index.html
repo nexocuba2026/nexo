@@ -185,28 +185,6 @@ btnInstall.addEventListener('click', async () => {
         .catch((err) => console.error('Error al registrar SW:', err));
   }
 
-  // Funcionalidad del botón de instalación
-  let deferredPrompt;
-  const btnInstall = document.getElementById('btnInstall');
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      // Se mostrará siempre
-      btnInstall.style.display = 'block';
-  });
-
-  btnInstall.addEventListener('click', async () => {
-      if (deferredPrompt) {
-          deferredPrompt.prompt();
-          const { outcome } = await deferredPrompt.userChoice;
-          console.log(`Resultado de instalación: ${outcome}`);
-          deferredPrompt = null;
-          btnInstall.style.display = 'none';
-      }
-  });
-</script>
-
 
 
 </body>
