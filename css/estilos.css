@@ -17,12 +17,12 @@ body {
 }
 /* Tarjetas más pequeñas solo en la página de contactos */
 body.contactos .tarjeta {
-    width: 250px;  /* antes eran 320px, ajusta según prefieras */
+    width: 150px;  /* antes eran 320px, ajusta según prefieras */
     margin: 10px;  /* opcional: menos espacio alrededor */
 }
 
 body.contactos .tarjeta img {
-    height: 180px; /* ajusta el alto de la imagen de acuerdo al nuevo tamaño */
+    height: 100px; /* ajusta el alto de la imagen de acuerdo al nuevo tamaño */
     object-fit: contain; /* mantiene la imagen completa sin recorte */
 }
 
