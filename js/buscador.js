@@ -7,7 +7,28 @@ const datosBusqueda = [
     url: "servicios.html"
   },
   {
-    texto: "Arquitectura",
+    texto: "X",
+    url: "servicios.html"
+  },
+  {
+    texto: "Arquitectura moderna",
+    url: "servicios.html"
+  },{
+    texto: "Restaurant",
+    url: "servicios.html"
+  },{
+    texto: "comida mexiacana",
+    url: "servicios.html"
+  },{
+    texto: "Transporte",
+    url: "servicios.html"
+  },
+  {
+    texto: "Carga y Pasajeros",
+    url: "servicios.html"
+  },
+  {
+    texto: "Pasajeros y Carga",
     url: "servicios.html"
   },
   {
@@ -19,11 +40,31 @@ const datosBusqueda = [
     url: "ofertas.html"
   },
   {
+    texto: "Viajes",
+    url: "servicios.html"
+  },
+  {
     texto: "Agendas profesionales",
     url: "tienda.html"
   },
   {
     texto: "Materiales de oficina",
+    url: "tienda.html"
+  },
+   {
+    texto: "Cemento Portland",
+    url: "tienda.html"
+  },
+   {
+    texto: "Ladrillo ",
+    url: "tienda.html"
+  },
+   {
+    texto: "Fogón",
+    url: "tienda.html"
+  },
+   {
+    texto: "Olla reina",
     url: "tienda.html"
   },
   {
@@ -34,6 +75,10 @@ const datosBusqueda = [
     texto: "Tienda AyB",
     url: "tienda.html"
   },
+   {
+    texto: "Cocina",
+    url: "tienda.html"
+  },
   {
     texto: "Ofertas Plus",
     url: "ofertas.html"
@@ -42,10 +87,86 @@ const datosBusqueda = [
     texto: "Quiénes Somos",
     url: "quienes.html"
   },
+   {
+    texto: "Nexo",
+    url: "quienes.html"
+  },
+   {
+    texto: "Electrodomésticos",
+    url: "tienda.html"
+  },
   {
     texto: "Contactos",
     url: "contactos.html"
-  }
+  },
+  {
+    texto: "Diseño",
+    url: "ofertas.html"
+  },
+{
+    texto: "Diseño de logotipos",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Logos",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Diseño Tarjetas de Presentación",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Diseño de Manuales de Identidad Visual",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Diseño de Plegables Publicitarios",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Diseño de Flyers Publicitarios",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Diseño de Interiores",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Plegables",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Flyers",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Manual de Identidad",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Logos",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Tarjetas",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Ofertas",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Diseño Gráfico",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Publicidad",
+    url: "ofertas.html"
+  },
+  {
+    texto: "Marketing",
+    url: "ofertas.html"
+  },
 ];
 
 // ===============================
