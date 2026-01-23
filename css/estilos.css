@@ -25,6 +25,34 @@ body.contactos .tarjeta img {
     height: 100px; /* ajusta el alto de la imagen de acuerdo al nuevo tamaño */
     object-fit: contain; /* mantiene la imagen completa sin recorte */
 }
+/* ==============================
+   TARJETAS CONTACTOS UNIFORMES
+============================== */
+body.contactos .tarjeta {
+    width: 150px;               /* Tamaño uniforme de todas las tarjetas */
+    height: auto;               /* Ajusta automáticamente según contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que botones estén al final */
+    margin: 15px;
+}
+
+body.contactos .tarjeta img {
+    width: 100%;
+    height: 180px;              /* Misma altura para todas las imágenes */
+    object-fit: contain;        /* No recorta la imagen */
+}
+
+body.contactos .tarjeta .contenido {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;               /* Ocupa todo el espacio disponible */
+}
+
+body.contactos .tarjeta .contenido .btn {
+    margin-top: auto;           /* Empuja los botones al final del contenido */
+}
 
 /* ========================================
    ENCABEZADO
