@@ -26,11 +26,11 @@
 </header>
 <!-- CARRUSEL DE IMÁGENES -->
 <div class="carrusel">
-    <div class="slide"><img src="imagenes/carrusel1.png" alt="Imagen 1"></div>
-    <div class="slide"><img src="imagenes/carrusel2.png" alt="Imagen 2"></div>
-    <div class="slide"><img src="imagenes/carrusel3.png" alt="Imagen 3"></div>
-    <div class="slide"><img src="imagenes/carrusel4.png" alt="Imagen 4"></div>
-    <div class="slide"><img src="imagenes/carrusel5.png" alt="Imagen 5"></div>
+    <div class="slide"><img src="imagenes/carrusel1.png" alt="Imagen 1" loading="lazy"></div>
+    <div class="slide"><img src="imagenes/carrusel2.png" alt="Imagen 2" loading="lazy"></div>
+    <div class="slide"><img src="imagenes/carrusel3.png" alt="Imagen 3" loading="lazy"></div>
+    <div class="slide"><img src="imagenes/carrusel4.png" alt="Imagen 4" loading="lazy"></div>
+    <div class="slide"><img src="imagenes/carrusel5.png" alt="Imagen 5" loading="lazy"></div>
 </div>
 
 <!-- BUSCADOR -->
@@ -54,7 +54,7 @@
 <h2 class="categoria">Servicios Destacados</h2>
 <div class="tarjetas-container">
   <div class="tarjeta">
-    <img src="imagenes/constructorax1.jpg" alt="Construcción">
+    <img src="imagenes/constructorax1.jpg" alt="Construcción" loading="lazy">
     <div class="contenido">
        <div class="empresa">Constructora X.</div>
       <h3>Diseño y Construcción</h3>
@@ -70,7 +70,7 @@
 <h2 class="categoria">Productos Destacados</h2>
 <div class="tarjetas-container">
   <div class="tarjeta">
-    <img src="imagenes/tiendaayb1.jpg" alt="Materiales de Oficina">
+    <img src="imagenes/tiendaayb1.jpg" alt="Materiales de Oficina loading="lazy"">
     <div class="contenido">
       <div class="empresa">Tienda AyB</div>
       <h3>Agendas profesionales</h3>
@@ -88,13 +88,13 @@
 
 <div class="tarjetas-container">
   <div class="tarjeta">
-    <img src="imagenes/diseñologotipo1.jpg" alt="Diseño de Logotipos">
+    <img src="imagenes/diseñologotipo1.jpg" alt="Diseño de Logotipos loading="lazy"">
     <div class="contenido">
       <h3>Diseño de Logotipos</h3>
     </div>
   </div>
   <div class="tarjeta">
-    <img src="imagenes/tarjetaspresentacion1.jpg" alt="Tarjetas de Presentación">
+    <img src="imagenes/tarjetaspresentacion1.jpg" alt="Tarjetas de Presentación loading="lazy"">
     <div class="contenido">
       <h3>Tarjetas de Presentación</h3>
     </div>
@@ -137,7 +137,7 @@ mostrarSlide();
 setInterval(mostrarSlide, 5000);
 </script>
 
-<script src="js/buscador.js"></script>
+<script src="js/buscador.js" defer></script>
 
 <script>
 if ('serviceWorker' in navigator) {
