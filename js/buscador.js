@@ -1,234 +1,177 @@
-// ===============================
-// DATOS PARA EL BUSCADOR
-// ===============================
-const datosBusqueda = [
+// ====== BUSCADOR GLOBAL NEXO ======
+
+// Contenedor de todos los ítems de búsqueda
+const indexBusqueda = [
+  // ===== Tienda =====
   {
-    texto: "Diseño y Construcción",
-    url: "servicios.html"
-  },
-  {
-    texto: "X",
-    url: "servicios.html"
-  },
-  {
-    texto: "Arquitectura moderna",
-    url: "servicios.html"
-  },{
-    texto: "Restaurant",
-    url: "servicios.html"
-  },{
-    texto: "comida mexiacana",
-    url: "servicios.html"
-  },{
-    texto: "Transporte",
-    url: "servicios.html"
+    titulo: "Cemento Portland",
+    descripcion: "Cemento de alta resistencia para obras civiles y residenciales.",
+    pagina: "tienda.html",
+    tipo: "producto"
   },
   {
-    texto: "Carga y Pasajeros",
-    url: "servicios.html"
+    titulo: "Ladrillo Rojo",
+    descripcion: "Ladrillo resistente ideal para construcción de viviendas y muros.",
+    pagina: "tienda.html",
+    tipo: "producto"
   },
   {
-    texto: "Pasajeros y Carga",
-    url: "servicios.html"
+    titulo: "Fogón Infrarrojo",
+    descripcion: "Fogones infrarrojos con tecnología de punta, son económicos y fáciles de usar.",
+    pagina: "tienda.html",
+    tipo: "producto"
   },
   {
-    texto: "Diseño de Logotipos",
-    url: "ofertas.html"
+    titulo: "Olla Reina",
+    descripcion: "Rápida cocción de alimentos y seguridad al cocinar.",
+    pagina: "tienda.html",
+    tipo: "producto"
+  },
+
+  // ===== Servicios =====
+  {
+    titulo: "Diseño y construcción de obras de Arquitectura Moderna",
+    descripcion: "Empresa Constructora X — Construcción de viviendas, edificios multifamiliares y locales multifuncionales.",
+    pagina: "servicios.html",
+    tipo: "servicio"
   },
   {
-    texto: "Tarjetas de Presentación",
-    url: "ofertas.html"
+    titulo: "Comida Mexicana",
+    descripcion: "Restaurante Come 2 — Comida mexicana para disfrutar en familia, amplia variedad de platos y servicio a la carta.",
+    pagina: "servicios.html",
+    tipo: "servicio"
   },
   {
-    texto: "Viajes",
-    url: "servicios.html"
+    titulo: "Transporte de Cargas y Pasajeros",
+    descripcion: "Transporte Fast — Servicios interprovinciales y locales. Transportación rápida y segura, confort y confianza garantizados.",
+    pagina: "servicios.html",
+    tipo: "servicio"
+  },
+
+  // ===== Ofertas =====
+  {
+    titulo: "Diseño de Logotipos",
+    descripcion: "Identidad visual profesional alineada con la esencia y objetivos de tu marca.",
+    pagina: "ofertas.html",
+    tipo: "oferta"
   },
   {
-    texto: "Agendas profesionales",
-    url: "tienda.html"
+    titulo: "Tarjetas de Presentación",
+    descripcion: "Diseño elegante y funcional que refuerza tu imagen corporativa.",
+    pagina: "ofertas.html",
+    tipo: "oferta"
   },
   {
-    texto: "Materiales de oficina",
-    url: "tienda.html"
-  },
-   {
-    texto: "Cemento Portland",
-    url: "tienda.html"
-  },
-   {
-    texto: "Ladrillo ",
-    url: "tienda.html"
-  },
-   {
-    texto: "Fogón",
-    url: "tienda.html"
-  },
-   {
-    texto: "Olla reina",
-    url: "tienda.html"
+    titulo: "Manual de Identidad",
+    descripcion: "Lineamientos visuales claros para el uso coherente de tu marca.",
+    pagina: "ofertas.html",
+    tipo: "oferta"
   },
   {
-    texto: "Constructora X",
-    url: "servicios.html"
+    titulo: "Flyers Publicitarios",
+    descripcion: "Material gráfico atractivo para campañas promocionales efectivas.",
+    pagina: "ofertas.html",
+    tipo: "oferta"
   },
   {
-    texto: "Tienda AyB",
-    url: "tienda.html"
-  },
-   {
-    texto: "Cocina",
-    url: "tienda.html"
+    titulo: "Plegables",
+    descripcion: "Comunicación visual clara para presentar servicios y productos.",
+    pagina: "ofertas.html",
+    tipo: "oferta"
   },
   {
-    texto: "Ofertas Plus",
-    url: "ofertas.html"
+    titulo: "Diseño de Interiores",
+    descripcion: "Soluciones espaciales que optimizan funcionalidad, estética y experiencia.",
+    pagina: "ofertas.html",
+    tipo: "oferta"
+  },
+
+  // ===== Quiénes Somos =====
+  {
+    titulo: "Nuestra Misión",
+    descripcion: "Ayudar a los negocios cubanos a destacarse, aumentar su alcance, fortalecer su imagen y convertir la publicidad en resultados reales.",
+    pagina: "quienes.html",
+    tipo: "informacion"
   },
   {
-    texto: "Quiénes Somos",
-    url: "quienes.html"
+    titulo: "Nuestra Visión",
+    descripcion: "Ser el aliado estratégico preferido de los negocios en Cuba, ofreciendo soluciones digitales y comerciales que permitan crecer de manera profesional y efectiva.",
+    pagina: "quienes.html",
+    tipo: "informacion"
   },
-   {
-    texto: "Nexo",
-    url: "quienes.html"
-  },
-   {
-    texto: "Electrodomésticos",
-    url: "tienda.html"
+
+  // ===== Contactos =====
+  {
+    titulo: "WhatsApp",
+    descripcion: "Escríbenos directamente por WhatsApp para cualquier consulta.",
+    pagina: "contactos.html",
+    tipo: "contacto"
   },
   {
-    texto: "Contactos",
-    url: "contactos.html"
+    titulo: "Correo",
+    descripcion: "Envíanos un email con tus dudas, solicitudes o propuestas.",
+    pagina: "contactos.html",
+    tipo: "contacto"
   },
   {
-    texto: "Diseño",
-    url: "ofertas.html"
-  },
-{
-    texto: "Diseño de logotipos",
-    url: "ofertas.html"
+    titulo: "Instagram",
+    descripcion: "Síguenos y conoce nuestras novedades en redes sociales.",
+    pagina: "contactos.html",
+    tipo: "contacto"
   },
   {
-    texto: "Logos",
-    url: "ofertas.html"
+    titulo: "Facebook",
+    descripcion: "Mantente informado con nuestras actualizaciones en Facebook.",
+    pagina: "contactos.html",
+    tipo: "contacto"
   },
   {
-    texto: "Diseño Tarjetas de Presentación",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Diseño de Manuales de Identidad Visual",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Diseño de Plegables Publicitarios",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Diseño de Flyers Publicitarios",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Diseño de Interiores",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Plegables",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Flyers",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Manual de Identidad",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Logos",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Tarjetas",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Ofertas",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Diseño Gráfico",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Publicidad",
-    url: "ofertas.html"
-  },
-  {
-    texto: "Marketing",
-    url: "ofertas.html"
-  },
+    titulo: "YouTube",
+    descripcion: "Mira nuestros tutoriales, presentaciones y más en nuestro canal.",
+    pagina: "contactos.html",
+    tipo: "contacto"
+  }
 ];
 
-// ===============================
-// ELEMENTOS DEL DOM
-// ===============================
-const inputBuscador = document.getElementById("buscador");
-const listaSugerencias = document.getElementById("sugerencias");
-const botonBuscar = document.getElementById("btnBuscar");
-
-// ===============================
-// MOSTRAR SUGERENCIAS
-// ===============================
-inputBuscador.addEventListener("input", () => {
-  const valor = inputBuscador.value.toLowerCase();
-  listaSugerencias.innerHTML = "";
-
-  if (valor.length === 0) {
-    listaSugerencias.style.display = "none";
-    return;
-  }
-
-  const resultados = datosBusqueda.filter(item =>
-    item.texto.toLowerCase().includes(valor)
+// ===== Función para mostrar resultados =====
+function buscarItems(query) {
+  const resultados = indexBusqueda.filter(item => 
+    item.titulo.toLowerCase().includes(query.toLowerCase()) ||
+    item.descripcion.toLowerCase().includes(query.toLowerCase())
   );
+  return resultados;
+}
 
-  if (resultados.length === 0) {
-    listaSugerencias.style.display = "none";
+// ===== Mostrar resultados en HTML =====
+function mostrarResultados(resultados, contenedor) {
+  contenedor.innerHTML = ""; // limpiar
+  if(resultados.length === 0){
+    contenedor.innerHTML = `<p class="no-result">No se encontraron resultados.</p>`;
     return;
   }
 
   resultados.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item.texto;
-    li.addEventListener("click", () => {
-      window.location.href = item.url;
-    });
-    listaSugerencias.appendChild(li);
+    const div = document.createElement("div");
+    div.classList.add("resultado-item");
+    div.innerHTML = `
+      <h4>${item.titulo} <span class="tipo">[${item.tipo}]</span></h4>
+      <p>${item.descripcion}</p>
+      <a href="${item.pagina}" class="btn">Ir a página</a>
+    `;
+    contenedor.appendChild(div);
   });
+}
 
-  listaSugerencias.style.display = "block";
-});
+// ===== Evento de input =====
+document.addEventListener("DOMContentLoaded", () => {
+  const inputBuscador = document.getElementById("input-buscador");
+  const contenedorResultados = document.getElementById("resultados-busqueda");
 
-// ===============================
-// BOTÓN BUSCAR
-// ===============================
-botonBuscar.addEventListener("click", () => {
-  const valor = inputBuscador.value.toLowerCase();
-
-  const resultado = datosBusqueda.find(item =>
-    item.texto.toLowerCase().includes(valor)
-  );
-
-  if (resultado) {
-    window.location.href = resultado.url;
-  }
-});
-
-// ===============================
-// OCULTAR SUGERENCIAS AL HACER CLICK FUERA
-// ===============================
-document.addEventListener("click", (e) => {
-  if (!e.target.closest(".buscador-container")) {
-    listaSugerencias.style.display = "none";
+  if(inputBuscador){
+    inputBuscador.addEventListener("input", () => {
+      const query = inputBuscador.value.trim();
+      const resultados = buscarItems(query);
+      mostrarResultados(resultados, contenedorResultados);
+    });
   }
 });
