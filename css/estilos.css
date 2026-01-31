@@ -419,7 +419,62 @@ nav a.active {
   background-color: #f2f2f2;
 }
 
+/* ===== Buscador global ===== */
+.buscador-global {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
 
+#input-buscador {
+  width: 90%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#resultados-busqueda {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.resultado-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.resultado-item h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.resultado-item .tipo {
+  font-size: 0.8rem;
+  color: #ff6600;
+}
+
+.resultado-item p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.resultado-item .btn {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px 10px;
+  background: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.no-result {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
 
 /* ========================================
    TARJETAS DE PRODUCTOS / SERVICIOS
